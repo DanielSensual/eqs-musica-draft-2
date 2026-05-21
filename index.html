@@ -1,0 +1,3003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EQS MÚSICA — Connecting Bachata Worldwide | Record Label, Production &amp; Bookings</title>
+  <meta name="description" content="EQS Música — the #1 bachata record label worldwide. Orlando-based since 1998. Record label, production, and bookings by DerekVinci.">
+  <link rel="canonical" href="https://www.eqsmusica.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.eqsmusica.com/">
+  <meta property="og:title" content="EQS MÚSICA — Connecting Bachata Worldwide">
+  <meta property="og:description" content="Orlando's premier bachata record label since 1998. Artists, production, and international bookings.">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EQS MÚSICA — Connecting Bachata Worldwide">
+  <meta name="twitter:description" content="Orlando's premier bachata record label since 1998.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/eqs-logo-square.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/eqs-logo-square.png">
+  <meta property="og:image" content="https://www.eqsmusica.com/img/eqs-logo-square.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "EQS Música",
+        "url": "https://www.eqsmusica.com/",
+        "logo": "https://www.eqsmusica.com/img/eqs-logo-square.png",
+        "foundingDate": "1998",
+        "founder": { "@type": "Person", "name": "DerekVinci" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Orlando", "addressRegion": "FL", "addressCountry": "US" },
+        "sameAs": ["https://open.spotify.com/artist/12YP3RGVLp3c36Zi6lFRtR"]
+      },
+      {
+        "@type": "MusicGroup",
+        "name": "EQS Música",
+        "genre": "Bachata",
+        "foundingLocation": "Orlando, FL"
+      }
+    ]
+  }
+  </script>
+  <style>
+/* EQS Música — Single-page styles */
+
+:root {
+  --ink: #000;
+  --ink-2: #1A1C17;
+  --cream: #E8E0D4;
+  --cream-dim: #A69E93;
+  --ash: #8A8178;
+  --blood: #E6AE6D;
+  --blood-dark: #C48B4A;
+  --accent-deep: #943240;
+  --hairline: rgba(232, 224, 212, 0.12);
+  --focus-ring: #E6AE6D;
+  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-script: "Allura", cursive;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --container-max: 1440px;
+  --section-pad: clamp(70px, 8vw, 120px);
+  --nav-height: 72px;
+  --ticker-height: 40px;
+  --transition-base: 0.45s var(--ease-out-expo);
+  --transition-fast: 0.28s var(--ease-out-expo);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+  line-height: 1.6;
+  color: var(--cream);
+  background-color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Utilities */
+
+.script-accent {
+  font-family: var(--font-script);
+  color: var(--blood);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.gold {
+  color: var(--blood);
+}
+
+.uppercase-label {
+  font-family: var(--font-body);
+  font-size: clamp(0.625rem, 0.58rem + 0.15vw, 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+}
+
+.section {
+  padding-block: var(--section-pad);
+}
+
+.section__eyebrow {
+  margin-bottom: 1rem;
+}
+
+.section__title {
+  font-size: clamp(2.25rem, 1.5rem + 3.5vw, 4.5rem);
+  margin-bottom: clamp(1rem, 2vw, 1.75rem);
+}
+
+.section__lead {
+  font-size: clamp(1rem, 0.95rem + 0.35vw, 1.25rem);
+  color: var(--cream-dim);
+  max-width: 42ch;
+  font-weight: 300;
+}
+
+/* Skip link */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100000;
+  padding: 0.75rem 1.25rem;
+  background: var(--blood);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0 0 4px 4px;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: none;
+}
+
+.skip-link:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Focus */
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Reveal animations */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s var(--ease-out-expo),
+    transform 0.9s var(--ease-out-expo);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.12s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.24s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.36s;
+}
+
+/* Marquee ticker */
+
+.ticker {
+  position: relative;
+  z-index: 100;
+  height: var(--ticker-height);
+  overflow: hidden;
+  background: var(--blood);
+  color: var(--ink);
+  border-block: 1px solid var(--blood-dark);
+}
+
+.ticker__track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 48s linear infinite;
+}
+
+.ticker:hover .ticker__track {
+  animation-play-state: paused;
+}
+
+.ticker__item {
+  flex-shrink: 0;
+  padding-inline: 2.5rem;
+  font-size: clamp(0.6875rem, 0.65rem + 0.15vw, 0.8125rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: var(--ticker-height);
+  white-space: nowrap;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Sticky navigation */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  height: var(--nav-height);
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+}
+
+.site-header__logo {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 1rem + 0.8vw, 1.625rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.site-header__logo:hover {
+  color: var(--blood);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.site-nav__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.site-nav__link {
+  font-size: clamp(0.6875rem, 0.65rem + 0.12vw, 0.8125rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.site-nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: var(--blood);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-fast);
+}
+
+.site-nav__link:hover,
+.site-nav__link[aria-current="page"] {
+  color: var(--cream);
+}
+
+.site-nav__link:hover::after,
+.site-nav__link[aria-current="page"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.lang-toggle:hover {
+  border-color: var(--blood);
+  color: var(--blood);
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.35rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: var(--blood);
+  color: var(--ink);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.btn-cta:hover {
+  background: var(--blood-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(230, 174, 109, 0.25);
+}
+
+.btn-cta--outline {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid var(--hairline);
+}
+
+.btn-cta--outline:hover {
+  border-color: var(--blood);
+  color: var(--blood);
+  background: transparent;
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 950;
+}
+
+.hamburger__bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--cream);
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.hamburger[aria-expanded="true"] .hamburger__bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] .hamburger__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] .hamburger__bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 940;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity var(--transition-base),
+    visibility var(--transition-base);
+}
+
+.mobile-drawer.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-drawer__link {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--cream);
+  transition: color var(--transition-fast);
+}
+
+.mobile-drawer__link:hover {
+  color: var(--blood);
+}
+
+.mobile-drawer__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  padding-block: 0 var(--section-pad);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(120vw, 900px);
+  height: min(80vw, 700px);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(230, 174, 109, 0.14) 0%,
+    rgba(148, 50, 64, 0.06) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.hero__meta-item {
+  font-size: clamp(0.625rem, 0.6rem + 0.12vw, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+.hero__meta-item strong {
+  color: var(--cream);
+  font-weight: 600;
+}
+
+.hero__headline {
+  font-size: clamp(3rem, 2rem + 8vw, 7.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  max-width: 14ch;
+}
+
+.hero__headline em {
+  font-style: italic;
+  color: var(--blood);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: end;
+}
+
+.hero__copy {
+  font-size: clamp(1rem, 0.95rem + 0.35vw, 1.1875rem);
+  color: var(--cream-dim);
+  font-weight: 300;
+  max-width: 38ch;
+}
+
+.hero__copy p + p {
+  margin-top: 1.25rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero__visual {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  max-height: 520px;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+}
+
+.hero__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Three lanes */
+
+.lanes {
+  background: var(--ink-2);
+  border-block: 1px solid var(--hairline);
+}
+
+.lanes__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.lane {
+  position: relative;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border-right: 1px solid var(--hairline);
+  transition:
+    background var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.lane:last-child {
+  border-right: none;
+}
+
+.lane:hover {
+  background: rgba(230, 174, 109, 0.04);
+  box-shadow: inset 0 0 60px rgba(230, 174, 109, 0.08);
+}
+
+.lane__icon {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  color: var(--blood);
+  margin-bottom: 1.25rem;
+}
+
+.lane__title {
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+  margin-bottom: 0.75rem;
+}
+
+.lane__text {
+  font-size: clamp(0.875rem, 0.85rem + 0.15vw, 1rem);
+  color: var(--cream-dim);
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.lane__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blood);
+  transition: gap var(--transition-fast);
+}
+
+.lane__link:hover {
+  gap: 0.85rem;
+}
+
+/* Stats */
+
+.stats {
+  border-block: 1px solid var(--hairline);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--hairline);
+}
+
+.stat {
+  background: var(--ink);
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem);
+  text-align: center;
+  transition: background var(--transition-fast);
+}
+
+.stat:hover {
+  background: var(--ink-2);
+}
+
+.stat__value {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
+  font-weight: 700;
+  color: var(--blood);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat__label {
+  font-size: clamp(0.625rem, 0.6rem + 0.1vw, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+/* Roster */
+
+.roster__featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.roster__featured-visual {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+}
+
+.roster__featured-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.roster__featured:hover .roster__featured-visual img {
+  transform: scale(1.03);
+}
+
+.roster__featured-name {
+  font-size: clamp(2.5rem, 1.8rem + 3vw, 4.75rem);
+  margin-bottom: 0.5rem;
+}
+
+.roster__featured-role {
+  margin-bottom: 1.5rem;
+}
+
+.roster__featured-bio {
+  color: var(--cream-dim);
+  font-weight: 300;
+  max-width: 42ch;
+  margin-bottom: 2rem;
+}
+
+.roster__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.artist-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-base);
+}
+
+.artist-card:hover {
+  border-color: rgba(230, 174, 109, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.artist-card__media {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--ink-2);
+}
+
+.artist-card__media img,
+.artist-card__placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.artist-card__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    145deg,
+    var(--ink-2) 0%,
+    #252820 50%,
+    var(--ink-2) 100%
+  );
+  color: var(--ash);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+}
+
+.artist-card:hover .artist-card__media img,
+.artist-card:hover .artist-card__placeholder {
+  transform: scale(1.06);
+}
+
+.artist-card__body {
+  padding: 1rem 1.125rem 1.25rem;
+}
+
+.artist-card__name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.artist-card__genre {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+/* Releases */
+
+.releases__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.release-channel {
+  border: 1px solid var(--hairline);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--ink-2);
+  transition: border-color var(--transition-fast);
+}
+
+.release-channel:hover {
+  border-color: rgba(230, 174, 109, 0.3);
+}
+
+.release-channel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.release-channel__title {
+  font-size: clamp(1.25rem, 1rem + 0.8vw, 1.75rem);
+}
+
+.release-channel__embed {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.release-channel__embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 352px;
+  border: 0;
+}
+
+/* Mini player */
+
+.mini-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 800;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem clamp(1rem, 3vw, 2rem);
+  background: rgba(26, 28, 23, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--hairline);
+  transform: translateY(100%);
+  transition: transform var(--transition-base);
+}
+
+.mini-player.active {
+  transform: translateY(0);
+}
+
+.mini-player__art {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.mini-player__art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mini-player__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mini-player__title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-player__artist {
+  font-size: 0.6875rem;
+  color: var(--ash);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-player__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mini-player__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--hairline);
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.mini-player__btn:hover {
+  border-color: var(--blood);
+  color: var(--blood);
+}
+
+.mini-player__btn--play {
+  background: var(--blood);
+  border-color: var(--blood);
+  color: var(--ink);
+}
+
+.mini-player__btn--play:hover {
+  background: var(--blood-dark);
+  border-color: var(--blood-dark);
+  color: var(--ink);
+}
+
+/* DerekVinci section */
+
+.derek {
+  position: relative;
+  background: var(--blood);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.derek::before {
+  content: "DerekVinci";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: clamp(6rem, 15vw, 18rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.derek .container {
+  position: relative;
+  z-index: 1;
+}
+
+.derek .section__title,
+.derek .section__lead {
+  color: var(--ink);
+}
+
+.derek .section__lead {
+  opacity: 0.75;
+}
+
+.derek .uppercase-label {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.derek__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.derek__portrait {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.derek__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.derek__bio {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.7;
+  max-width: 48ch;
+}
+
+.derek__bio p + p {
+  margin-top: 1.25rem;
+}
+
+/* Partners */
+
+.partners__grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.partner-logo {
+  opacity: 0.45;
+  filter: grayscale(1) brightness(1.4);
+  max-height: 48px;
+  width: auto;
+  transition:
+    opacity var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.partner-logo:hover {
+  opacity: 1;
+  filter: grayscale(0) brightness(1);
+}
+
+/* Testimonials */
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.testimonial {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--hairline);
+  background: var(--ink-2);
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-base);
+}
+
+.testimonial:hover {
+  border-color: rgba(230, 174, 109, 0.25);
+  transform: translateY(-4px);
+}
+
+.testimonial__quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 1rem + 0.4vw, 1.375rem);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--cream);
+}
+
+.testimonial__author {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blood);
+}
+
+.testimonial__role {
+  font-size: 0.6875rem;
+  color: var(--ash);
+  margin-top: 0.25rem;
+}
+
+/* Contact */
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact__detail {
+  font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+}
+
+.contact__detail a {
+  color: var(--blood);
+  transition: color var(--transition-fast);
+}
+
+.contact__detail a:hover {
+  color: var(--cream);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--ink-2);
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible,
+.form-group select:focus-visible {
+  border-color: var(--blood);
+  box-shadow: 0 0 0 3px rgba(230, 174, 109, 0.15);
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* Final CTA */
+
+.final-cta {
+  text-align: center;
+  border-block: 1px solid var(--hairline);
+  background: linear-gradient(
+    180deg,
+    var(--ink) 0%,
+    var(--ink-2) 100%
+  );
+}
+
+.final-cta__title {
+  font-size: clamp(2.5rem, 1.5rem + 5vw, 5.5rem);
+  max-width: 16ch;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+.final-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Mobile action bar */
+
+.mobile-action-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 850;
+  height: 64px;
+  padding: 0 0.5rem;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--hairline);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mobile-action-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ash);
+  transition: color var(--transition-fast);
+}
+
+.mobile-action-bar__item:hover,
+.mobile-action-bar__item[aria-current="page"] {
+  color: var(--blood);
+}
+
+.mobile-action-bar__icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Footer */
+
+.site-footer {
+  padding-block: clamp(3rem, 6vw, 5rem) 2rem;
+  border-top: 1px solid var(--hairline);
+  background: var(--ink-2);
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.footer-col__title {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blood);
+  margin-bottom: 1.25rem;
+}
+
+.footer-col__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-col__link {
+  font-size: 0.8125rem;
+  color: var(--cream-dim);
+  transition: color var(--transition-fast);
+}
+
+.footer-col__link:hover {
+  color: var(--cream);
+}
+
+.footer-col__text {
+  font-size: 0.8125rem;
+  color: var(--ash);
+  line-height: 1.65;
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--hairline);
+  font-size: 0.6875rem;
+  color: var(--ash);
+}
+
+.site-footer__social {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-footer__social a {
+  color: var(--cream-dim);
+  transition: color var(--transition-fast);
+}
+
+.site-footer__social a:hover {
+  color: var(--blood);
+}
+
+/* Language toggle (ES) */
+
+body.lang-es [data-lang="en"] {
+  display: none;
+}
+
+body:not(.lang-es) [data-lang="es"] {
+  display: none;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .ticker__track {
+    animation: none;
+  }
+}
+
+/* Responsive — roster 2 col */
+
+@media (max-width: 1100px) {
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roster__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials__grid .testimonial:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin-inline: auto;
+  }
+}
+
+/* Responsive — single col, hamburger */
+
+@media (max-width: 900px) {
+  .site-nav__links,
+  .site-nav .btn-cta:not(.mobile-drawer .btn-cta) {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero__grid,
+  .roster__featured,
+  .releases__grid,
+  .derek__grid,
+  .contact__grid,
+  .lanes__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lane {
+    border-right: none;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .lane:last-child {
+    border-bottom: none;
+  }
+
+  .hero__visual {
+    max-height: 400px;
+  }
+
+  .mobile-action-bar {
+    display: flex;
+  }
+
+  body:has(.mini-player.active) .mobile-action-bar {
+    bottom: 72px;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials__grid .testimonial:last-child {
+    max-width: none;
+    grid-column: auto;
+  }
+}
+
+/* Responsive — roster 1 col */
+
+@media (max-width: 700px) {
+  .roster__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* Spec-aligned overrides & extensions */
+
+:root {
+  --ink: #000000;
+  --ink-2: #1a1c17;
+  --cream: #e8e0d4;
+  --cream-dim: #a69e93;
+  --ash: #8a8178;
+  --blood: #e6ae6d;
+  --blood-dark: #c48b4a;
+  --accent-deep: #943240;
+  --hairline: rgba(232, 224, 212, 0.12);
+  --focus-ring: #e6ae6d;
+}
+
+.site-header {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.site-header__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  height: var(--nav-height);
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.site-header__logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.site-footer .site-header__logo-img {
+  width: 52px;
+  height: 52px;
+}
+
+.site-header__wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.site-header__wordmark strong {
+  font-weight: 900;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.site-header__wordmark em {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--cream-dim);
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lang-toggle-group {
+  display: inline-flex;
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.lang-toggle-group .lang-toggle__btn {
+  padding: 0.45rem 0.65rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  background: transparent;
+  border: none;
+  color: var(--cream-dim);
+  cursor: pointer;
+}
+
+.lang-toggle-group .lang-toggle__btn.is-active {
+  background: var(--blood);
+  color: var(--ink);
+}
+
+.btn-cta--cream {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.btn-cta--cream:hover {
+  background: var(--blood);
+  box-shadow: 0 0 24px rgba(230, 174, 109, 0.3);
+}
+
+.ticker__item {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.hero__banner {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  height: clamp(220px, 42vw, 560px);
+  min-height: 220px;
+  overflow: hidden;
+  border: none;
+  border-bottom: 1px solid var(--hairline);
+  background: var(--ink);
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transform: scale(1.35);
+  transform-origin: center center;
+}
+
+.hero__video-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.55) 78%,
+    rgba(0, 0, 0, 0.92) 100%
+  );
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.hero::before {
+  top: 10%;
+  right: -10%;
+  left: auto;
+  transform: none;
+  width: 55vw;
+  height: 70vh;
+  background: radial-gradient(ellipse, rgba(230, 174, 109, 0.06), transparent 70%);
+  z-index: 0;
+}
+
+.hero__meta {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__meta-item--center {
+  text-align: center;
+}
+
+.hero__meta-item--end {
+  text-align: right;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+  animation: pulse-dot 2s ease infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+  }
+}
+
+.hero__headline--editorial {
+  font-family: var(--font-heading);
+  font-size: clamp(64px, 10vw, 168px);
+  line-height: 0.92;
+  max-width: none;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+}
+
+.hero__line {
+  display: block;
+}
+
+.hero__script {
+  display: block;
+  margin-left: 8vw;
+  font-size: clamp(72px, 11vw, 180px);
+}
+
+.hero__line--right {
+  text-align: right;
+}
+
+.hero__statement {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.35;
+  color: var(--cream);
+  max-width: 28ch;
+}
+
+.hero__statement em {
+  font-style: italic;
+  color: var(--blood);
+}
+
+.hero__byline {
+  font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ash);
+  text-align: right;
+  align-self: end;
+}
+
+.hero__grid {
+  grid-template-columns: 1.3fr 1fr;
+}
+
+.lane__number {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--blood);
+  margin-bottom: 1rem;
+}
+
+.lane__title {
+  font-style: italic;
+  font-size: clamp(2rem, 2vw, 2.625rem);
+}
+
+.lane__cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blood);
+}
+
+.lane:hover {
+  background: rgba(230, 174, 109, 0.09);
+}
+
+.stat__value {
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  color: var(--cream);
+}
+
+.stat__value .gold {
+  color: var(--blood);
+}
+
+.stat__note {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.6875rem;
+  color: var(--ash);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.roster {
+  background: var(--ink-2);
+}
+
+.roster__featured {
+  grid-template-columns: 1.4fr 1fr;
+}
+
+.roster__featured-visual {
+  background-size: cover;
+  background-position: center top;
+  box-shadow: 0 24px 60px rgba(198, 139, 74, 0.18);
+}
+
+.roster__featured-visual--mr-don {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.75) 100%
+    ),
+    url("img/mr-don.jpg");
+  background-position: center, 70% 25%;
+}
+
+.roster__featured-overlay-name {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  line-height: 1;
+  z-index: 2;
+}
+
+.roster__featured-tag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blood);
+  margin-bottom: 0.75rem;
+}
+
+.roster__featured-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  margin-bottom: 1.25rem;
+}
+
+.roster__featured-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.roster__featured-stats div span {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--cream);
+}
+
+.roster__featured-stats div small {
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+.link-gold {
+  color: var(--blood);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.artist-card__media {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.artist-card__media--j-salez {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
+    url("img/j-salez.jpg");
+  background-position: center, 65% 30%;
+}
+.artist-card__media--johandy {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
+    url("img/johandy.jpg");
+  background-position: center, 55% 30%;
+}
+.artist-card__media--vinny-rivera {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
+    url("img/vinny-rivera.jpg");
+  background-position: center, 32% 35%;
+}
+.artist-card__media--tony-lozano {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
+    url("img/tony-lozano.jpg");
+  background-position: center, 65% 30%;
+}
+.artist-card__media--jhonny-evidence {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
+    url("img/jhonny-evidence.jpg");
+  background-position: center, 45% 30%;
+}
+
+.artist-card__badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--blood);
+  z-index: 2;
+}
+
+.artist-card__info {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1rem 1.1rem 1.2rem;
+  z-index: 2;
+}
+
+.artist-card__name {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 2.4vw, 38px);
+  transition: color var(--transition-fast);
+}
+
+.artist-card:hover .artist-card__name {
+  color: var(--blood);
+}
+
+.artist-card__genre {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.artist-card__actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.artist-card:hover .artist-card__actions {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.artist-card__placeholder-watermark {
+  width: clamp(4rem, 35%, 7rem);
+  height: auto;
+  object-fit: contain;
+  opacity: 0.18;
+  filter: grayscale(0.2);
+}
+
+.artist-card__coming {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 2;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 0.35rem 0.55rem;
+  background: var(--blood);
+  color: var(--ink);
+}
+
+.artist-card__body {
+  display: none;
+}
+
+.release-channel__embed iframe,
+.spotify-embeds iframe {
+  height: 152px;
+  border-radius: 12px;
+}
+
+.spotify-embeds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.mini-player {
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0));
+}
+
+.mini-player__label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--blood);
+  width: 100%;
+  max-width: 120px;
+}
+
+.mini-player__embed {
+  flex: 1;
+  min-width: 200px;
+}
+
+.mini-player__embed iframe {
+  height: 80px;
+  border-radius: 8px;
+  border: 0;
+  width: 100%;
+}
+
+.mini-player__close {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--hairline);
+  background: transparent;
+  color: var(--cream);
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.derek {
+  color: var(--ink);
+  background: linear-gradient(165deg, #e8c08a 0%, var(--blood) 42%, #c9924f 100%);
+}
+
+.derek::before {
+  content: "DEREKVINCI";
+  font-style: italic;
+  font-size: clamp(7rem, 16vw, 200px);
+  opacity: 0.06;
+  color: var(--ink);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.derek .section__eyebrow,
+.derek .uppercase-label {
+  color: rgba(0, 0, 0, 0.62);
+  font-weight: 700;
+}
+
+.derek .section__title {
+  color: var(--ink);
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.derek .section__title .script-accent {
+  color: var(--accent-deep);
+}
+
+.derek__bio {
+  color: var(--ink);
+  font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+.derek__credits {
+  margin-top: 1.5rem;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  list-style: none;
+  line-height: 1.85;
+}
+
+.derek__credits li {
+  color: var(--ink);
+  font-size: clamp(0.875rem, 0.85rem + 0.15vw, 1rem);
+  font-weight: 500;
+}
+
+.derek__credits li::before {
+  content: "— ";
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.derek .btn-cta--outline {
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.06);
+  font-weight: 700;
+}
+
+.derek .btn-cta--outline:hover {
+  background: var(--ink);
+  color: var(--cream);
+  border-color: var(--ink);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.derek__cta {
+  margin-top: 2rem;
+  display: inline-flex;
+}
+
+.partners__layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem 4rem;
+  align-items: start;
+}
+
+.partners__label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blood);
+}
+
+.partners__names {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  line-height: 1.5;
+}
+
+.partners__names a {
+  color: var(--cream-dim);
+  filter: grayscale(1);
+  transition: color var(--transition-fast), filter var(--transition-fast);
+}
+
+.partners__names a:hover {
+  color: var(--blood);
+  filter: none;
+}
+
+.partners__sep {
+  font-style: italic;
+  margin: 0 0.35rem;
+  color: var(--ash);
+}
+
+.testimonial__mark {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  line-height: 0.5;
+  color: var(--blood);
+  margin-bottom: 0.75rem;
+}
+
+.contact__title .script-accent {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.form-submit {
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  background: var(--blood);
+  color: var(--ink);
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition-fast), letter-spacing var(--transition-fast);
+}
+
+.form-submit:hover {
+  background: var(--blood-dark);
+  letter-spacing: 0.18em;
+}
+
+.final-cta__email {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, 2.75rem);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.final-cta__email:hover {
+  border-bottom-color: var(--blood);
+}
+
+.final-cta__location {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+.mobile-action-bar--dual {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  height: auto;
+  min-height: 64px;
+}
+
+.mobile-action-bar--dual .btn-cta,
+.mobile-action-bar--dual .btn-cta--outline {
+  width: 100%;
+  text-align: center;
+  padding: 0.85rem 0.5rem;
+  font-size: 0.625rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--hairline);
+  color: var(--cream-dim);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.social-icon:hover {
+  border-color: var(--blood);
+  color: var(--blood);
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--hairline);
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+.mobile-drawer__link {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-style: italic;
+}
+
+body.drawer-open {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.reveal {
+  transform: translateY(40px);
+}
+
+@media (max-width: 1100px) {
+  .roster__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spotify-embeds {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-nav__links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .hero__meta {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .hero__meta-item--center,
+  .hero__meta-item--end {
+    text-align: left;
+    justify-content: flex-start;
+  }
+  .hero__grid,
+  .lanes__grid,
+  .releases__grid,
+  .derek__grid,
+  .contact__grid,
+  .partners__layout,
+  .roster__featured {
+    grid-template-columns: 1fr;
+  }
+  .mobile-action-bar--dual {
+    display: grid;
+  }
+  body:has(.mini-player.active) .mobile-action-bar--dual {
+    bottom: 72px;
+  }
+}
+
+@media (max-width: 700px) {
+  .roster__grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .hero__video {
+    display: none;
+    transform: none;
+  }
+  .hero__banner {
+    height: 12rem;
+    background: linear-gradient(145deg, var(--ink-2), var(--ink));
+  }
+  .hero__video-scrim {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="ticker" role="marquee" aria-label="EQS Música announcements">
+  <div class="ticker__track"><span class="ticker__item">CONNECTING BACHATA WORLDWIDE ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ #1 IN BACHATA MUSIC ✕ NOW BOOKING 2026 DATES</span><span class="ticker__item">CONNECTING BACHATA WORLDWIDE ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ #1 IN BACHATA MUSIC ✕ NOW BOOKING 2026 DATES</span><span class="ticker__item">CONNECTING BACHATA WORLDWIDE ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ #1 IN BACHATA MUSIC ✕ NOW BOOKING 2026 DATES</span><span class="ticker__item">CONNECTING BACHATA WORLDWIDE ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ #1 IN BACHATA MUSIC ✕ NOW BOOKING 2026 DATES</span></div>
+</div>
+
+<header class="site-header" id="top">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="#top" aria-label="EQS Música home">
+      <img class="site-header__logo-img" src="img/eqs-logo.png" alt="" width="44" height="44" decoding="async">
+      <span class="site-header__wordmark"><strong>EQS</strong><em data-en="Música" data-es="Música">Música</em></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="site-nav__links">
+        <a class="site-nav__link" href="#roster" data-en="ROSTER" data-es="ARTISTAS">ROSTER</a>
+        <a class="site-nav__link" href="#releases" data-en="RELEASES" data-es="LANZAMIENTOS">RELEASES</a>
+        <a class="site-nav__link" href="#derekvinci" data-en="DEREKVINCI" data-es="DEREKVINCI">DEREKVINCI</a>
+        <a class="site-nav__link" href="#bookings" data-en="BOOKINGS" data-es="RESERVAS">BOOKINGS</a>
+        <a class="site-nav__link" href="#journal" data-en="JOURNAL" data-es="DIARIO">JOURNAL</a>
+      </div>
+    </nav>
+    <div class="site-header__actions">
+      <div class="lang-toggle-group" role="group" aria-label="Language">
+        <button type="button" class="lang-toggle__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-toggle__btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn-cta btn-cta--cream" href="#contact" data-en="SUBMIT A DEMO →" data-es="ENVIAR DEMO →">SUBMIT A DEMO →</a>
+      <button type="button" class="hamburger" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <a class="mobile-drawer__link" href="#roster" data-en="ROSTER" data-es="ARTISTAS">ROSTER</a>
+  <a class="mobile-drawer__link" href="#releases" data-en="RELEASES" data-es="LANZAMIENTOS">RELEASES</a>
+  <a class="mobile-drawer__link" href="#derekvinci" data-en="DEREKVINCI" data-es="DEREKVINCI">DEREKVINCI</a>
+  <a class="mobile-drawer__link" href="#bookings" data-en="BOOKINGS" data-es="RESERVAS">BOOKINGS</a>
+  <a class="mobile-drawer__link" href="#journal" data-en="JOURNAL" data-es="DIARIO">JOURNAL</a>
+  <div class="mobile-drawer__actions">
+    <div class="lang-toggle-group" role="group" aria-label="Language">
+      <button type="button" class="lang-toggle__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang-toggle__btn" data-lang="es" aria-pressed="false">ES</button>
+    </div>
+    <a class="btn-cta btn-cta--cream" href="#contact" data-en="SUBMIT A DEMO →" data-es="ENVIAR DEMO →">SUBMIT A DEMO →</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero section reveal" aria-labelledby="hero-heading">
+    <div class="hero__banner" aria-hidden="true">
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="img/eqs-logo-square.png">
+        <source src="video/banner.mp4" type="video/mp4">
+      </video>
+      <div class="hero__video-scrim"></div>
+    </div>
+    <div class="container hero__content">
+      <div class="hero__meta" aria-label="Label information">
+        <span class="hero__meta-item">EQS MÚSICA</span>
+        <span class="hero__meta-item hero__meta-item--center">ORLANDO, FL</span>
+        <span class="hero__meta-item hero__meta-item--end"><span class="pulse-dot" aria-hidden="true"></span> <span data-en="NOW BOOKING" data-es="RESERVAS ABIERTAS">NOW BOOKING</span></span>
+      </div>
+      <h1 id="hero-heading" class="hero__headline hero__headline--editorial">
+        <span class="hero__line" data-en="Bachata's" data-es="Las">Bachata's</span>
+        <span class="hero__script script-accent" data-en="Leading" data-es="Voces">Leading</span>
+        <span class="hero__line hero__line--right" data-en="Voices." data-es="Líderes.">Voices.</span>
+      </h1>
+      <div class="hero__grid">
+        <p class="hero__statement" data-en="Three decades defining &lt;em&gt;el sonido&lt;/em&gt; — from Orlando studios to stages across 25+ countries." data-es="Tres décadas definiendo &lt;em&gt;el sonido&lt;/em&gt; — de los estudios de Orlando a escenarios en más de 25 países.">Three decades defining <em>el sonido</em> — from Orlando studios to stages across 25+ countries.</p>
+        <p class="hero__byline" data-en="A label. A studio. A movement. — EST. 1998" data-es="Un sello. Un estudio. Un movimiento. — EST. 1998">A label. A studio. A movement. — EST. 1998</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lanes section reveal" id="services" aria-labelledby="lanes-heading">
+    <div class="container">
+      <h2 id="lanes-heading" class="visually-hidden">EQS Services</h2>
+      <div class="lanes__grid">
+        <article class="lane" id="record-label">
+          <span class="lane__number">01</span>
+          <h3 class="lane__title" data-en="Record Label" data-es="Sello Discográfico">Record Label</h3>
+          <p class="lane__text" data-en="Home of eight genre-defining artists — from Mr. Don's 20M+ streams to the next wave of bachata talent." data-es="Hogar de ocho artistas que definen el género — desde los 20M+ de Mr. Don hasta la nueva ola del talento bachatero.">Home of eight genre-defining artists — from Mr. Don's 20M+ streams to the next wave of bachata talent.</p>
+          <a class="lane__cta" href="#roster" data-en="Explore roster →" data-es="Ver artistas →">Explore roster →</a>
+        </article>
+        <article class="lane" id="production">
+          <span class="lane__number">02</span>
+          <h3 class="lane__title" data-en="Production" data-es="Producción">Production</h3>
+          <p class="lane__text" data-en="State-of-the-art studio sessions, mixing, mastering, and arrangements by DerekVinci since '98." data-es="Sesiones de estudio, mezcla, masterización y arreglos de última generación por DerekVinci desde el '98.">State-of-the-art studio sessions, mixing, mastering, and arrangements by DerekVinci since '98.</p>
+          <a class="lane__cta" href="#derekvinci" data-en="Meet the architect →" data-es="Conoce al arquitecto →">Meet the architect →</a>
+        </article>
+        <article class="lane" id="bookings">
+          <span class="lane__number">03</span>
+          <h3 class="lane__title" data-en="Bookings" data-es="Reservas">Bookings</h3>
+          <p class="lane__text" data-en="Direct booking for festivals, private events, and international tours — 25+ countries and counting." data-es="Reservas directas para festivales, eventos privados y giras internacionales — más de 25 países y contando.">Direct booking for festivals, private events, and international tours — 25+ countries and counting.</p>
+          <a class="lane__cta" href="#contact" data-en="Book now →" data-es="Reservar ahora →">Book now →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats section reveal" aria-label="Statistics">
+    <div class="container">
+      <ul class="stats__grid">
+        <li class="stat reveal-delay-1">
+          <span class="stat__value">8</span>
+          <span class="stat__label" data-en="Artists on Roster" data-es="Artistas en Roster">Artists on Roster</span>
+          <span class="stat__note" data-en="Mr. Don · J Salez · Johandy +5" data-es="Mr. Don · J Salez · Johandy +5">Mr. Don · J Salez · Johandy +5</span>
+        </li>
+        <li class="stat reveal-delay-2">
+          <span class="stat__value">60M<span class="gold">+</span></span>
+          <span class="stat__label" data-en="Combined Streams" data-es="Reproducciones Combinadas">Combined Streams</span>
+          <span class="stat__note" data-en="Across all roster artists" data-es="En todo el roster">Across all roster artists</span>
+        </li>
+        <li class="stat reveal-delay-3">
+          <span class="stat__value">25<span class="gold">+</span></span>
+          <span class="stat__label" data-en="Countries Toured" data-es="Países en Gira">Countries Toured</span>
+          <span class="stat__note" data-en="Americas · Europe · Asia" data-es="América · Europa · Asia">Americas · Europe · Asia</span>
+        </li>
+        <li class="stat">
+          <span class="stat__value">1998</span>
+          <span class="stat__label" data-en="Year Founded" data-es="Año de Fundación">Year Founded</span>
+          <span class="stat__note" data-en="Orlando, Florida" data-es="Orlando, Florida">Orlando, Florida</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="roster section reveal" id="roster" aria-labelledby="roster-heading">
+    <div class="container">
+      <p class="section__eyebrow uppercase-label" data-en="The Roster" data-es="El Roster">The Roster</p>
+      <h2 id="roster-heading" class="section__title" data-en="Bachata's defining voices." data-es="Las voces que definen la bachata.">Bachata's defining voices.</h2>
+      <div class="roster__featured">
+        <div class="roster__featured-visual roster__featured-visual--mr-don">
+          <span class="roster__featured-overlay-name" aria-hidden="true">Mr. Don</span>
+        </div>
+        <div class="roster__featured-copy">
+          <p class="roster__featured-tag" data-en="01 — FEATURED ARTIST" data-es="01 — ARTISTA DESTACADO">01 — FEATURED ARTIST</p>
+          <h3 class="roster__featured-title">Mr. <span class="script-accent">Don</span></h3>
+          <p class="roster__featured-bio" data-en="Chilean bachata powerhouse and EQS flagship artist — festival headliner, multi-platinum streams, and the sound that moved bachata onto global stages." data-es="Potencia bachatera chilena y artista insignia de EQS — headliner de festivales, streams multi-platino y el sonido que llevó la bachata a escenarios globales.">Chilean bachata powerhouse and EQS flagship artist — festival headliner, multi-platinum streams, and the sound that moved bachata onto global stages.</p>
+          <div class="roster__featured-stats">
+            <div><span>20M+</span><small data-en="Streams" data-es="Streams">Streams</small></div>
+            <div><span>4</span><small data-en="Albums" data-es="Álbumes">Albums</small></div>
+            <div><span>15</span><small data-en="Countries" data-es="Países">Countries</small></div>
+          </div>
+          <p><a class="link-gold" href="https://open.spotify.com/artist/12YP3RGVLp3c36Zi6lFRtR" target="_blank" rel="noopener noreferrer" data-en="Listen on Spotify" data-es="Escuchar en Spotify">Listen on Spotify</a></p>
+          <a class="btn-cta btn-cta--outline" href="#contact" style="margin-top:1rem;display:inline-flex" data-en="Book Now" data-es="Reservar Ahora">Book Now</a>
+        </div>
+      </div>
+      <div class="roster__grid"><article class="artist-card reveal">
+      <div class="artist-card__media artist-card__media--j-salez" role="img" aria-label="J Salez"></div>
+      <span class="artist-card__badge">02</span>
+      <div class="artist-card__info">
+        <h3 class="artist-card__name">J Salez</h3>
+        <p class="artist-card__genre">Bachata · R&amp;B Fusion</p>
+        <div class="artist-card__actions">
+          <a class="btn-cta" href="#releases" data-en="Listen" data-es="Escuchar">Listen</a>
+          <a class="btn-cta btn-cta--outline" href="#contact" data-en="Book" data-es="Reservar">Book</a>
+        </div>
+      </div>
+    </article><article class="artist-card reveal">
+      <div class="artist-card__media artist-card__placeholder">
+          <img class="artist-card__placeholder-watermark" src="img/eqs-logo.png" alt="" aria-hidden="true" width="120" height="84">
+          <span class="artist-card__coming" data-en="COMING SOON" data-es="PRÓXIMAMENTE">COMING SOON</span>
+        </div>
+      <span class="artist-card__badge">03</span>
+      <div class="artist-card__info">
+        <h3 class="artist-card__name">DJ Khalid</h3>
+        <p class="artist-card__genre">DJ · Producer</p>
+        <div class="artist-card__actions">
+          <a class="btn-cta" href="#releases" data-en="Listen" data-es="Escuchar">Listen</a>
+          <a class="btn-cta btn-cta--outline" href="#contact" data-en="Book" data-es="Reservar">Book</a>
+        </div>
+      </div>
+    </article><article class="artist-card reveal">
+      <div class="artist-card__media artist-card__media--johandy" role="img" aria-label="Johandy"></div>
+      <span class="artist-card__badge">04</span>
+      <div class="artist-card__info">
+        <h3 class="artist-card__name">Johandy</h3>
+        <p class="artist-card__genre">Bachata Romántica</p>
+        <div class="artist-card__actions">
+          <a class="btn-cta" href="#releases" data-en="Listen" data-es="Escuchar">Listen</a>
+          <a class="btn-cta btn-cta--outline" href="#contact" data-en="Book" data-es="Reservar">Book</a>
+        </div>
+      </div>
+    </article><article class="artist-card reveal">
+      <div class="artist-card__media artist-card__media--vinny-rivera" role="img" aria-label="Vinny Rivera"></div>
+      <span class="artist-card__badge">05</span>
+      <div class="artist-card__info">
+        <h3 class="artist-card__name">Vinny Rivera</h3>
+        <p class="artist-card__genre">Bachata · Tropical</p>
+        <div class="artist-card__actions">
+          <a class="btn-cta" href="#releases" data-en="Listen" data-es="Escuchar">Listen</a>
+          <a class="btn-cta btn-cta--outline" href="#contact" data-en="Book" data-es="Reservar">Book</a>
+        </div>
+      </div>
+    </article><article class="artist-card reveal">
+      <div class="artist-card__media artist-card__media--tony-lozano" role="img" aria-label="Tony Lozano"></div>
+      <span class="artist-card__badge">06</span>
+      <div class="artist-card__info">
+        <h3 class="artist-card__name">Tony Lozano</h3>
+        <p class="artist-card__genre">Bachata Moderna</p>
+        <div class="artist-card__actions">
+          <a class="btn-cta" href="#releases" data-en="Listen" data-es="Escuchar">Listen</a>
+          <a class="btn-cta btn-cta--outline" href="#contact" data-en="Book" data-es="Reservar">Book</a>
+        </div>
+      </div>
+    </article><article class="artist-card reveal">
+      <div class="artist-card__media artist-card__media--jhonny-evidence" role="img" aria-label="Jhonny Evidence"></div>
+      <span class="artist-card__badge">07</span>
+      <div class="artist-card__info">
+        <h3 class="artist-card__name">Jhonny Evidence</h3>
+        <p class="artist-card__genre">Bachata Urbana</p>
+        <div class="artist-card__actions">
+          <a class="btn-cta" href="#releases" data-en="Listen" data-es="Escuchar">Listen</a>
+          <a class="btn-cta btn-cta--outline" href="#contact" data-en="Book" data-es="Reservar">Book</a>
+        </div>
+      </div>
+    </article><article class="artist-card reveal">
+      <div class="artist-card__media artist-card__placeholder">
+          <img class="artist-card__placeholder-watermark" src="img/eqs-logo.png" alt="" aria-hidden="true" width="120" height="84">
+          <span class="artist-card__coming" data-en="COMING SOON" data-es="PRÓXIMAMENTE">COMING SOON</span>
+        </div>
+      <span class="artist-card__badge">08</span>
+      <div class="artist-card__info">
+        <h3 class="artist-card__name">DJ Taga'Da</h3>
+        <p class="artist-card__genre">DJ · Remixer</p>
+        <div class="artist-card__actions">
+          <a class="btn-cta" href="#releases" data-en="Listen" data-es="Escuchar">Listen</a>
+          <a class="btn-cta btn-cta--outline" href="#contact" data-en="Book" data-es="Reservar">Book</a>
+        </div>
+      </div>
+    </article><article class="artist-card reveal">
+      <div class="artist-card__media artist-card__placeholder">
+          <img class="artist-card__placeholder-watermark" src="img/eqs-logo.png" alt="" aria-hidden="true" width="120" height="84">
+          <span class="artist-card__coming" data-en="COMING SOON" data-es="PRÓXIMAMENTE">COMING SOON</span>
+        </div>
+      <span class="artist-card__badge">09</span>
+      <div class="artist-card__info">
+        <h3 class="artist-card__name">Ronny Mercedes</h3>
+        <p class="artist-card__genre">Bachata · Songwriter</p>
+        <div class="artist-card__actions">
+          <a class="btn-cta" href="#releases" data-en="Listen" data-es="Escuchar">Listen</a>
+          <a class="btn-cta btn-cta--outline" href="#contact" data-en="Book" data-es="Reservar">Book</a>
+        </div>
+      </div>
+    </article></div>
+    </div>
+  </section>
+
+  <section class="releases section reveal" id="releases" aria-labelledby="releases-heading">
+    <div class="container">
+      <p class="section__eyebrow uppercase-label" data-en="Catalog" data-es="Catálogo">Catalog</p>
+      <h2 id="releases-heading" class="section__title" data-en="Releases &amp; visual stories." data-es="Lanzamientos e historias visuales.">Releases &amp; visual stories.</h2>
+      <div class="releases__grid">
+        <article class="release-channel">
+          <h3 class="release-channel__title" data-en="The EQS Catalog" data-es="El Catálogo EQS">The EQS Catalog</h3>
+          <p class="section__lead" data-en="Stream the full EQS roster — new singles, albums, and curated playlists updated weekly." data-es="Escucha todo el roster EQS — sencillos, álbumes y playlists curadas actualizadas cada semana.">Stream the full EQS roster — new singles, albums, and curated playlists updated weekly.</p>
+          <a class="lane__cta" href="https://open.spotify.com/artist/12YP3RGVLp3c36Zi6lFRtR" target="_blank" rel="noopener noreferrer" data-en="Open on Spotify →" data-es="Abrir en Spotify →">Open on Spotify →</a>
+        </article>
+        <article class="release-channel">
+          <h3 class="release-channel__title" data-en="Visual Stories" data-es="Historias Visuales">Visual Stories</h3>
+          <p class="section__lead" data-en="Official music videos, live sessions, and behind-the-scenes from Orlando to the world." data-es="Videos oficiales, sesiones en vivo y detrás de cámaras de Orlando al mundo.">Official music videos, live sessions, and behind-the-scenes from Orlando to the world.</p>
+          <a class="lane__cta" href="https://www.youtube.com/@eqsmusica" target="_blank" rel="noopener noreferrer" data-en="Watch on YouTube →" data-es="Ver en YouTube →">Watch on YouTube →</a>
+        </article>
+      </div>
+      <div class="spotify-embeds" id="spotify-section">
+        <iframe title="Mr. Don on Spotify" src="https://open.spotify.com/embed/artist/12YP3RGVLp3c36Zi6lFRtR?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="Bachata playlist on Spotify" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7aO8vX7i9i0?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="derek section reveal" id="derekvinci" aria-labelledby="derek-heading">
+    <div class="container">
+      <div class="derek__grid">
+        <div>
+          <p class="section__eyebrow uppercase-label" data-en="The Architect" data-es="El Arquitecto">The Architect</p>
+          <h2 id="derek-heading" class="section__title">Derek<span class="script-accent">Vinci</span></h2>
+          <p class="uppercase-label" data-en="Founder · Audio Engineer · Visionary" data-es="Fundador · Ingeniero de Audio · Visionario">Founder · Audio Engineer · Visionary</p>
+          <ul class="derek__credits">
+            <li data-en="Mixed for: Mr. Don, J Salez, Johandy" data-es="Mezclado para: Mr. Don, J Salez, Johandy">Mixed for: Mr. Don, J Salez, Johandy</li>
+            <li data-en="Produced: Vinny Rivera, Tony Lozano, Jhonny Evidence" data-es="Producido: Vinny Rivera, Tony Lozano, Jhonny Evidence">Produced: Vinny Rivera, Tony Lozano, Jhonny Evidence</li>
+            <li data-en="A&amp;R · Studio · Bookings — Orlando since 1998" data-es="A&amp;R · Estudio · Reservas — Orlando desde 1998">A&amp;R · Studio · Bookings — Orlando since 1998</li>
+          </ul>
+        </div>
+        <div class="derek__bio">
+          <p data-en="For more than 25 years, DerekVinci has been the ear behind EQS Música — engineering records, developing artists, and building the infrastructure that took bachata from Orlando studios to international festivals." data-es="Por más de 25 años, DerekVinci ha sido el oído detrás de EQS Música — ingeniería de discos, desarrollo de artistas y la infraestructura que llevó la bachata de los estudios de Orlando a festivales internacionales.">For more than 25 years, DerekVinci has been the ear behind EQS Música — engineering records, developing artists, and building the infrastructure that took bachata from Orlando studios to international festivals.</p>
+          <a class="btn-cta btn-cta--outline derek__cta" href="mailto:DEREKVINCI@EQSMUSICA.COM" data-en="Explore DerekVinci →" data-es="Explorar DerekVinci →">Explore DerekVinci →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners section reveal" aria-labelledby="partners-heading">
+    <div class="container partners__layout">
+      <p id="partners-heading" class="partners__label" data-en="Trusted By" data-es="Confían en Nosotros">Trusted By</p>
+      <p class="partners__names"><a href="https://www.universallatino.com/" target="_blank" rel="noopener noreferrer">Universal Latino</a><span class="partners__sep" aria-hidden="true"> · </span><a href="https://www.sonymusiclatin.com/" target="_blank" rel="noopener noreferrer">Sony Music Latin</a><span class="partners__sep" aria-hidden="true"> · </span><a href="https://artists.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify for Artists</a><span class="partners__sep" aria-hidden="true"> · </span><a href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a><span class="partners__sep" aria-hidden="true"> · </span><a href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a><span class="partners__sep" aria-hidden="true"> · </span><a href="https://music.amazon.com/" target="_blank" rel="noopener noreferrer">Amazon Music</a><span class="partners__sep" aria-hidden="true"> · </span><a href="https://www.deezer.com/" target="_blank" rel="noopener noreferrer">Deezer</a><span class="partners__sep" aria-hidden="true"> · </span><a href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer">SoundCloud</a><span class="partners__sep" aria-hidden="true"> · </span><a href="https://bnmusic.com/" target="_blank" rel="noopener noreferrer">BN Music</a><span class="partners__sep" aria-hidden="true"> · </span><a href="https://www.vevo.com/" target="_blank" rel="noopener noreferrer">Vevo</a></p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="journal" aria-labelledby="journal-heading">
+    <div class="container">
+      <p class="section__eyebrow uppercase-label" data-en="Social Proof" data-es="Testimonios">Social Proof</p>
+      <h2 id="journal-heading" class="section__title" data-en="Voices from the industry." data-es="Voces de la industria.">Voices from the industry.</h2>
+      <div class="testimonials__grid">
+        <blockquote class="testimonial reveal-delay-1">
+          <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial__quote" data-en="EQS changed the game for bachata in the U.S. — their production quality rivals any major label." data-es="EQS cambió el juego de la bachata en EE.UU. — su calidad de producción rivaliza con cualquier gran sello.">EQS changed the game for bachata in the U.S. — their production quality rivals any major label.</p>
+          <footer><p class="testimonial__author" data-en="Producer, BN Music" data-es="Productor, BN Music">Producer, BN Music</p></footer>
+        </blockquote>
+        <blockquote class="testimonial reveal-delay-2">
+          <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial__quote" data-en="From studio to stage, DerekVinci's ear is unmatched. Every mix is a masterpiece." data-es="Del estudio al escenario, el oído de DerekVinci no tiene igual. Cada mezcla es una obra maestra.">From studio to stage, DerekVinci's ear is unmatched. Every mix is a masterpiece.</p>
+          <footer><p class="testimonial__author" data-en="A&amp;R Executive, Latin Division" data-es="Ejecutivo A&amp;R, División Latina">A&amp;R Executive, Latin Division</p></footer>
+        </blockquote>
+        <blockquote class="testimonial reveal-delay-3">
+          <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
+          <p class="testimonial__quote" data-en="The roster speaks for itself — eight artists, sixty million streams, and they're just getting started." data-es="El roster habla por sí solo — ocho artistas, sesenta millones de streams, y apenas comienzan.">The roster speaks for itself — eight artists, sixty million streams, and they're just getting started.</p>
+          <footer><p class="testimonial__author" data-en="Music Journalist, Orlando Sentinel" data-es="Periodista Musical, Orlando Sentinel">Music Journalist, Orlando Sentinel</p></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section reveal" id="contact" aria-labelledby="contact-heading">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <h2 id="contact-heading" class="contact__title section__title">Let's <span class="script-accent" data-en="Connect" data-es="Conectar">Connect</span></h2>
+        <p class="section__lead" data-en="Demos, bookings, press, and collaborations — our team responds within 48 hours." data-es="Demos, reservas, prensa y colaboraciones — nuestro equipo responde en 48 horas.">Demos, bookings, press, and collaborations — our team responds within 48 hours.</p>
+        <p class="contact__detail"><a href="mailto:DEREKVINCI@EQSMUSICA.COM">DEREKVINCI@EQSMUSICA.COM</a></p>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name" data-en="First Name" data-es="Nombre">First Name</label>
+            <input id="first-name" name="first_name" type="text" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="last-name" data-en="Last Name" data-es="Apellido">Last Name</label>
+            <input id="last-name" name="last_name" type="text" required autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" data-en="Email" data-es="Correo">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="inquiry" data-en="Inquiry Type" data-es="Tipo de Consulta">Inquiry Type</label>
+          <select id="inquiry" name="inquiry" required>
+            <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
+            <option value="booking" data-en="Booking" data-es="Reserva">Booking</option>
+            <option value="demo" data-en="Demo Submission" data-es="Envío de Demo">Demo Submission</option>
+            <option value="press" data-en="Press" data-es="Prensa">Press</option>
+            <option value="collaboration" data-en="Collaboration" data-es="Colaboración">Collaboration</option>
+            <option value="general" data-en="General" data-es="General">General</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message" data-en="Message" data-es="Mensaje">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button class="form-submit" type="submit" data-en="SEND INQUIRY →" data-es="ENVIAR CONSULTA →">SEND INQUIRY →</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="final-cta section reveal" aria-labelledby="final-cta-heading">
+    <div class="container">
+      <h2 id="final-cta-heading" class="final-cta__title">Your Sound. <span class="script-accent" data-en="Our Stage." data-es="Nuestro Escenario.">Our Stage.</span></h2>
+      <a class="final-cta__email" href="mailto:DEREKVINCI@EQSMUSICA.COM">DEREKVINCI@EQSMUSICA.COM</a>
+      <p class="final-cta__location" data-en="Orlando, FL — Since 1998" data-es="Orlando, FL — Desde 1998">Orlando, FL — Since 1998</p>
+    </div>
+  </section>
+</main>
+
+<aside class="mini-player" aria-label="Now playing">
+  <span class="mini-player__label" data-en="NOW PLAYING" data-es="REPRODUCIENDO">NOW PLAYING</span>
+  <div class="mini-player__embed">
+    <iframe title="EQS Spotify mini player" src="https://open.spotify.com/embed/artist/12YP3RGVLp3c36Zi6lFRtR?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+  <button type="button" class="mini-player__close" aria-label="Close player">×</button>
+</aside>
+
+<nav class="mobile-action-bar mobile-action-bar--dual" aria-label="Quick actions">
+  <a class="btn-cta" href="#contact" data-en="SUBMIT DEMO" data-es="ENVIAR DEMO">SUBMIT DEMO</a>
+  <a class="btn-cta btn-cta--outline" href="#contact" data-en="BOOK ARTIST" data-es="RESERVAR ARTISTA">BOOK ARTIST</a>
+</nav>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div class="footer-col">
+        <a class="site-header__logo" href="#top">
+          <img class="site-header__logo-img" src="img/eqs-logo.png" alt="" width="52" height="52" decoding="async">
+          <span class="site-header__wordmark"><strong>EQS</strong><em>Música</em></span>
+        </a>
+        <p class="section__lead" style="margin-top:1rem" data-en="#1 bachata record label worldwide — connecting artists, production, and bookings since 1998." data-es="El sello bachatero #1 del mundo — conectando artistas, producción y reservas desde 1998.">#1 bachata record label worldwide — connecting artists, production, and bookings since 1998.</p>
+        <div style="display:flex;gap:0.5rem;margin-top:1.25rem;flex-wrap:wrap">
+          <a class="social-icon" href="https://open.spotify.com/artist/12YP3RGVLp3c36Zi6lFRtR" aria-label="Spotify" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02z"/></svg></a>
+          <a class="social-icon" href="https://www.youtube.com/@eqsmusica" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a class="social-icon" href="https://www.instagram.com/eqsmusica" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a class="social-icon" href="https://www.facebook.com/eqsmusica" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a class="social-icon" href="https://soundcloud.com" aria-label="SoundCloud" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.255-2.154c-.009-.06-.049-.1-.099-.1zm1.49 1.57c-.06 0-.111.053-.119.119l-.207 1.584.207 1.527c.008.066.059.119.119.119.055 0 .102-.053.11-.119l.24-1.527-.24-1.584c-.008-.066-.055-.119-.11-.119zm1.52-.88c-.075 0-.135.067-.143.148l-.19 2.464.19 2.375c.008.081.068.148.143.148.07 0 .13-.067.138-.148l.216-2.375-.216-2.464c-.008-.081-.068-.148-.138-.148zm1.537-.44c-.09 0-.162.08-.17.178l-.178 2.904.178 2.793c.008.098.08.178.17.178.085 0 .157-.08.165-.178l.202-2.793-.202-2.904c-.008-.098-.08-.178-.165-.178zm1.55-.22c-.105 0-.19.093-.198.207l-.165 3.124.165 3.007c.008.114.093.207.198.207.1 0 .185-.093.193-.207l.188-3.007-.188-3.124c-.008-.114-.093-.207-.193-.207zm1.565-.11c-.12 0-.217.107-.225.238l-.152 3.234.152 3.11c.008.131.105.238.225.238.115 0 .212-.107.22-.238l.173-3.11-.173-3.234c-.008-.131-.105-.238-.22-.238zm1.58 0c-.13 0-.235.116-.243.26l-.14 3.234.14 3.096c.008.144.113.26.243.26.125 0 .23-.116.238-.26l.158-3.096-.158-3.234c-.008-.144-.113-.26-.238-.26zm1.595.11c-.14 0-.253.125-.261.282l-.125 3.124.125 2.98c.008.157.121.282.261.282.135 0 .248-.125.256-.282l.143-2.98-.143-3.124c-.008-.157-.121-.282-.256-.282zm1.61.33c-.155 0-.28.139-.288.314l-.11 2.794.11 2.66c.008.175.133.314.288.314.15 0 .275-.139.283-.314l.128-2.66-.128-2.794c-.008-.175-.133-.314-.283-.314zm1.625.55c-.165 0-.298.148-.306.335l-.095 2.244.095 2.13c.008.187.141.335.306.335.16 0 .293-.148.301-.335l.113-2.13-.113-2.244c-.008-.187-.141-.335-.301-.335zm1.64.77c-.18 0-.325.161-.333.363l-.08 1.474.08 1.39c.008.202.153.363.333.363.175 0 .32-.161.328-.363l.098-1.39-.098-1.474c-.008-.202-.153-.363-.328-.363zm1.655 1.1c-.195 0-.353.175-.361.393l-.065.374.065.35c.008.218.166.393.361.393.19 0 .348-.175.356-.393l.083-.35-.083-.374c-.008-.218-.166-.393-.356-.393zm3.005-2.2c-.22 0-.398.197-.406.442v8.316c.008.245.186.442.406.442h8.316c.22 0 .398-.197.406-.442V12.5c-.008-.245-.186-.442-.406-.442h-8.316z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title" data-en="Navigation" data-es="Navegación">Navigation</h3>
+        <ul class="footer-col__links">
+          <li><a class="footer-col__link" href="#roster" data-en="Roster" data-es="Artistas">Roster</a></li>
+          <li><a class="footer-col__link" href="#releases" data-en="Releases" data-es="Lanzamientos">Releases</a></li>
+          <li><a class="footer-col__link" href="#derekvinci" data-en="DerekVinci" data-es="DerekVinci">DerekVinci</a></li>
+          <li><a class="footer-col__link" href="#bookings" data-en="Bookings" data-es="Reservas">Bookings</a></li>
+          <li><a class="footer-col__link" href="#journal" data-en="Journal" data-es="Diario">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title" data-en="Artists" data-es="Artistas">Artists</h3>
+        <ul class="footer-col__links">
+          <li><a class="footer-col__link" href="#roster">Mr. Don</a></li>
+          <li><a class="footer-col__link" href="#roster">J Salez</a></li>
+          <li><a class="footer-col__link" href="#roster">Johandy</a></li>
+          <li><a class="footer-col__link" href="#roster">Vinny Rivera</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col__title" data-en="Contact" data-es="Contacto">Contact</h3>
+        <ul class="footer-col__links">
+          <li><a class="footer-col__link" href="mailto:DEREKVINCI@EQSMUSICA.COM">DEREKVINCI@EQSMUSICA.COM</a></li>
+          <li><span class="footer-col__link">Orlando, FL</span></li>
+          <li><a class="footer-col__link" href="#contact" data-en="Submit Demo" data-es="Enviar Demo">Submit Demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span data-en="© 2025 EQS MUSIC MANAGEMENT LLC" data-es="© 2025 EQS MUSIC MANAGEMENT LLC">© 2025 EQS MUSIC MANAGEMENT LLC</span>
+      <span data-en="DESIGNED WITH SOUL IN ORLANDO, FL" data-es="DISEÑADO CON ALMA EN ORLANDO, FL">DESIGNED WITH SOUL IN ORLANDO, FL</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Hero banner video */
+  const heroVideo = document.querySelector('.hero__video');
+  if (heroVideo) {
+    if (REDUCED) {
+      heroVideo.pause();
+      heroVideo.removeAttribute('autoplay');
+    } else {
+      heroVideo.play().catch(() => {});
+    }
+  }
+
+  /* Scroll reveal */
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    const revealObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
+    revealEls.forEach((el) => revealObs.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('visible'));
+  }
+
+  /* Mobile drawer */
+  const hamburger = document.querySelector('.hamburger');
+  const drawer = document.querySelector('.mobile-drawer');
+  const drawerLinks = drawer ? drawer.querySelectorAll('a') : [];
+  const focusableSel =
+    'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+
+  function trapFocus(container) {
+    const nodes = [...container.querySelectorAll(focusableSel)].filter(
+      (n) => n.offsetParent !== null || n === document.activeElement
+    );
+    if (!nodes.length) return () => {};
+    const first = nodes[0];
+    const last = nodes[nodes.length - 1];
+    function onKey(e) {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+    container.addEventListener('keydown', onKey);
+    first.focus();
+    return () => container.removeEventListener('keydown', onKey);
+  }
+
+  let releaseTrap = null;
+
+  function setDrawerOpen(open) {
+    if (!drawer || !hamburger) return;
+    drawer.classList.toggle('open', open);
+    drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.classList.toggle('drawer-open', open);
+    if (open) {
+      releaseTrap = trapFocus(drawer);
+    } else if (releaseTrap) {
+      releaseTrap();
+      releaseTrap = null;
+      hamburger.focus();
+    }
+  }
+
+  if (hamburger && drawer) {
+    hamburger.addEventListener('click', () => setDrawerOpen(!drawer.classList.contains('open')));
+    drawerLinks.forEach((link) => link.addEventListener('click', () => setDrawerOpen(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) setDrawerOpen(false);
+    });
+  }
+
+  /* Language toggle */
+  const LANG_KEY = 'eqs-lang';
+  const langBtns = document.querySelectorAll('.lang-toggle__btn[data-lang]');
+
+  function applyLang(lang) {
+    const isEs = lang === 'es';
+    document.documentElement.lang = isEs ? 'es' : 'en';
+    document.body.classList.toggle('lang-es', isEs);
+    document.querySelectorAll('[data-en][data-es]').forEach((el) => {
+      const text = isEs ? el.getAttribute('data-es') : el.getAttribute('data-en');
+      if (text != null) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = text;
+        } else if (el.tagName === 'OPTION') {
+          el.textContent = text;
+        } else {
+          el.innerHTML = text;
+        }
+      }
+    });
+    langBtns.forEach((btn) => {
+      const active = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    try {
+      localStorage.setItem(LANG_KEY, lang);
+    } catch (_) {}
+  }
+
+  langBtns.forEach((btn) => {
+    btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
+  });
+
+  const savedLang = (() => {
+    try {
+      return localStorage.getItem(LANG_KEY);
+    } catch (_) {
+      return null;
+    }
+  })();
+  if (savedLang === 'es' || savedLang === 'en') applyLang(savedLang);
+
+  /* Mini player */
+  const miniPlayer = document.querySelector('.mini-player');
+  const spotifySection = document.getElementById('spotify-section');
+  const miniClose = document.querySelector('.mini-player__close');
+
+  if (miniPlayer && spotifySection && 'IntersectionObserver' in window) {
+    let dismissed = false;
+    const playerObs = new IntersectionObserver(
+      ([entry]) => {
+        if (dismissed) return;
+        if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+          miniPlayer.classList.add('active');
+        }
+      },
+      { threshold: 0, rootMargin: '0px' }
+    );
+    playerObs.observe(spotifySection);
+    if (miniClose) {
+      miniClose.addEventListener('click', () => {
+        dismissed = true;
+        miniPlayer.classList.remove('active');
+      });
+    }
+  } else if (miniClose && miniPlayer) {
+    miniClose.addEventListener('click', () => miniPlayer.classList.remove('active'));
+  }
+
+  /* Smooth scroll */
+  if (!REDUCED) {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', (e) => {
+        const id = anchor.getAttribute('href');
+        if (!id || id === '#') return;
+        const target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (drawer && drawer.classList.contains('open')) setDrawerOpen(false);
+      });
+    });
+  }
+
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
+
+</script>
+</body>
+</html>
