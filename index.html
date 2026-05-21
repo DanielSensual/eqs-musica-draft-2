@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EQS MÚSICA — Connecting Bachata Worldwide | Record Label, Production &amp; Bookings</title>
-  <meta name="description" content="EQS Música — the #1 bachata record label worldwide. Orlando-based since 1998. Record label, production, and bookings by DerekVinci.">
+  <title>EQS MÚSICA — #1 in Tropical Music | Record Label, Production &amp; Bookings</title>
+  <meta name="description" content="EQS Música — #1 in tropical music. Orlando-based since 1998. Record label, production, and bookings by DerekVinci.">
   <link rel="canonical" href="https://www.eqsmusica.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.eqsmusica.com/">
-  <meta property="og:title" content="EQS MÚSICA — Connecting Bachata Worldwide">
-  <meta property="og:description" content="Orlando's premier bachata record label since 1998. Artists, production, and international bookings.">
+  <meta property="og:title" content="EQS MÚSICA — #1 in Tropical Music">
+  <meta property="og:description" content="Orlando's premier tropical music label since 1998. Artists, production, and international bookings.">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EQS MÚSICA — Connecting Bachata Worldwide">
-  <meta name="twitter:description" content="Orlando's premier bachata record label since 1998.">
+  <meta name="twitter:title" content="EQS MÚSICA — #1 in Tropical Music">
+  <meta name="twitter:description" content="Orlando's premier tropical music label since 1998.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" href="img/eqs-logo-square.png" type="image/png">
   <link rel="apple-touch-icon" href="img/eqs-logo-square.png">
   <meta property="og:image" content="https://www.eqsmusica.com/img/eqs-logo-square.png">
@@ -37,7 +37,7 @@
       {
         "@type": "MusicGroup",
         "name": "EQS Música",
-        "genre": "Bachata",
+        "genre": "Tropical Music",
         "foundingLocation": "Orlando, FL"
       }
     ]
@@ -47,19 +47,21 @@
 /* EQS Música — Single-page styles */
 
 :root {
-  --ink: #000;
-  --ink-2: #1A1C17;
-  --cream: #E8E0D4;
-  --cream-dim: #A69E93;
-  --ash: #8A8178;
-  --blood: #E6AE6D;
-  --blood-dark: #C48B4A;
+  --ink: #000000;
+  --ink-2: #1a2e22;
+  --cream: #e8e0d4;
+  --cream-dim: #a69e93;
+  --ash: #8a8178;
+  --blood: #e6ae6d;
+  --blood-dark: #c48b4a;
   --accent-deep: #943240;
+  --accent-palm: #2d5a3d;
+  --accent-sun: #e6ae6d;
   --hairline: rgba(232, 224, 212, 0.12);
-  --focus-ring: #E6AE6D;
-  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-body: "Montserrat", system-ui, -apple-system, sans-serif;
-  --font-script: "Allura", cursive;
+  --focus-ring: #e6ae6d;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+  --font-script: "Cormorant Garamond", Georgia, serif;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --container-max: 1440px;
   --section-pad: clamp(70px, 8vw, 120px);
@@ -184,8 +186,11 @@ h6 {
 }
 
 .section__title {
-  font-size: clamp(2.25rem, 1.5rem + 3.5vw, 4.5rem);
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3.25rem);
   margin-bottom: clamp(1rem, 2vw, 1.75rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .section__lead {
@@ -1511,19 +1516,37 @@ body:not(.lang-es) [data-lang="es"] {
 
 :root {
   --ink: #000000;
-  --ink-2: #1a1c17;
+  --ink-2: #1a2e22;
   --cream: #e8e0d4;
   --cream-dim: #a69e93;
   --ash: #8a8178;
   --blood: #e6ae6d;
   --blood-dark: #c48b4a;
   --accent-deep: #943240;
+  --accent-palm: #2d5a3d;
+  --accent-sun: #e6ae6d;
   --hairline: rgba(232, 224, 212, 0.12);
   --focus-ring: #e6ae6d;
 }
 
+body {
+  background: linear-gradient(165deg, #0a0f0d 0%, #1a2e22 35%, #000000 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  opacity: 0.02;
+  mix-blend-mode: soft-light;
+}
+
+.ticker {
+  background: linear-gradient(90deg, #2d5a3d, #943240, #e6ae6d);
+  color: var(--cream);
+  border-block-color: transparent;
+}
+
 .site-header {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(10, 15, 13, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -1605,18 +1628,34 @@ body:not(.lang-es) [data-lang="es"] {
 }
 
 .lang-toggle-group .lang-toggle__btn.is-active {
-  background: var(--blood);
+  background: var(--accent-sun);
   color: var(--ink);
+}
+
+.btn-cta,
+.btn-cta--cream {
+  border-radius: 999px;
 }
 
 .btn-cta--cream {
   background: var(--cream);
   color: var(--ink);
+  font-weight: 800;
 }
 
 .btn-cta--cream:hover {
+  background: var(--accent-sun);
+  color: var(--ink);
+  box-shadow: 0 8px 28px rgba(255, 179, 71, 0.45);
+}
+
+.btn-cta {
   background: var(--blood);
-  box-shadow: 0 0 24px rgba(230, 174, 109, 0.3);
+  border-radius: 999px;
+}
+
+.btn-cta:hover {
+  background: var(--blood-dark);
 }
 
 .ticker__item {
@@ -1633,12 +1672,16 @@ body:not(.lang-es) [data-lang="es"] {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   margin-bottom: clamp(2rem, 4vw, 3.5rem);
-  height: clamp(220px, 42vw, 560px);
-  min-height: 220px;
+  height: clamp(240px, 48vw, 620px);
+  min-height: 240px;
   overflow: hidden;
   border: none;
   border-bottom: 1px solid var(--hairline);
-  background: var(--ink);
+  background: var(--ink-2);
+}
+
+.hero__banner--tropical {
+  background: #0d1a14;
 }
 
 .hero__video {
@@ -1649,8 +1692,9 @@ body:not(.lang-es) [data-lang="es"] {
   object-fit: cover;
   object-position: center center;
   display: block;
-  transform: scale(1.35);
+  transform: scale(1);
   transform-origin: center center;
+  filter: saturate(1.12) contrast(1.05);
 }
 
 .hero__video-scrim {
@@ -1659,12 +1703,22 @@ body:not(.lang-es) [data-lang="es"] {
   z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.1) 40%,
-    rgba(0, 0, 0, 0.55) 78%,
+    rgba(26, 46, 34, 0.45) 0%,
+    rgba(0, 0, 0, 0.12) 40%,
+    rgba(0, 0, 0, 0.55) 72%,
     rgba(0, 0, 0, 0.92) 100%
   );
   pointer-events: none;
+}
+
+.hero__tropical-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(230, 174, 109, 0.22), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 85% 15%, rgba(45, 90, 61, 0.35), transparent 60%);
+  mix-blend-mode: screen;
 }
 
 .hero__content {
@@ -1674,13 +1728,14 @@ body:not(.lang-es) [data-lang="es"] {
 }
 
 .hero::before {
-  top: 10%;
-  right: -10%;
-  left: auto;
+  top: 0;
+  right: -15%;
+  left: -15%;
   transform: none;
-  width: 55vw;
-  height: 70vh;
-  background: radial-gradient(ellipse, rgba(230, 174, 109, 0.06), transparent 70%);
+  width: 80vw;
+  height: 80vh;
+  background: radial-gradient(ellipse at 70% 20%, rgba(230, 174, 109, 0.14), transparent 55%),
+    radial-gradient(ellipse at 15% 85%, rgba(45, 90, 61, 0.2), transparent 50%);
   z-index: 0;
 }
 
@@ -1724,11 +1779,12 @@ body:not(.lang-es) [data-lang="es"] {
 
 .hero__headline--editorial {
   font-family: var(--font-heading);
-  font-size: clamp(64px, 10vw, 168px);
+  font-size: clamp(3rem, 9vw, 6.5rem);
   line-height: 0.92;
   max-width: none;
   margin-bottom: clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .hero__line {
@@ -1737,25 +1793,31 @@ body:not(.lang-es) [data-lang="es"] {
 
 .hero__script {
   display: block;
-  margin-left: 8vw;
-  font-size: clamp(72px, 11vw, 180px);
+  margin-left: 6vw;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--blood);
 }
 
 .hero__line--right {
-  text-align: right;
+  text-align: left;
+  color: var(--cream);
 }
 
 .hero__statement {
-  font-family: var(--font-heading);
-  font-size: clamp(22px, 2.2vw, 28px);
-  line-height: 1.35;
-  color: var(--cream);
-  max-width: 28ch;
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--cream-dim);
+  max-width: 36ch;
 }
 
 .hero__statement em {
-  font-style: italic;
-  color: var(--blood);
+  font-style: normal;
+  font-weight: 700;
+  color: var(--accent-sun);
 }
 
 .hero__byline {
@@ -1795,13 +1857,40 @@ body:not(.lang-es) [data-lang="es"] {
   color: var(--blood);
 }
 
+.lanes {
+  background: rgba(10, 79, 88, 0.55);
+}
+
 .lane:hover {
-  background: rgba(230, 174, 109, 0.09);
+  background: rgba(255, 92, 122, 0.12);
+}
+
+.lane__number,
+.lane__cta,
+.partners__label,
+.stat__value .gold,
+.link-gold,
+.artist-card__badge {
+  color: var(--accent-sun);
+}
+
+.script-accent {
+  color: var(--accent-sun);
+}
+
+.roster {
+  background: rgba(10, 79, 88, 0.45);
+}
+
+.artist-card:hover .artist-card__name {
+  color: var(--accent-sun);
 }
 
 .stat__value {
   font-size: clamp(3rem, 4vw, 4.5rem);
   color: var(--cream);
+  font-family: var(--font-heading);
+  font-weight: 900;
 }
 
 .stat__value .gold {
@@ -1831,14 +1920,14 @@ body:not(.lang-es) [data-lang="es"] {
   box-shadow: 0 24px 60px rgba(198, 139, 74, 0.18);
 }
 
-.roster__featured-visual--mr-don {
+.roster__featured-visual--j-salez {
   background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.15) 0%,
       rgba(0, 0, 0, 0.75) 100%
     ),
-    url("img/mr-don.jpg");
-  background-position: center, 70% 25%;
+    url("img/j-salez.jpg");
+  background-position: center, 65% 30%;
 }
 
 .roster__featured-overlay-name {
@@ -2051,38 +2140,43 @@ body:not(.lang-es) [data-lang="es"] {
 }
 
 .derek {
-  color: var(--ink);
-  background: linear-gradient(165deg, #e8c08a 0%, var(--blood) 42%, #c9924f 100%);
+  color: var(--cream);
+  background: linear-gradient(135deg, #1a2e22 0%, #943240 45%, #2d5a3d 100%);
 }
 
 .derek::before {
   content: "DEREKVINCI";
-  font-style: italic;
-  font-size: clamp(7rem, 16vw, 200px);
-  opacity: 0.06;
-  color: var(--ink);
+  font-family: var(--font-heading);
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(5rem, 14vw, 11rem);
+  opacity: 0.08;
+  color: var(--cream);
   white-space: nowrap;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
 }
 
 .derek .section__eyebrow,
 .derek .uppercase-label {
-  color: rgba(0, 0, 0, 0.62);
-  font-weight: 700;
+  color: rgba(255, 250, 245, 0.85);
+  font-weight: 800;
 }
 
 .derek .section__title {
-  color: var(--ink);
-  font-weight: 600;
+  color: var(--cream);
+  font-weight: 900;
+  text-transform: uppercase;
   text-shadow: none;
 }
 
 .derek .section__title .script-accent {
-  color: var(--accent-deep);
+  color: var(--cream);
+  text-transform: none;
+  font-weight: 700;
 }
 
 .derek__bio {
-  color: var(--ink);
+  color: var(--cream);
   font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
   line-height: 1.75;
   font-weight: 500;
@@ -2091,40 +2185,86 @@ body:not(.lang-es) [data-lang="es"] {
 .derek__credits {
   margin-top: 1.5rem;
   padding: 1.25rem 0 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   list-style: none;
   line-height: 1.85;
 }
 
 .derek__credits li {
-  color: var(--ink);
+  color: var(--cream);
   font-size: clamp(0.875rem, 0.85rem + 0.15vw, 1rem);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .derek__credits li::before {
-  content: "— ";
-  color: var(--accent-deep);
+  content: "♪ ";
+  color: var(--accent-sun);
   font-weight: 700;
 }
 
 .derek .btn-cta--outline {
-  border: 2px solid var(--ink);
-  color: var(--ink);
-  background: rgba(0, 0, 0, 0.06);
-  font-weight: 700;
+  border: 2px solid var(--cream);
+  color: var(--cream);
+  background: rgba(255, 255, 255, 0.12);
+  font-weight: 800;
+  border-radius: 999px;
 }
 
 .derek .btn-cta--outline:hover {
-  background: var(--ink);
-  color: var(--cream);
-  border-color: var(--ink);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .derek__cta {
   margin-top: 2rem;
   display: inline-flex;
+}
+
+.testimonial {
+  background: rgba(10, 79, 88, 0.5);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.testimonial__mark {
+  color: var(--blood);
+}
+
+.testimonial__author {
+  color: var(--accent-sun);
+}
+
+.site-footer {
+  background: rgba(4, 47, 53, 0.95);
+}
+
+.final-cta {
+  background: linear-gradient(180deg, transparent, rgba(10, 79, 88, 0.6));
+}
+
+.final-cta__title {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.form-submit {
+  border-radius: 999px;
+  background: var(--accent-sun);
+  color: var(--ink);
+}
+
+.form-submit:hover {
+  background: var(--cream);
+}
+
+.pulse-dot {
+  background: var(--accent-palm);
+  box-shadow: 0 0 0 0 rgba(60, 179, 113, 0.5);
+}
+
+.release-channel {
+  background: rgba(10, 79, 88, 0.45);
 }
 
 .partners__layout {
@@ -2379,7 +2519,7 @@ body.drawer-open {
 <a class="skip-link" href="#main">Skip to content</a>
 
 <div class="ticker" role="marquee" aria-label="EQS Música announcements">
-  <div class="ticker__track"><span class="ticker__item">CONNECTING BACHATA WORLDWIDE ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ #1 IN BACHATA MUSIC ✕ NOW BOOKING 2026 DATES</span><span class="ticker__item">CONNECTING BACHATA WORLDWIDE ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ #1 IN BACHATA MUSIC ✕ NOW BOOKING 2026 DATES</span><span class="ticker__item">CONNECTING BACHATA WORLDWIDE ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ #1 IN BACHATA MUSIC ✕ NOW BOOKING 2026 DATES</span><span class="ticker__item">CONNECTING BACHATA WORLDWIDE ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ #1 IN BACHATA MUSIC ✕ NOW BOOKING 2026 DATES</span></div>
+  <div class="ticker__track"><span class="ticker__item">#1 IN TROPICAL MUSIC ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ CONNECTING THE CARIBBEAN SOUND ✕ NOW BOOKING 2026 DATES</span><span class="ticker__item">#1 IN TROPICAL MUSIC ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ CONNECTING THE CARIBBEAN SOUND ✕ NOW BOOKING 2026 DATES</span><span class="ticker__item">#1 IN TROPICAL MUSIC ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ CONNECTING THE CARIBBEAN SOUND ✕ NOW BOOKING 2026 DATES</span><span class="ticker__item">#1 IN TROPICAL MUSIC ✕ EST. 1998 ✕ ORLANDO · MIAMI · SANTO DOMINGO · MADRID ✕ CONNECTING THE CARIBBEAN SOUND ✕ NOW BOOKING 2026 DATES</span></div>
 </div>
 
 <header class="site-header" id="top">
@@ -2429,11 +2569,12 @@ body.drawer-open {
 
 <main id="main">
   <section class="hero section reveal" aria-labelledby="hero-heading">
-    <div class="hero__banner" aria-hidden="true">
-      <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="img/eqs-logo-square.png">
-        <source src="video/banner.mp4" type="video/mp4">
+    <div class="hero__banner hero__banner--tropical" aria-hidden="true">
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="">
+        <source src="video/hero-tropical.mp4" type="video/mp4">
       </video>
       <div class="hero__video-scrim"></div>
+      <div class="hero__tropical-glow" aria-hidden="true"></div>
     </div>
     <div class="container hero__content">
       <div class="hero__meta" aria-label="Label information">
@@ -2442,12 +2583,12 @@ body.drawer-open {
         <span class="hero__meta-item hero__meta-item--end"><span class="pulse-dot" aria-hidden="true"></span> <span data-en="NOW BOOKING" data-es="RESERVAS ABIERTAS">NOW BOOKING</span></span>
       </div>
       <h1 id="hero-heading" class="hero__headline hero__headline--editorial">
-        <span class="hero__line" data-en="Bachata's" data-es="Las">Bachata's</span>
-        <span class="hero__script script-accent" data-en="Leading" data-es="Voces">Leading</span>
-        <span class="hero__line hero__line--right" data-en="Voices." data-es="Líderes.">Voices.</span>
+        <span class="hero__line" data-en="Tropical" data-es="La">Tropical</span>
+        <span class="hero__script script-accent" data-en="Music's" data-es="Música">Music's</span>
+        <span class="hero__line hero__line--right" data-en="#1 Voices." data-es="Líderes.">#1 Voices.</span>
       </h1>
       <div class="hero__grid">
-        <p class="hero__statement" data-en="Three decades defining &lt;em&gt;el sonido&lt;/em&gt; — from Orlando studios to stages across 25+ countries." data-es="Tres décadas definiendo &lt;em&gt;el sonido&lt;/em&gt; — de los estudios de Orlando a escenarios en más de 25 países.">Three decades defining <em>el sonido</em> — from Orlando studios to stages across 25+ countries.</p>
+        <p class="hero__statement" data-en="#1 in tropical music — cinematic sound from Orlando studios to stages across 25+ countries." data-es="#1 en música tropical — sonido cinematográfico desde Orlando a escenarios en más de 25 países.">#1 in tropical music — cinematic sound from Orlando studios to stages across 25+ countries.</p>
         <p class="hero__byline" data-en="A label. A studio. A movement. — EST. 1998" data-es="Un sello. Un estudio. Un movimiento. — EST. 1998">A label. A studio. A movement. — EST. 1998</p>
       </div>
     </div>
@@ -2460,7 +2601,7 @@ body.drawer-open {
         <article class="lane" id="record-label">
           <span class="lane__number">01</span>
           <h3 class="lane__title" data-en="Record Label" data-es="Sello Discográfico">Record Label</h3>
-          <p class="lane__text" data-en="Home of eight genre-defining artists — from Mr. Don's 20M+ streams to the next wave of bachata talent." data-es="Hogar de ocho artistas que definen el género — desde los 20M+ de Mr. Don hasta la nueva ola del talento bachatero.">Home of eight genre-defining artists — from Mr. Don's 20M+ streams to the next wave of bachata talent.</p>
+          <p class="lane__text" data-en="Home of genre-defining tropical artists — bachata, fusion, and the next wave of Caribbean sound." data-es="Hogar de artistas que definen el género tropical — bachata, fusión y la nueva ola del sonido caribeño.">Home of genre-defining tropical artists — bachata, fusion, and the next wave of Caribbean sound.</p>
           <a class="lane__cta" href="#roster" data-en="Explore roster →" data-es="Ver artistas →">Explore roster →</a>
         </article>
         <article class="lane" id="production">
@@ -2483,9 +2624,9 @@ body.drawer-open {
     <div class="container">
       <ul class="stats__grid">
         <li class="stat reveal-delay-1">
-          <span class="stat__value">8</span>
+          <span class="stat__value">7</span>
           <span class="stat__label" data-en="Artists on Roster" data-es="Artistas en Roster">Artists on Roster</span>
-          <span class="stat__note" data-en="Mr. Don · J Salez · Johandy +5" data-es="Mr. Don · J Salez · Johandy +5">Mr. Don · J Salez · Johandy +5</span>
+          <span class="stat__note" data-en="J Salez · Johandy · Vinny Rivera +4" data-es="J Salez · Johandy · Vinny Rivera +4">J Salez · Johandy · Vinny Rivera +4</span>
         </li>
         <li class="stat reveal-delay-2">
           <span class="stat__value">60M<span class="gold">+</span></span>
@@ -2509,41 +2650,30 @@ body.drawer-open {
   <section class="roster section reveal" id="roster" aria-labelledby="roster-heading">
     <div class="container">
       <p class="section__eyebrow uppercase-label" data-en="The Roster" data-es="El Roster">The Roster</p>
-      <h2 id="roster-heading" class="section__title" data-en="Bachata's defining voices." data-es="Las voces que definen la bachata.">Bachata's defining voices.</h2>
+      <h2 id="roster-heading" class="section__title" data-en="Tropical music's defining voices." data-es="Las voces que definen la música tropical.">Tropical music's defining voices.</h2>
       <div class="roster__featured">
-        <div class="roster__featured-visual roster__featured-visual--mr-don">
-          <span class="roster__featured-overlay-name" aria-hidden="true">Mr. Don</span>
+        <div class="roster__featured-visual roster__featured-visual--j-salez">
+          <span class="roster__featured-overlay-name" aria-hidden="true">J Salez</span>
         </div>
         <div class="roster__featured-copy">
           <p class="roster__featured-tag" data-en="01 — FEATURED ARTIST" data-es="01 — ARTISTA DESTACADO">01 — FEATURED ARTIST</p>
-          <h3 class="roster__featured-title">Mr. <span class="script-accent">Don</span></h3>
-          <p class="roster__featured-bio" data-en="Chilean bachata powerhouse and EQS flagship artist — festival headliner, multi-platinum streams, and the sound that moved bachata onto global stages." data-es="Potencia bachatera chilena y artista insignia de EQS — headliner de festivales, streams multi-platino y el sonido que llevó la bachata a escenarios globales.">Chilean bachata powerhouse and EQS flagship artist — festival headliner, multi-platinum streams, and the sound that moved bachata onto global stages.</p>
+          <h3 class="roster__featured-title">J <span class="script-accent">Salez</span></h3>
+          <p class="roster__featured-bio" data-en="Bachata and R&amp;B fusion — one of EQS's most streamed voices with 20+ singles and a growing international presence." data-es="Fusión bachata y R&amp;B — una de las voces más escuchadas de EQS con más de 20 sencillos y presencia internacional en crecimiento.">Bachata and R&amp;B fusion — one of EQS's most streamed voices with 20+ singles and a growing international presence.</p>
           <div class="roster__featured-stats">
-            <div><span>20M+</span><small data-en="Streams" data-es="Streams">Streams</small></div>
-            <div><span>4</span><small data-en="Albums" data-es="Álbumes">Albums</small></div>
-            <div><span>15</span><small data-en="Countries" data-es="Países">Countries</small></div>
+            <div><span>15M+</span><small data-en="Streams" data-es="Streams">Streams</small></div>
+            <div><span>20+</span><small data-en="Singles" data-es="Sencillos">Singles</small></div>
+            <div><span>10+</span><small data-en="Countries" data-es="Países">Countries</small></div>
           </div>
-          <p><a class="link-gold" href="https://open.spotify.com/artist/12YP3RGVLp3c36Zi6lFRtR" target="_blank" rel="noopener noreferrer" data-en="Listen on Spotify" data-es="Escuchar en Spotify">Listen on Spotify</a></p>
+          <p><a class="link-gold" href="#releases" data-en="Listen on Spotify" data-es="Escuchar en Spotify">Listen on Spotify</a></p>
           <a class="btn-cta btn-cta--outline" href="#contact" style="margin-top:1rem;display:inline-flex" data-en="Book Now" data-es="Reservar Ahora">Book Now</a>
         </div>
       </div>
       <div class="roster__grid"><article class="artist-card reveal">
-      <div class="artist-card__media artist-card__media--j-salez" role="img" aria-label="J Salez"></div>
-      <span class="artist-card__badge">02</span>
-      <div class="artist-card__info">
-        <h3 class="artist-card__name">J Salez</h3>
-        <p class="artist-card__genre">Bachata · R&amp;B Fusion</p>
-        <div class="artist-card__actions">
-          <a class="btn-cta" href="#releases" data-en="Listen" data-es="Escuchar">Listen</a>
-          <a class="btn-cta btn-cta--outline" href="#contact" data-en="Book" data-es="Reservar">Book</a>
-        </div>
-      </div>
-    </article><article class="artist-card reveal">
       <div class="artist-card__media artist-card__placeholder">
           <img class="artist-card__placeholder-watermark" src="img/eqs-logo.png" alt="" aria-hidden="true" width="120" height="84">
           <span class="artist-card__coming" data-en="COMING SOON" data-es="PRÓXIMAMENTE">COMING SOON</span>
         </div>
-      <span class="artist-card__badge">03</span>
+      <span class="artist-card__badge">02</span>
       <div class="artist-card__info">
         <h3 class="artist-card__name">DJ Khalid</h3>
         <p class="artist-card__genre">DJ · Producer</p>
@@ -2554,7 +2684,7 @@ body.drawer-open {
       </div>
     </article><article class="artist-card reveal">
       <div class="artist-card__media artist-card__media--johandy" role="img" aria-label="Johandy"></div>
-      <span class="artist-card__badge">04</span>
+      <span class="artist-card__badge">03</span>
       <div class="artist-card__info">
         <h3 class="artist-card__name">Johandy</h3>
         <p class="artist-card__genre">Bachata Romántica</p>
@@ -2565,7 +2695,7 @@ body.drawer-open {
       </div>
     </article><article class="artist-card reveal">
       <div class="artist-card__media artist-card__media--vinny-rivera" role="img" aria-label="Vinny Rivera"></div>
-      <span class="artist-card__badge">05</span>
+      <span class="artist-card__badge">04</span>
       <div class="artist-card__info">
         <h3 class="artist-card__name">Vinny Rivera</h3>
         <p class="artist-card__genre">Bachata · Tropical</p>
@@ -2576,7 +2706,7 @@ body.drawer-open {
       </div>
     </article><article class="artist-card reveal">
       <div class="artist-card__media artist-card__media--tony-lozano" role="img" aria-label="Tony Lozano"></div>
-      <span class="artist-card__badge">06</span>
+      <span class="artist-card__badge">05</span>
       <div class="artist-card__info">
         <h3 class="artist-card__name">Tony Lozano</h3>
         <p class="artist-card__genre">Bachata Moderna</p>
@@ -2587,7 +2717,7 @@ body.drawer-open {
       </div>
     </article><article class="artist-card reveal">
       <div class="artist-card__media artist-card__media--jhonny-evidence" role="img" aria-label="Jhonny Evidence"></div>
-      <span class="artist-card__badge">07</span>
+      <span class="artist-card__badge">06</span>
       <div class="artist-card__info">
         <h3 class="artist-card__name">Jhonny Evidence</h3>
         <p class="artist-card__genre">Bachata Urbana</p>
@@ -2601,7 +2731,7 @@ body.drawer-open {
           <img class="artist-card__placeholder-watermark" src="img/eqs-logo.png" alt="" aria-hidden="true" width="120" height="84">
           <span class="artist-card__coming" data-en="COMING SOON" data-es="PRÓXIMAMENTE">COMING SOON</span>
         </div>
-      <span class="artist-card__badge">08</span>
+      <span class="artist-card__badge">07</span>
       <div class="artist-card__info">
         <h3 class="artist-card__name">DJ Taga'Da</h3>
         <p class="artist-card__genre">DJ · Remixer</p>
@@ -2615,7 +2745,7 @@ body.drawer-open {
           <img class="artist-card__placeholder-watermark" src="img/eqs-logo.png" alt="" aria-hidden="true" width="120" height="84">
           <span class="artist-card__coming" data-en="COMING SOON" data-es="PRÓXIMAMENTE">COMING SOON</span>
         </div>
-      <span class="artist-card__badge">09</span>
+      <span class="artist-card__badge">08</span>
       <div class="artist-card__info">
         <h3 class="artist-card__name">Ronny Mercedes</h3>
         <p class="artist-card__genre">Bachata · Songwriter</p>
@@ -2659,7 +2789,7 @@ body.drawer-open {
           <h2 id="derek-heading" class="section__title">Derek<span class="script-accent">Vinci</span></h2>
           <p class="uppercase-label" data-en="Founder · Audio Engineer · Visionary" data-es="Fundador · Ingeniero de Audio · Visionario">Founder · Audio Engineer · Visionary</p>
           <ul class="derek__credits">
-            <li data-en="Mixed for: Mr. Don, J Salez, Johandy" data-es="Mezclado para: Mr. Don, J Salez, Johandy">Mixed for: Mr. Don, J Salez, Johandy</li>
+            <li data-en="Mixed for: J Salez, Johandy, Vinny Rivera" data-es="Mezclado para: J Salez, Johandy, Vinny Rivera">Mixed for: J Salez, Johandy, Vinny Rivera</li>
             <li data-en="Produced: Vinny Rivera, Tony Lozano, Jhonny Evidence" data-es="Producido: Vinny Rivera, Tony Lozano, Jhonny Evidence">Produced: Vinny Rivera, Tony Lozano, Jhonny Evidence</li>
             <li data-en="A&amp;R · Studio · Bookings — Orlando since 1998" data-es="A&amp;R · Estudio · Reservas — Orlando desde 1998">A&amp;R · Studio · Bookings — Orlando since 1998</li>
           </ul>
@@ -2775,7 +2905,7 @@ body.drawer-open {
           <img class="site-header__logo-img" src="img/eqs-logo.png" alt="" width="52" height="52" decoding="async">
           <span class="site-header__wordmark"><strong>EQS</strong><em>Música</em></span>
         </a>
-        <p class="section__lead" style="margin-top:1rem" data-en="#1 bachata record label worldwide — connecting artists, production, and bookings since 1998." data-es="El sello bachatero #1 del mundo — conectando artistas, producción y reservas desde 1998.">#1 bachata record label worldwide — connecting artists, production, and bookings since 1998.</p>
+        <p class="section__lead" style="margin-top:1rem" data-en="#1 in tropical music — connecting artists, production, and bookings since 1998." data-es="#1 en música tropical — conectando artistas, producción y reservas desde 1998.">#1 in tropical music — connecting artists, production, and bookings since 1998.</p>
         <div style="display:flex;gap:0.5rem;margin-top:1.25rem;flex-wrap:wrap">
           <a class="social-icon" href="https://open.spotify.com/artist/12YP3RGVLp3c36Zi6lFRtR" aria-label="Spotify" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02z"/></svg></a>
           <a class="social-icon" href="https://www.youtube.com/@eqsmusica" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
@@ -2797,7 +2927,6 @@ body.drawer-open {
       <div class="footer-col">
         <h3 class="footer-col__title" data-en="Artists" data-es="Artistas">Artists</h3>
         <ul class="footer-col__links">
-          <li><a class="footer-col__link" href="#roster">Mr. Don</a></li>
           <li><a class="footer-col__link" href="#roster">J Salez</a></li>
           <li><a class="footer-col__link" href="#roster">Johandy</a></li>
           <li><a class="footer-col__link" href="#roster">Vinny Rivera</a></li>
