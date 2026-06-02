@@ -2,3 +2,5 @@
 .env
 .env.*
 .vercel
+client-assets/
+.review-assets/
