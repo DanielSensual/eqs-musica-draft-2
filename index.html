@@ -16,7 +16,9 @@
   <meta name="twitter:description" content="Orlando's premier tropical music label since 1998.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/glacial-indifference" rel="stylesheet">
   <link rel="icon" href="img/eqs-logo-square.png" type="image/png">
   <link rel="apple-touch-icon" href="img/eqs-logo-square.png">
   <meta property="og:image" content="https://www.eqsmusica.com/img/eqs-logo-square.png">
@@ -32,7 +34,7 @@
         "foundingDate": "1998",
         "founder": { "@type": "Person", "name": "DerekVinci" },
         "address": { "@type": "PostalAddress", "addressLocality": "Orlando", "addressRegion": "FL", "addressCountry": "US" },
-        "sameAs": ["https://open.spotify.com/artist/12YP3RGVLp3c36Zi6lFRtR"]
+        "sameAs": ["https://open.spotify.com/artist/1k9LH8hJGdjr23xa8Gu7zU"]
       },
       {
         "@type": "MusicGroup",
@@ -49,19 +51,20 @@
 :root {
   --ink: #000000;
   --ink-2: #1a2e22;
-  --cream: #e8e0d4;
+  --cream: #f5f1e8;
   --cream-dim: #a69e93;
   --ash: #8a8178;
-  --blood: #e6ae6d;
-  --blood-dark: #c48b4a;
-  --accent-deep: #943240;
-  --accent-palm: #2d5a3d;
-  --accent-sun: #e6ae6d;
-  --hairline: rgba(232, 224, 212, 0.12);
-  --focus-ring: #e6ae6d;
-  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --blood: #dcc9a3;
+  --blood-dark: #c4ad82;
+  --accent-deep: #953240;
+  --accent-palm: #0e5c4a;
+  --accent-palm-dark: #06352a;
+  --accent-sun: #dcc9a3;
+  --hairline: rgba(245, 241, 232, 0.12);
+  --focus-ring: #dcc9a3;
+  --font-heading: "Glacial Indifference", "Montserrat", system-ui, sans-serif;
   --font-body: "Montserrat", system-ui, sans-serif;
-  --font-script: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Glacial Indifference", "Montserrat", system-ui, sans-serif;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --container-max: 1440px;
   --section-pad: clamp(70px, 8vw, 120px);
@@ -1517,16 +1520,17 @@ body:not(.lang-es) [data-lang="es"] {
 :root {
   --ink: #000000;
   --ink-2: #1a2e22;
-  --cream: #e8e0d4;
+  --cream: #f5f1e8;
   --cream-dim: #a69e93;
   --ash: #8a8178;
-  --blood: #e6ae6d;
-  --blood-dark: #c48b4a;
-  --accent-deep: #943240;
-  --accent-palm: #2d5a3d;
-  --accent-sun: #e6ae6d;
-  --hairline: rgba(232, 224, 212, 0.12);
-  --focus-ring: #e6ae6d;
+  --blood: #dcc9a3;
+  --blood-dark: #c4ad82;
+  --accent-deep: #953240;
+  --accent-palm: #0e5c4a;
+  --accent-palm-dark: #06352a;
+  --accent-sun: #dcc9a3;
+  --hairline: rgba(245, 241, 232, 0.12);
+  --focus-ring: #dcc9a3;
 }
 
 body {
@@ -1540,7 +1544,7 @@ body::before {
 }
 
 .ticker {
-  background: linear-gradient(90deg, #2d5a3d 0%, #143324 50%, #2d5a3d 100%);
+  background: linear-gradient(90deg, #0e5c4a 0%, #06352a 50%, #0e5c4a 100%);
   color: var(--cream);
   border-block-color: transparent;
 }
@@ -2015,6 +2019,11 @@ body::before {
     url("img/jhonny-evidence.jpg");
   background-position: center, 45% 30%;
 }
+.artist-card__media--angel-rose {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
+    url("img/angel-rose.jpg");
+  background-position: center, 50% 12%;
+}
 
 .artist-card__badge {
   position: absolute;
@@ -2141,7 +2150,7 @@ body::before {
 
 .derek {
   color: var(--cream);
-  background: linear-gradient(135deg, #1a2e22 0%, #943240 45%, #2d5a3d 100%);
+  background: linear-gradient(135deg, #1a2e22 0%, #953240 45%, #0e5c4a 100%);
 }
 
 .derek::before {
@@ -3057,13 +3066,10 @@ body.drawer-open {
           </div>
         </article>
         <article class="artist-card artist-card--v4 reveal">
-          <div class="artist-card__media artist-card__placeholder" role="img" aria-label="Angel Rose">
-            <img class="artist-card__placeholder-watermark" src="img/eqs-logo-gold.png" alt="" aria-hidden="true" width="120" height="84">
-            <span class="artist-card__coming" data-en="PHOTO SOON" data-es="FOTO PRONTO">PHOTO SOON</span>
-          </div>
+          <div class="artist-card__media artist-card__media--angel-rose" role="img" aria-label="Angel Rose"></div>
           <div class="artist-card__info">
             <h3 class="artist-card__name">Angel Rose</h3>
-            <a class="artist-card__explore" href="#contact" data-en="Explore" data-es="Explorar">Explore</a>
+            <a class="artist-card__explore" href="#releases" data-en="Explore" data-es="Explorar">Explore</a>
           </div>
         </article>
       </div>
@@ -3078,7 +3084,7 @@ body.drawer-open {
         <article class="release-channel">
           <h3 class="release-channel__title" data-en="The EQS Catalog" data-es="El Catálogo EQS">The EQS Catalog</h3>
           <p class="section__lead" data-en="Stream the full EQS roster — new singles, albums, and curated playlists updated weekly." data-es="Escucha todo el roster EQS — sencillos, álbumes y playlists curadas actualizadas cada semana.">Stream the full EQS roster — new singles, albums, and curated playlists updated weekly.</p>
-          <a class="lane__cta" href="https://open.spotify.com/artist/12YP3RGVLp3c36Zi6lFRtR" target="_blank" rel="noopener noreferrer" data-en="Open on Spotify →" data-es="Abrir en Spotify →">Open on Spotify →</a>
+          <a class="lane__cta" href="https://open.spotify.com/artist/1k9LH8hJGdjr23xa8Gu7zU" target="_blank" rel="noopener noreferrer" data-en="Open on Spotify →" data-es="Abrir en Spotify →">Open on Spotify →</a>
         </article>
         <article class="release-channel">
           <h3 class="release-channel__title" data-en="Visual Stories" data-es="Historias Visuales">Visual Stories</h3>
@@ -3087,8 +3093,8 @@ body.drawer-open {
         </article>
       </div>
       <div class="spotify-embeds" id="spotify-section">
-        <iframe title="EQS Música on Spotify" src="https://open.spotify.com/embed/artist/12YP3RGVLp3c36Zi6lFRtR?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <iframe title="Bachata playlist on Spotify" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7aO8vX7i9i0?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="J Salez on Spotify" src="https://open.spotify.com/embed/artist/1k9LH8hJGdjr23xa8Gu7zU?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="Vinny Rivera on Spotify" src="https://open.spotify.com/embed/artist/16KwTAKkQMkBVS0Fuz2vpt?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -3380,7 +3386,7 @@ body.drawer-open {
 <aside class="mini-player" aria-label="Now playing">
   <span class="mini-player__label" data-en="NOW PLAYING" data-es="REPRODUCIENDO">NOW PLAYING</span>
   <div class="mini-player__embed">
-    <iframe title="EQS Spotify mini player" src="https://open.spotify.com/embed/artist/12YP3RGVLp3c36Zi6lFRtR?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe title="EQS Spotify mini player" src="https://open.spotify.com/embed/artist/1k9LH8hJGdjr23xa8Gu7zU?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
   <button type="button" class="mini-player__close" aria-label="Close player">×</button>
 </aside>
@@ -3400,7 +3406,7 @@ body.drawer-open {
         </a>
         <p class="section__lead" style="margin-top:1rem" data-en="#1 in tropical music — connecting artists, production, and bookings since 1998." data-es="#1 en música tropical — conectando artistas, producción y reservas desde 1998.">#1 in tropical music — connecting artists, production, and bookings since 1998.</p>
         <div style="display:flex;gap:0.5rem;margin-top:1.25rem;flex-wrap:wrap">
-          <a class="social-icon" href="https://open.spotify.com/artist/12YP3RGVLp3c36Zi6lFRtR" aria-label="Spotify" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02z"/></svg></a>
+          <a class="social-icon" href="https://open.spotify.com/artist/1k9LH8hJGdjr23xa8Gu7zU" aria-label="Spotify" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02z"/></svg></a>
           <a class="social-icon" href="https://www.youtube.com/@eqsmusica" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
           <a class="social-icon" href="https://www.instagram.com/eqsmusica" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
           <a class="social-icon" href="https://www.facebook.com/eqsmusica" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
