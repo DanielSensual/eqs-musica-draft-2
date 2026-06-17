@@ -2258,13 +2258,28 @@ body::before {
 }
 
 .form-submit {
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  border: none;
   border-radius: 999px;
   background: var(--accent-sun);
   color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition-fast), letter-spacing var(--transition-fast);
 }
 
 .form-submit:hover {
   background: var(--cream);
+  letter-spacing: 0.18em;
+}
+
+.form-submit:disabled {
+  opacity: 0.55;
+  cursor: default;
+  letter-spacing: 0.12em;
 }
 
 .pulse-dot {
@@ -2324,24 +2339,6 @@ body::before {
 
 .contact__title .script-accent {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
-}
-
-.form-submit {
-  align-self: flex-start;
-  padding: 1rem 2rem;
-  background: var(--blood);
-  color: var(--ink);
-  border: none;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background var(--transition-fast), letter-spacing var(--transition-fast);
-}
-
-.form-submit:hover {
-  background: var(--blood-dark);
-  letter-spacing: 0.18em;
 }
 
 .final-cta__email {
@@ -2794,6 +2791,269 @@ body.drawer-open {
   line-height: 1.65;
 }
 
+/* Artist application wizard */
+.form-sublabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+/* Progress bar — hidden until JS upgrades the form to a wizard */
+.application-form .wizard-progress {
+  display: none;
+}
+
+.application-form.js-wizard .wizard-progress {
+  display: block;
+  margin-bottom: 1.75rem;
+}
+
+.wizard-progress__track {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.wizard-progress__tick {
+  flex: 1 1 0;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--hairline);
+  transition: background var(--transition-fast);
+}
+
+.wizard-progress__tick.is-done {
+  background: var(--blood-dark);
+}
+
+.wizard-progress__tick.is-current {
+  background: var(--blood);
+}
+
+.wizard-progress__label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+/* Steps: one at a time once the wizard is active */
+.application-form.js-wizard .wizard-step {
+  display: none;
+}
+
+.application-form.js-wizard .wizard-step.is-active {
+  display: block;
+  animation: wizardFade var(--transition-fast);
+}
+
+@keyframes wizardFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.application-form .wizard-step__legend {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.wizard-step__num {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid var(--blood);
+  color: var(--blood);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.wizard-step__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.wizard-step__name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--cream);
+  outline: none;
+}
+
+.wizard-step__hint {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--cream-dim);
+}
+
+/* Nav row — Back / Next / Submit */
+.application-form .wizard-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.application-form .wizard-nav__spacer {
+  flex: 1 1 auto;
+}
+
+.wizard-btn {
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--blood);
+  background: transparent;
+  color: var(--blood);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.wizard-btn--next {
+  background: var(--blood);
+  color: var(--ink);
+}
+
+.wizard-btn:hover {
+  background: var(--blood);
+  color: var(--ink);
+}
+
+/* No-JS fallback: only the submit shows; Back/Next stay hidden */
+.application-form .wizard-btn--back,
+.application-form .wizard-btn--next {
+  display: none;
+}
+
+.application-form.js-wizard .wizard-btn--back,
+.application-form.js-wizard .wizard-btn--next {
+  display: inline-flex;
+}
+
+.application-form.js-wizard .wizard-btn--back[hidden],
+.application-form.js-wizard .wizard-btn--next[hidden],
+.application-form .wizard-btn--submit[hidden] {
+  display: none;
+}
+
+/* Live word counter */
+.word-counter {
+  margin-top: 0.4rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  text-align: right;
+}
+
+.word-counter.is-over {
+  color: var(--blood);
+  font-weight: 700;
+}
+
+/* Inline validation + submit feedback */
+.genre-error {
+  margin-top: 0.6rem;
+  font-size: 0.8125rem;
+  color: var(--blood);
+}
+
+.application-error {
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--blood);
+  border-radius: 2px;
+  background: rgba(220, 201, 163, 0.08);
+  font-size: 0.875rem;
+  color: var(--cream);
+}
+
+.genre-error[hidden],
+.application-error[hidden] {
+  display: none;
+}
+
+/* Success state */
+.application-success {
+  border: 1px solid var(--blood);
+  border-radius: 2px;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  background: rgba(220, 201, 163, 0.06);
+}
+
+.application-success[hidden] {
+  display: none;
+}
+
+.application-success:focus {
+  outline: none;
+}
+
+.application-success__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--blood);
+  color: var(--blood);
+  font-size: 1.6rem;
+}
+
+.application-success__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 0.75rem;
+  color: var(--cream);
+}
+
+.application-success__text {
+  max-width: 46ch;
+  margin-inline: auto;
+  color: var(--cream-dim);
+  line-height: 1.65;
+}
+
+@media (max-width: 540px) {
+  .application-form .wizard-nav {
+    flex-wrap: wrap;
+  }
+  .application-form .wizard-btn--submit {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .derek__grid--v4 {
   grid-template-columns: minmax(220px, 340px) 1fr;
 }
@@ -3161,8 +3421,20 @@ body.drawer-open {
       <p class="application-intro" data-en="At EQS Música we are building the future of tropical music. We look for artists who are serious, consistent, and investing in their careers — not just talent alone." data-es="En EQS Música estamos construyendo el futuro de la música tropical. Buscamos artistas serios, consistentes e invertidos en sus carreras — no solo talento.">At EQS Música we are building the future of tropical music. We look for artists who are serious, consistent, and investing in their careers — not just talent alone.</p>
       <form class="contact-form application-form" action="https://formspree.io/f/YOUR_ARTIST_FORM_ID" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="EQS New Artist Application">
-        <fieldset>
-          <legend data-en="Section 1 — Basic Information" data-es="Sección 1 — Información Básica">Section 1 — Basic Information</legend>
+        <div class="wizard-progress">
+          <div class="wizard-progress__track" aria-hidden="true"></div>
+          <p class="wizard-progress__label" aria-live="polite"></p>
+        </div>
+        <fieldset class="wizard-step">
+          <legend>
+            <span class="wizard-step__legend">
+              <span class="wizard-step__num" aria-hidden="true">1</span>
+              <span class="wizard-step__titles">
+                <span class="wizard-step__name" tabindex="-1" data-en="Basic Information" data-es="Información Básica">Basic Information</span>
+                <span class="wizard-step__hint" data-en="Tell us who you are and where you're based." data-es="Cuéntanos quién eres y dónde estás.">Tell us who you are and where you're based.</span>
+              </span>
+            </span>
+          </legend>
           <div class="form-row">
             <div class="form-group"><label for="app-full-name" data-en="Full Name" data-es="Nombre Completo">Full Name</label><input id="app-full-name" name="full_name" type="text" required autocomplete="name"></div>
             <div class="form-group"><label for="app-artist-name" data-en="Artist Name" data-es="Nombre Artístico">Artist Name</label><input id="app-artist-name" name="artist_name" type="text" required></div>
@@ -3177,7 +3449,7 @@ body.drawer-open {
             <div class="form-group"><label for="app-age" data-en="Age" data-es="Edad">Age</label><input id="app-age" name="age" type="number" min="16" max="99" required></div>
           </div>
           <div class="form-group">
-            <span class="form-group label" style="display:block;margin-bottom:0.5rem;font-size:0.6875rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream-dim)" data-en="Preferred Music Genre" data-es="Género Musical Preferido">Preferred Music Genre</span>
+            <span class="form-sublabel" data-en="Preferred Music Genre" data-es="Género Musical Preferido">Preferred Music Genre</span>
             <div class="form-check-grid">
               <label class="form-check"><input type="checkbox" name="genre" value="Bachata"> Bachata</label>
               <label class="form-check"><input type="checkbox" name="genre" value="Salsa"> Salsa</label>
@@ -3187,39 +3459,56 @@ body.drawer-open {
               <label class="form-check"><input type="checkbox" name="genre" value="Tropical R&B"> Tropical R&amp;B</label>
               <label class="form-check"><input type="checkbox" name="genre" value="Other"> <span data-en="Other" data-es="Otro">Other</span></label>
             </div>
+            <p class="genre-error" role="alert" hidden data-en="Please select at least one genre." data-es="Por favor selecciona al menos un género.">Please select at least one genre.</p>
           </div>
         </fieldset>
-        <fieldset>
-          <legend data-en="Section 2 — Music Links" data-es="Sección 2 — Enlaces Musicales">Section 2 — Music Links</legend>
-          <div class="form-group"><label for="app-spotify">Spotify Profile</label><input id="app-spotify" name="spotify" type="url" placeholder="https://"></div>
-          <div class="form-group"><label for="app-youtube">YouTube Channel</label><input id="app-youtube" name="youtube" type="url" placeholder="https://"></div>
-          <div class="form-group"><label for="app-apple">Apple Music</label><input id="app-apple" name="apple_music" type="url" placeholder="https://"></div>
+        <fieldset class="wizard-step">
+          <legend>
+            <span class="wizard-step__legend">
+              <span class="wizard-step__num" aria-hidden="true">2</span>
+              <span class="wizard-step__titles">
+                <span class="wizard-step__name" tabindex="-1" data-en="Music Links" data-es="Enlaces Musicales">Music Links</span>
+                <span class="wizard-step__hint" data-en="Drop your streaming and social profiles." data-es="Comparte tus perfiles de streaming y redes.">Drop your streaming and social profiles.</span>
+              </span>
+            </span>
+          </legend>
+          <div class="form-group"><label for="app-spotify" data-en="Spotify Profile" data-es="Perfil de Spotify">Spotify Profile</label><input id="app-spotify" name="spotify" type="url" placeholder="https://"></div>
+          <div class="form-group"><label for="app-youtube" data-en="YouTube Channel" data-es="Canal de YouTube">YouTube Channel</label><input id="app-youtube" name="youtube" type="url" placeholder="https://"></div>
+          <div class="form-group"><label for="app-apple" data-en="Apple Music" data-es="Apple Music">Apple Music</label><input id="app-apple" name="apple_music" type="url" placeholder="https://"></div>
           <div class="form-row">
-            <div class="form-group"><label for="app-instagram">Instagram</label><input id="app-instagram" name="instagram" type="url" placeholder="https://"></div>
-            <div class="form-group"><label for="app-tiktok">TikTok</label><input id="app-tiktok" name="tiktok" type="url" placeholder="https://"></div>
+            <div class="form-group"><label for="app-instagram" data-en="Instagram" data-es="Instagram">Instagram</label><input id="app-instagram" name="instagram" type="url" placeholder="https://"></div>
+            <div class="form-group"><label for="app-tiktok" data-en="TikTok" data-es="TikTok">TikTok</label><input id="app-tiktok" name="tiktok" type="url" placeholder="https://"></div>
           </div>
           <div class="form-row">
-            <div class="form-group"><label for="app-facebook">Facebook</label><input id="app-facebook" name="facebook" type="url" placeholder="https://"></div>
-            <div class="form-group"><label for="app-linktree">Linktree</label><input id="app-linktree" name="linktree" type="url" placeholder="https://"></div>
+            <div class="form-group"><label for="app-facebook" data-en="Facebook" data-es="Facebook">Facebook</label><input id="app-facebook" name="facebook" type="url" placeholder="https://"></div>
+            <div class="form-group"><label for="app-linktree" data-en="Linktree" data-es="Linktree">Linktree</label><input id="app-linktree" name="linktree" type="url" placeholder="https://"></div>
           </div>
           <div class="form-group"><label for="app-website" data-en="Website (if applicable)" data-es="Sitio Web (si aplica)">Website (if applicable)</label><input id="app-website" name="website" type="url" placeholder="https://"></div>
         </fieldset>
-        <fieldset>
-          <legend data-en="Section 3 — Music Career" data-es="Sección 3 — Carrera Musical">Section 3 — Music Career</legend>
+        <fieldset class="wizard-step">
+          <legend>
+            <span class="wizard-step__legend">
+              <span class="wizard-step__num" aria-hidden="true">3</span>
+              <span class="wizard-step__titles">
+                <span class="wizard-step__name" tabindex="-1" data-en="Music Career" data-es="Carrera Musical">Music Career</span>
+                <span class="wizard-step__hint" data-en="A quick snapshot of your release history." data-es="Un vistazo rápido a tu historial de lanzamientos.">A quick snapshot of your release history.</span>
+              </span>
+            </span>
+          </legend>
           <div class="form-group">
             <label for="app-years" data-en="Years releasing music" data-es="Años lanzando música">Years releasing music</label>
             <select id="app-years" name="years_releasing" required>
-              <option value="">Select…</option>
-              <option value="Less than 1 Year">Less than 1 Year</option>
-              <option value="1-3 Years">1-3 Years</option>
-              <option value="3-5 Years">3-5 Years</option>
-              <option value="5+ Years">5+ Years</option>
+              <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
+              <option value="Less than 1 Year" data-en="Less than 1 Year" data-es="Menos de 1 año">Less than 1 Year</option>
+              <option value="1-3 Years" data-en="1-3 Years" data-es="1-3 años">1-3 Years</option>
+              <option value="3-5 Years" data-en="3-5 Years" data-es="3-5 años">3-5 Years</option>
+              <option value="5+ Years" data-en="5+ Years" data-es="5+ años">5+ Years</option>
             </select>
           </div>
           <div class="form-group">
             <label for="app-songs" data-en="Official songs released" data-es="Canciones oficiales lanzadas">Official songs released</label>
             <select id="app-songs" name="songs_released" required>
-              <option value="">Select…</option>
+              <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
               <option value="1-5">1-5</option>
               <option value="6-20">6-20</option>
               <option value="21-50">21-50</option>
@@ -3229,25 +3518,33 @@ body.drawer-open {
           <div class="form-group">
             <label for="app-release-freq" data-en="Release frequency" data-es="Frecuencia de lanzamientos">Release frequency</label>
             <select id="app-release-freq" name="release_frequency" required>
-              <option value="">Select…</option>
-              <option value="Weekly">Weekly</option>
-              <option value="Monthly">Monthly</option>
-              <option value="Every 2-3 Months">Every 2-3 Months</option>
-              <option value="Every 6 Months">Every 6 Months</option>
-              <option value="Rarely">Rarely</option>
+              <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
+              <option value="Weekly" data-en="Weekly" data-es="Semanal">Weekly</option>
+              <option value="Monthly" data-en="Monthly" data-es="Mensual">Monthly</option>
+              <option value="Every 2-3 Months" data-en="Every 2-3 Months" data-es="Cada 2-3 meses">Every 2-3 Months</option>
+              <option value="Every 6 Months" data-en="Every 6 Months" data-es="Cada 6 meses">Every 6 Months</option>
+              <option value="Rarely" data-en="Rarely" data-es="Rara vez">Rarely</option>
             </select>
           </div>
         </fieldset>
-        <fieldset>
-          <legend data-en="Section 4 — Social Media Consistency" data-es="Sección 4 — Consistencia en Redes">Section 4 — Social Media Consistency</legend>
+        <fieldset class="wizard-step">
+          <legend>
+            <span class="wizard-step__legend">
+              <span class="wizard-step__num" aria-hidden="true">4</span>
+              <span class="wizard-step__titles">
+                <span class="wizard-step__name" tabindex="-1" data-en="Social Media Consistency" data-es="Consistencia en Redes">Social Media Consistency</span>
+                <span class="wizard-step__hint" data-en="How active are you with content?" data-es="¿Qué tan activo eres con el contenido?">How active are you with content?</span>
+              </span>
+            </span>
+          </legend>
           <div class="form-group">
             <label for="app-post-freq" data-en="How often do you post content?" data-es="¿Con qué frecuencia publicas contenido?">How often do you post content?</label>
             <select id="app-post-freq" name="post_frequency" required>
-              <option value="">Select…</option>
-              <option value="Daily">Daily</option>
-              <option value="4-6 Times Per Week">4-6 Times Per Week</option>
-              <option value="1-3 Times Per Week">1-3 Times Per Week</option>
-              <option value="Less Than Once Per Week">Less Than Once Per Week</option>
+              <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
+              <option value="Daily" data-en="Daily" data-es="Diario">Daily</option>
+              <option value="4-6 Times Per Week" data-en="4-6 Times Per Week" data-es="4-6 veces por semana">4-6 Times Per Week</option>
+              <option value="1-3 Times Per Week" data-en="1-3 Times Per Week" data-es="1-3 veces por semana">1-3 Times Per Week</option>
+              <option value="Less Than Once Per Week" data-en="Less Than Once Per Week" data-es="Menos de una vez por semana">Less Than Once Per Week</option>
             </select>
           </div>
           <div class="form-row">
@@ -3257,41 +3554,57 @@ body.drawer-open {
           <div class="form-group">
             <label for="app-content-time" data-en="Time spent creating content" data-es="Tiempo creando contenido">Time spent creating content</label>
             <select id="app-content-time" name="content_time_percent" required>
-              <option value="">Select…</option>
-              <option value="Less than 10%">Less than 10%</option>
+              <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
+              <option value="Less than 10%" data-en="Less than 10%" data-es="Menos del 10%">Less than 10%</option>
               <option value="10%-25%">10%-25%</option>
               <option value="25%-50%">25%-50%</option>
-              <option value="More than 50%">More than 50%</option>
+              <option value="More than 50%" data-en="More than 50%" data-es="Más del 50%">More than 50%</option>
             </select>
           </div>
           <div class="form-group">
             <label for="app-own-content" data-en="Do you create your own content?" data-es="¿Creas tu propio contenido?">Do you create your own content?</label>
             <select id="app-own-content" name="creates_own_content" required>
-              <option value="">Select…</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              <option value="Sometimes">Sometimes</option>
+              <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
+              <option value="Yes" data-en="Yes" data-es="Sí">Yes</option>
+              <option value="No" data-en="No" data-es="No">No</option>
+              <option value="Sometimes" data-en="Sometimes" data-es="A veces">Sometimes</option>
             </select>
           </div>
         </fieldset>
-        <fieldset>
-          <legend data-en="Section 5 — Professionalism" data-es="Sección 5 — Profesionalismo">Section 5 — Professionalism</legend>
+        <fieldset class="wizard-step">
+          <legend>
+            <span class="wizard-step__legend">
+              <span class="wizard-step__num" aria-hidden="true">5</span>
+              <span class="wizard-step__titles">
+                <span class="wizard-step__name" tabindex="-1" data-en="Professionalism" data-es="Profesionalismo">Professionalism</span>
+                <span class="wizard-step__hint" data-en="Your assets and live experience." data-es="Tus recursos y experiencia en vivo.">Your assets and live experience.</span>
+              </span>
+            </span>
+          </legend>
           <div class="form-row">
-            <div class="form-group"><label for="app-pro-photos" data-en="Professional artist photos?" data-es="¿Fotos profesionales?">Professional artist photos?</label><select id="app-pro-photos" name="pro_photos" required><option value="">Select…</option><option value="Yes">Yes</option><option value="No">No</option></select></div>
-            <div class="form-group"><label for="app-cover-art" data-en="Professional cover artwork?" data-es="¿Arte de portada profesional?">Professional cover artwork?</label><select id="app-cover-art" name="cover_art" required><option value="">Select…</option><option value="Yes">Yes</option><option value="No">No</option></select></div>
+            <div class="form-group"><label for="app-pro-photos" data-en="Professional artist photos?" data-es="¿Fotos profesionales?">Professional artist photos?</label><select id="app-pro-photos" name="pro_photos" required><option value="" data-en="Select…" data-es="Seleccionar…">Select…</option><option value="Yes" data-en="Yes" data-es="Sí">Yes</option><option value="No" data-en="No" data-es="No">No</option></select></div>
+            <div class="form-group"><label for="app-cover-art" data-en="Professional cover artwork?" data-es="¿Arte de portada profesional?">Professional cover artwork?</label><select id="app-cover-art" name="cover_art" required><option value="" data-en="Select…" data-es="Seleccionar…">Select…</option><option value="Yes" data-en="Yes" data-es="Sí">Yes</option><option value="No" data-en="No" data-es="No">No</option></select></div>
           </div>
           <div class="form-row">
-            <div class="form-group"><label for="app-epk" data-en="EPK available?" data-es="¿EPK disponible?">EPK available?</label><select id="app-epk" name="epk" required><option value="">Select…</option><option value="Yes">Yes</option><option value="No">No</option></select></div>
-            <div class="form-group"><label for="app-live" data-en="Perform live?" data-es="¿Presentaciones en vivo?">Perform live?</label><select id="app-live" name="performs_live" required><option value="">Select…</option><option value="Yes">Yes</option><option value="No">No</option></select></div>
+            <div class="form-group"><label for="app-epk" data-en="EPK available?" data-es="¿EPK disponible?">EPK available?</label><select id="app-epk" name="epk" required><option value="" data-en="Select…" data-es="Seleccionar…">Select…</option><option value="Yes" data-en="Yes" data-es="Sí">Yes</option><option value="No" data-en="No" data-es="No">No</option></select></div>
+            <div class="form-group"><label for="app-live" data-en="Perform live?" data-es="¿Presentaciones en vivo?">Perform live?</label><select id="app-live" name="performs_live" required><option value="" data-en="Select…" data-es="Seleccionar…">Select…</option><option value="Yes" data-en="Yes" data-es="Sí">Yes</option><option value="No" data-en="No" data-es="No">No</option></select></div>
           </div>
           <div class="form-group"><label for="app-live-count" data-en="Live performances (last 12 months)" data-es="Presentaciones en vivo (últimos 12 meses)">Live performances (last 12 months)</label><input id="app-live-count" name="live_performances_12mo" type="number" min="0" required></div>
         </fieldset>
-        <fieldset>
-          <legend data-en="Section 6 — Investment &amp; Commitment" data-es="Sección 6 — Inversión y Compromiso">Section 6 — Investment &amp; Commitment</legend>
+        <fieldset class="wizard-step">
+          <legend>
+            <span class="wizard-step__legend">
+              <span class="wizard-step__num" aria-hidden="true">6</span>
+              <span class="wizard-step__titles">
+                <span class="wizard-step__name" tabindex="-1" data-en="Investment & Commitment" data-es="Inversión y Compromiso">Investment &amp; Commitment</span>
+                <span class="wizard-step__hint" data-en="How you back your own career." data-es="Cómo respaldas tu propia carrera.">How you back your own career.</span>
+              </span>
+            </span>
+          </legend>
           <div class="form-group">
             <label for="app-invested" data-en="Personal investment (last 12 months)" data-es="Inversión personal (últimos 12 meses)">Personal investment (last 12 months)</label>
             <select id="app-invested" name="investment_12mo" required>
-              <option value="">Select…</option>
+              <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
               <option value="$0-$500">$0-$500</option>
               <option value="$500-$2,000">$500-$2,000</option>
               <option value="$2,000-$5,000">$2,000-$5,000</option>
@@ -3300,35 +3613,70 @@ body.drawer-open {
             </select>
           </div>
           <div class="form-row">
-            <div class="form-group"><label for="app-paid-ads" data-en="Run paid ads for music?" data-es="¿Anuncios pagados para tu música?">Run paid ads for music?</label><select id="app-paid-ads" name="paid_ads" required><option value="">Select…</option><option value="Yes">Yes</option><option value="No">No</option></select></div>
-            <div class="form-group"><label for="app-hired-pros" data-en="Hired photographers / producers / marketers?" data-es="¿Contrataste fotógrafos / productores / marketers?">Hired photographers / producers / marketers?</label><select id="app-hired-pros" name="hired_professionals" required><option value="">Select…</option><option value="Yes">Yes</option><option value="No">No</option></select></div>
+            <div class="form-group"><label for="app-paid-ads" data-en="Run paid ads for music?" data-es="¿Anuncios pagados para tu música?">Run paid ads for music?</label><select id="app-paid-ads" name="paid_ads" required><option value="" data-en="Select…" data-es="Seleccionar…">Select…</option><option value="Yes" data-en="Yes" data-es="Sí">Yes</option><option value="No" data-en="No" data-es="No">No</option></select></div>
+            <div class="form-group"><label for="app-hired-pros" data-en="Hired photographers / producers / marketers?" data-es="¿Contrataste fotógrafos / productores / marketers?">Hired photographers / producers / marketers?</label><select id="app-hired-pros" name="hired_professionals" required><option value="" data-en="Select…" data-es="Seleccionar…">Select…</option><option value="Yes" data-en="Yes" data-es="Sí">Yes</option><option value="No" data-en="No" data-es="No">No</option></select></div>
           </div>
-          <div class="form-group"><label for="app-willing-invest" data-en="Willing to invest alongside the label?" data-es="¿Dispuesto a invertir junto al sello?">Willing to invest alongside the label?</label><select id="app-willing-invest" name="willing_to_invest" required><option value="">Select…</option><option value="Yes">Yes</option><option value="No">No</option></select></div>
+          <div class="form-group"><label for="app-willing-invest" data-en="Willing to invest alongside the label?" data-es="¿Dispuesto a invertir junto al sello?">Willing to invest alongside the label?</label><select id="app-willing-invest" name="willing_to_invest" required><option value="" data-en="Select…" data-es="Seleccionar…">Select…</option><option value="Yes" data-en="Yes" data-es="Sí">Yes</option><option value="No" data-en="No" data-es="No">No</option></select></div>
         </fieldset>
-        <fieldset>
-          <legend data-en="Section 7 — Mindset Filter" data-es="Sección 7 — Filtro de Mentalidad">Section 7 — Mindset Filter</legend>
+        <fieldset class="wizard-step">
+          <legend>
+            <span class="wizard-step__legend">
+              <span class="wizard-step__num" aria-hidden="true">7</span>
+              <span class="wizard-step__titles">
+                <span class="wizard-step__name" tabindex="-1" data-en="Mindset Filter" data-es="Filtro de Mentalidad">Mindset Filter</span>
+                <span class="wizard-step__hint" data-en="A few questions about your drive." data-es="Unas preguntas sobre tu motivación.">A few questions about your drive.</span>
+              </span>
+            </span>
+          </legend>
           <div class="form-group"><label for="app-why-join" data-en="Why do you want to join EQS Música?" data-es="¿Por qué quieres unirte a EQS Música?">Why do you want to join EQS Música?</label><textarea id="app-why-join" name="why_join" required rows="3"></textarea></div>
           <div class="form-group"><label for="app-different" data-en="What makes you different?" data-es="¿Qué te hace diferente?">What makes you different?</label><textarea id="app-different" name="what_different" required rows="3"></textarea></div>
           <div class="form-group"><label for="app-five-years" data-en="Where do you see yourself in 5 years?" data-es="¿Dónde te ves en 5 años?">Where do you see yourself in 5 years?</label><textarea id="app-five-years" name="five_years" required rows="3"></textarea></div>
           <div class="form-group"><label for="app-sacrifice" data-en="What are you willing to sacrifice for success?" data-es="¿Qué estás dispuesto a sacrificar?">What are you willing to sacrifice for success?</label><textarea id="app-sacrifice" name="sacrifice" required rows="3"></textarea></div>
           <div class="form-group"><label for="app-hours" data-en="Hours per week dedicated to music" data-es="Horas por semana dedicadas a la música">Hours per week dedicated to music</label><input id="app-hours" name="hours_per_week" type="number" min="1" max="168" required></div>
         </fieldset>
-        <fieldset>
-          <legend data-en="Section 8 — Discipline Test" data-es="Sección 8 — Prueba de Disciplina">Section 8 — Discipline Test</legend>
-          <div class="form-group"><label for="app-routine" data-en="Describe your current weekly routine as an artist (500 words max)" data-es="Describe tu rutina semanal como artista (máx. 500 palabras)">Describe your current weekly routine as an artist (500 words max)</label><textarea id="app-routine" name="weekly_routine" required rows="8" maxlength="3500"></textarea></div>
+        <fieldset class="wizard-step">
+          <legend>
+            <span class="wizard-step__legend">
+              <span class="wizard-step__num" aria-hidden="true">8</span>
+              <span class="wizard-step__titles">
+                <span class="wizard-step__name" tabindex="-1" data-en="Discipline Test" data-es="Prueba de Disciplina">Discipline Test</span>
+                <span class="wizard-step__hint" data-en="Show us your weekly discipline." data-es="Muéstranos tu disciplina semanal.">Show us your weekly discipline.</span>
+              </span>
+            </span>
+          </legend>
+          <div class="form-group"><label for="app-routine" data-en="Describe your current weekly routine as an artist (500 words max)" data-es="Describe tu rutina semanal como artista (máx. 500 palabras)">Describe your current weekly routine as an artist (500 words max)</label><textarea id="app-routine" name="weekly_routine" required rows="8" data-word-max="500"></textarea><p class="word-counter"><span class="word-counter__count">0</span> / 500 <span data-en="words" data-es="palabras">words</span></p></div>
         </fieldset>
-        <fieldset>
-          <legend data-en="Section 9 — Final Submission" data-es="Sección 9 — Envío Final">Section 9 — Final Submission</legend>
+        <fieldset class="wizard-step">
+          <legend>
+            <span class="wizard-step__legend">
+              <span class="wizard-step__num" aria-hidden="true">9</span>
+              <span class="wizard-step__titles">
+                <span class="wizard-step__name" tabindex="-1" data-en="Final Submission" data-es="Envío Final">Final Submission</span>
+                <span class="wizard-step__hint" data-en="Last step — your bio, music, and pitch." data-es="Último paso — tu bio, música y propuesta.">Last step — your bio, music, and pitch.</span>
+              </span>
+            </span>
+          </legend>
           <div class="form-group"><label for="app-bio" data-en="Bio" data-es="Biografía">Bio</label><textarea id="app-bio" name="bio" required rows="4"></textarea></div>
           <div class="form-group"><label for="app-music-link" data-en="Music files (Dropbox / Drive link)" data-es="Archivos de música (enlace Dropbox / Drive)">Music files (Dropbox / Drive link)</label><input id="app-music-link" name="music_files_link" type="url" placeholder="https://" required></div>
           <div class="form-row">
             <div class="form-group"><label for="app-photos-upload" data-en="Professional photos (optional upload)" data-es="Fotos profesionales (opcional)">Professional photos (optional upload)</label><input id="app-photos-upload" name="photos" type="file" accept="image/*"></div>
             <div class="form-group"><label for="app-press-upload" data-en="Press kit (optional upload)" data-es="Press kit (opcional)">Press kit (optional upload)</label><input id="app-press-upload" name="press_kit" type="file" accept=".pdf,.doc,.docx,image/*"></div>
           </div>
-          <div class="form-group"><label for="app-invest-pitch" data-en="Why should EQS Música invest in you? (500 words max)" data-es="¿Por qué debería EQS Música invertir en ti? (máx. 500 palabras)">Why should EQS Música invest in you? (500 words max)</label><textarea id="app-invest-pitch" name="why_invest" required rows="8" maxlength="3500"></textarea></div>
+          <div class="form-group"><label for="app-invest-pitch" data-en="Why should EQS Música invest in you? (500 words max)" data-es="¿Por qué debería EQS Música invertir en ti? (máx. 500 palabras)">Why should EQS Música invest in you? (500 words max)</label><textarea id="app-invest-pitch" name="why_invest" required rows="8" data-word-max="500"></textarea><p class="word-counter"><span class="word-counter__count">0</span> / 500 <span data-en="words" data-es="palabras">words</span></p></div>
         </fieldset>
-        <button class="form-submit" type="submit" data-en="SUBMIT APPLICATION →" data-es="ENVIAR SOLICITUD →">SUBMIT APPLICATION →</button>
+        <p class="application-error" role="alert" hidden></p>
+        <div class="wizard-nav">
+          <button type="button" class="wizard-btn wizard-btn--back" hidden data-en="← Back" data-es="← Atrás">← Back</button>
+          <span class="wizard-nav__spacer"></span>
+          <button type="button" class="wizard-btn wizard-btn--next" data-en="Next →" data-es="Siguiente →">Next →</button>
+          <button class="form-submit wizard-btn--submit" type="submit" data-en="SUBMIT APPLICATION →" data-es="ENVIAR SOLICITUD →">SUBMIT APPLICATION →</button>
+        </div>
       </form>
+      <div class="application-success" hidden role="status">
+        <div class="application-success__icon" aria-hidden="true">✓</div>
+        <h3 class="application-success__title" data-en="Application received!" data-es="¡Solicitud recibida!">Application received!</h3>
+        <p class="application-success__text" data-en="Thank you for applying to EQS Música. Our team reviews every submission carefully and will respond within 5 business days." data-es="Gracias por aplicar a EQS Música. Nuestro equipo revisa cada solicitud con cuidado y responderá en un plazo de 5 días hábiles.">Thank you for applying to EQS Música. Our team reviews every submission carefully and will respond within 5 business days.</p>
+      </div>
     </div>
   </section>
 
@@ -3542,9 +3890,12 @@ body.drawer-open {
   /* Language toggle */
   const LANG_KEY = 'eqs-lang';
   const langBtns = document.querySelectorAll('.lang-toggle__btn[data-lang]');
+  let currentLang = 'en';
+  let refreshWizardLang = function () {};
 
   function applyLang(lang) {
     const isEs = lang === 'es';
+    currentLang = isEs ? 'es' : 'en';
     document.documentElement.lang = isEs ? 'es' : 'en';
     document.body.classList.toggle('lang-es', isEs);
     document.querySelectorAll('[data-en][data-es]').forEach((el) => {
@@ -3567,6 +3918,7 @@ body.drawer-open {
     try {
       localStorage.setItem(LANG_KEY, lang);
     } catch (_) {}
+    refreshWizardLang();
   }
 
   langBtns.forEach((btn) => {
@@ -3621,6 +3973,210 @@ body.drawer-open {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         if (drawer && drawer.classList.contains('open')) setDrawerOpen(false);
       });
+    });
+  }
+
+  /* Artist application wizard + AJAX submit */
+  const appForm = document.querySelector('.application-form');
+  if (appForm) {
+    const steps = [...appForm.querySelectorAll('.wizard-step')];
+    const track = appForm.querySelector('.wizard-progress__track');
+    const label = appForm.querySelector('.wizard-progress__label');
+    const backBtn = appForm.querySelector('.wizard-btn--back');
+    const nextBtn = appForm.querySelector('.wizard-btn--next');
+    const submitBtn = appForm.querySelector('.wizard-btn--submit');
+    const errorBox = appForm.querySelector('.application-error');
+    const genreError = appForm.querySelector('.genre-error');
+    const successCard = document.querySelector('.application-success');
+    let show = function () {};
+
+    const I18N = {
+      step: { en: 'Step', es: 'Paso' },
+      of: { en: 'of', es: 'de' },
+      sending: { en: 'Sending…', es: 'Enviando…' },
+      noEndpoint: {
+        en: 'The application form isn’t connected yet. Please email us in the meantime.',
+        es: 'El formulario aún no está conectado. Por favor escríbenos mientras tanto.'
+      },
+      netErr: {
+        en: 'Network error. Please check your connection and try again.',
+        es: 'Error de red. Revisa tu conexión e intenta de nuevo.'
+      },
+      srvErr: {
+        en: 'Something went wrong. Please try again.',
+        es: 'Algo salió mal. Por favor intenta de nuevo.'
+      }
+    };
+    const L = (key) => I18N[key][currentLang === 'es' ? 'es' : 'en'];
+
+    function showError(msg) {
+      if (!errorBox) return;
+      errorBox.textContent = msg;
+      errorBox.hidden = false;
+    }
+    function hideError() {
+      if (errorBox) errorBox.hidden = true;
+    }
+
+    /* Live word counters (soft cap) */
+    appForm.querySelectorAll('textarea[data-word-max]').forEach((ta) => {
+      const group = ta.closest('.form-group');
+      const out = group && group.querySelector('.word-counter__count');
+      const wrap = group && group.querySelector('.word-counter');
+      const max = parseInt(ta.getAttribute('data-word-max'), 10) || 500;
+      const update = () => {
+        const trimmed = ta.value.trim();
+        const words = trimmed ? trimmed.split(/\s+/).length : 0;
+        if (out) out.textContent = String(words);
+        if (wrap) wrap.classList.toggle('is-over', words > max);
+      };
+      ta.addEventListener('input', update);
+      update();
+    });
+
+    if (steps.length) {
+      appForm.classList.add('js-wizard');
+      const total = steps.length;
+      let idx = 0;
+
+      /* Build progress ticks */
+      if (track) {
+        steps.forEach(() => {
+          const tick = document.createElement('span');
+          tick.className = 'wizard-progress__tick';
+          track.appendChild(tick);
+        });
+      }
+      const ticks = track ? [...track.children] : [];
+
+      function refreshLabel() {
+        if (label) {
+          const nameEl = steps[idx].querySelector('.wizard-step__name');
+          const name = nameEl ? nameEl.textContent.trim() : '';
+          label.textContent = L('step') + ' ' + (idx + 1) + ' ' + L('of') + ' ' + total + ' — ' + name;
+        }
+        ticks.forEach((t, i) => {
+          t.classList.toggle('is-current', i === idx);
+          t.classList.toggle('is-done', i < idx);
+        });
+      }
+
+      show = function (i, doFocus) {
+        idx = Math.max(0, Math.min(total - 1, i));
+        steps.forEach((s, n) => s.classList.toggle('is-active', n === idx));
+        if (backBtn) backBtn.hidden = idx === 0;
+        const last = idx === total - 1;
+        if (nextBtn) nextBtn.hidden = last;
+        if (submitBtn) submitBtn.hidden = !last;
+        refreshLabel();
+        hideError();
+        if (doFocus) {
+          const top = appForm.getBoundingClientRect().top + window.pageYOffset - 90;
+          window.scrollTo({ top, behavior: REDUCED ? 'auto' : 'smooth' });
+          const heading = steps[idx].querySelector('.wizard-step__name');
+          if (heading) heading.focus({ preventScroll: true });
+        }
+      };
+
+      function genreOk(stepEl) {
+        const genres = stepEl.querySelectorAll('input[name="genre"]');
+        if (!genres.length) return true;
+        const any = [...genres].some((c) => c.checked);
+        if (genreError) genreError.hidden = any;
+        if (!any) genres[0].focus();
+        return any;
+      }
+
+      function validateStep() {
+        const cur = steps[idx];
+        if (!genreOk(cur)) return false;
+        const fields = [...cur.querySelectorAll('input, select, textarea')];
+        for (const f of fields) {
+          if (!f.checkValidity()) {
+            f.reportValidity();
+            f.focus({ preventScroll: true });
+            return false;
+          }
+        }
+        return true;
+      }
+
+      if (nextBtn) nextBtn.addEventListener('click', () => { if (validateStep()) show(idx + 1, true); });
+      if (backBtn) backBtn.addEventListener('click', () => show(idx - 1, true));
+
+      refreshWizardLang = refreshLabel;
+      show(0, false);
+    }
+
+    /* AJAX submit */
+    appForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      hideError();
+
+      /* Validate the whole form; jump to the first step with a problem */
+      for (let i = 0; i < steps.length; i++) {
+        const genres = steps[i].querySelectorAll('input[name="genre"]');
+        if (genres.length && ![...genres].some((c) => c.checked)) {
+          if (steps.length) show(i, true);
+          if (genreError) genreError.hidden = false;
+          return;
+        }
+        const bad = steps[i].querySelector(':invalid');
+        if (bad) {
+          if (steps.length) show(i, true);
+          window.setTimeout(() => { bad.reportValidity(); bad.focus({ preventScroll: true }); }, REDUCED ? 0 : 320);
+          return;
+        }
+      }
+      if (!appForm.checkValidity()) { appForm.reportValidity(); return; }
+
+      const action = appForm.getAttribute('action') || '';
+      if (!action || action.indexOf('YOUR_ARTIST_FORM_ID') !== -1) {
+        showError(L('noEndpoint'));
+        return;
+      }
+
+      const restore = submitBtn
+        ? submitBtn.getAttribute(currentLang === 'es' ? 'data-es' : 'data-en')
+        : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = L('sending');
+      }
+
+      fetch(action, {
+        method: 'POST',
+        body: new FormData(appForm),
+        headers: { Accept: 'application/json' }
+      })
+        .then((res) => {
+          if (res.ok) {
+            appForm.hidden = true;
+            if (successCard) {
+              successCard.hidden = false;
+              successCard.setAttribute('tabindex', '-1');
+              const top = successCard.getBoundingClientRect().top + window.pageYOffset - 90;
+              window.scrollTo({ top, behavior: REDUCED ? 'auto' : 'smooth' });
+              successCard.focus({ preventScroll: true });
+            }
+            return;
+          }
+          return res
+            .json()
+            .then((d) => {
+              const msg = d && d.errors && d.errors.length
+                ? d.errors.map((x) => x.message).join(', ')
+                : L('srvErr');
+              throw new Error(msg);
+            });
+        })
+        .catch((err) => {
+          showError(err && err.message ? err.message : L('netErr'));
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = restore;
+          }
+        });
     });
   }
 
