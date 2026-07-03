@@ -1385,11 +1385,11 @@ h6 {
 
 /* Language toggle (ES) */
 
-body.lang-es [data-lang="en"] {
+body.lang-es [data-lang="en"]:not(.lang-toggle__btn) {
   display: none;
 }
 
-body:not(.lang-es) [data-lang="es"] {
+body:not(.lang-es) [data-lang="es"]:not(.lang-toggle__btn) {
   display: none;
 }
 
@@ -3245,9 +3245,9 @@ body.drawer-open {
     <div class="container">
       <ul class="stats__grid">
         <li class="stat reveal-delay-1">
-          <span class="stat__value">8</span>
+          <span class="stat__value">9</span>
           <span class="stat__label" data-en="Artists on Roster" data-es="Artistas en Roster">Artists on Roster</span>
-          <span class="stat__note" data-en="J Salez · Tony Lozano · Vinny Rivera · Johandy +4" data-es="J Salez · Tony Lozano · Vinny Rivera · Johandy +4">J Salez · Tony Lozano · Vinny Rivera · Johandy +4</span>
+          <span class="stat__note" data-en="J Salez · Tony Lozano · Vinny Rivera · Johandy +5" data-es="J Salez · Tony Lozano · Vinny Rivera · Johandy +5">J Salez · Tony Lozano · Vinny Rivera · Johandy +5</span>
         </li>
         <li class="stat reveal-delay-2">
           <span class="stat__value">60M<span class="gold">+</span></span>
@@ -3729,6 +3729,7 @@ body.drawer-open {
           <label for="message" data-en="Message" data-es="Mensaje">Message</label>
           <textarea id="message" name="message" required></textarea>
         </div>
+        <p class="application-error contact-form__error" role="alert" hidden></p>
         <button class="form-submit" type="submit" data-en="SEND INQUIRY →" data-es="ENVIAR CONSULTA →">SEND INQUIRY →</button>
       </form>
     </div>
@@ -3770,7 +3771,6 @@ body.drawer-open {
           <a class="social-icon" href="https://www.youtube.com/@eqsmusica" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
           <a class="social-icon" href="https://www.instagram.com/eqsmusica" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
           <a class="social-icon" href="https://www.facebook.com/eqsmusica" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a class="social-icon" href="https://soundcloud.com" aria-label="SoundCloud" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.255-2.154c-.009-.06-.049-.1-.099-.1zm1.49 1.57c-.06 0-.111.053-.119.119l-.207 1.584.207 1.527c.008.066.059.119.119.119.055 0 .102-.053.11-.119l.24-1.527-.24-1.584c-.008-.066-.055-.119-.11-.119zm1.52-.88c-.075 0-.135.067-.143.148l-.19 2.464.19 2.375c.008.081.068.148.143.148.07 0 .13-.067.138-.148l.216-2.375-.216-2.464c-.008-.081-.068-.148-.138-.148zm1.537-.44c-.09 0-.162.08-.17.178l-.178 2.904.178 2.793c.008.098.08.178.17.178.085 0 .157-.08.165-.178l.202-2.793-.202-2.904c-.008-.098-.08-.178-.165-.178zm1.55-.22c-.105 0-.19.093-.198.207l-.165 3.124.165 3.007c.008.114.093.207.198.207.1 0 .185-.093.193-.207l.188-3.007-.188-3.124c-.008-.114-.093-.207-.193-.207zm1.565-.11c-.12 0-.217.107-.225.238l-.152 3.234.152 3.11c.008.131.105.238.225.238.115 0 .212-.107.22-.238l.173-3.11-.173-3.234c-.008-.131-.105-.238-.22-.238zm1.58 0c-.13 0-.235.116-.243.26l-.14 3.234.14 3.096c.008.144.113.26.243.26.125 0 .23-.116.238-.26l.158-3.096-.158-3.234c-.008-.144-.113-.26-.238-.26zm1.595.11c-.14 0-.253.125-.261.282l-.125 3.124.125 2.98c.008.157.121.282.261.282.135 0 .248-.125.256-.282l.143-2.98-.143-3.124c-.008-.157-.121-.282-.256-.282zm1.61.33c-.155 0-.28.139-.288.314l-.11 2.794.11 2.66c.008.175.133.314.288.314.15 0 .275-.139.283-.314l.128-2.66-.128-2.794c-.008-.175-.133-.314-.283-.314zm1.625.55c-.165 0-.298.148-.306.335l-.095 2.244.095 2.13c.008.187.141.335.306.335.16 0 .293-.148.301-.335l.113-2.13-.113-2.244c-.008-.187-.141-.335-.301-.335zm1.64.77c-.18 0-.325.161-.333.363l-.08 1.474.08 1.39c.008.202.153.363.333.363.175 0 .32-.161.328-.363l.098-1.39-.098-1.474c-.008-.202-.153-.363-.328-.363zm1.655 1.1c-.195 0-.353.175-.361.393l-.065.374.065.35c.008.218.166.393.361.393.19 0 .348-.175.356-.393l.083-.35-.083-.374c-.008-.218-.166-.393-.356-.393zm3.005-2.2c-.22 0-.398.197-.406.442v8.316c.008.245.186.442.406.442h8.316c.22 0 .398-.197.406-.442V12.5c-.008-.245-.186-.442-.406-.442h-8.316z"/></svg></a>
         </div>
       </div>
       <div class="footer-col">
@@ -3789,8 +3789,13 @@ body.drawer-open {
         <ul class="footer-col__links">
           <li><a class="footer-col__link" href="#roster">J Salez</a></li>
           <li><a class="footer-col__link" href="#roster">Tony Lozano</a></li>
+          <li><a class="footer-col__link" href="#roster">Vinny Rivera</a></li>
+          <li><a class="footer-col__link" href="#roster">Johandy</a></li>
+          <li><a class="footer-col__link" href="#roster">Jhonny Evidence</a></li>
           <li><a class="footer-col__link" href="#roster">Lee Sanz</a></li>
+          <li><a class="footer-col__link" href="#roster">Albin St Rose</a></li>
           <li><a class="footer-col__link" href="#roster">Angel Rose</a></li>
+          <li><a class="footer-col__link" href="#roster">danielsensualAI</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -4189,6 +4194,26 @@ body.drawer-open {
             submitBtn.textContent = restore;
           }
         });
+    });
+  }
+
+  /* Booking form: block submits while the Formspree endpoint is a placeholder */
+  const bookingForm = document.querySelector('.contact-form:not(.application-form)');
+  if (bookingForm) {
+    const bookingError = bookingForm.querySelector('.contact-form__error');
+    const BOOKING_MSG = {
+      en: 'The booking form isn’t connected yet. Please email DEREKVINCI@EQSMUSICA.COM in the meantime.',
+      es: 'El formulario de reservas aún no está conectado. Por favor escribe a DEREKVINCI@EQSMUSICA.COM mientras tanto.'
+    };
+    bookingForm.addEventListener('submit', (e) => {
+      const action = bookingForm.getAttribute('action') || '';
+      if (!action || action.indexOf('YOUR_FORM_ID') !== -1) {
+        e.preventDefault();
+        if (bookingError) {
+          bookingError.textContent = BOOKING_MSG[currentLang === 'es' ? 'es' : 'en'];
+          bookingError.hidden = false;
+        }
+      }
     });
   }
 
