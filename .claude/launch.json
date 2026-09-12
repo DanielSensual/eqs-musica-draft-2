@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "eqs-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "9876"],
+      "port": 9876
+    }
+  ]
+}

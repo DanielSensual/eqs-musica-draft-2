@@ -2019,9 +2019,19 @@ body::before {
     url("img/jhonny-evidence.jpg");
   background-position: center, 45% 30%;
 }
-.artist-card__media--angel-rose {
+.artist-card__media--lee-sanz {
   background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
-    url("img/angel-rose.jpg");
+    url("img/lee-sanz.jpg");
+  background-position: center, 50% 25%;
+}
+.artist-card__media--albin-st-rose {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
+    url("img/albin-st-rose.jpg");
+  background-position: center, 50% 20%;
+}
+.artist-card__media--angel-rico {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
+    url("img/angel-rico.jpg");
   background-position: center, 50% 12%;
 }
 .artist-card__media--danielsensual-ai {
@@ -3137,6 +3147,162 @@ body.drawer-open {
   }
 }
 
+/* Newsletter archive */
+
+.newsletter__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(260px, 28vw, 340px), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.issue-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--hairline);
+  background: var(--ink-2);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.issue-card:hover {
+  border-color: rgba(220, 201, 163, 0.3);
+  transform: translateY(-3px);
+}
+
+.issue-card__meta {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blood);
+}
+
+.issue-card__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 1rem + 0.5vw, 1.5rem);
+  line-height: 1.25;
+}
+
+.issue-card__text {
+  color: var(--cream-dim);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.issue-card__link {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blood);
+  border-bottom: 1px solid transparent;
+  align-self: flex-start;
+  transition: border-color var(--transition-fast);
+}
+
+.issue-card__link:hover {
+  border-bottom-color: var(--blood);
+}
+
+.newsletter__empty {
+  grid-column: 1 / -1;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 1px dashed var(--hairline);
+  color: var(--cream-dim);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Creator program */
+
+.creators {
+  background:
+    linear-gradient(180deg, rgba(14, 92, 74, 0.16), rgba(0, 0, 0, 0)),
+    var(--ink);
+}
+
+.creators__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.creators__lead {
+  color: var(--cream-dim);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+.creators__perks {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.creators__perk {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--cream);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.creators__perk::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  background: var(--blood);
+  transform: rotate(45deg);
+}
+
+.creators__email-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ash);
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 900px) {
+  .creators__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Seven nav items need tighter spacing before the hamburger takes over at 900px */
+
+@media (max-width: 1200px) {
+  .site-nav__links {
+    gap: clamp(0.6rem, 1.2vw, 1rem);
+  }
+
+  .site-nav__link {
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-sep {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .site-nav__links {
+    gap: 0.5rem;
+  }
+
+  .site-nav__link {
+    letter-spacing: 0.04em;
+  }
+}
 </style>
 </head>
 <body>
@@ -3157,6 +3323,8 @@ body.drawer-open {
         <a class="site-nav__link" href="#about" data-en="ABOUT" data-es="NOSOTROS">ABOUT</a><span class="nav-sep" aria-hidden="true">|</span>
         <a class="site-nav__link" href="#derekvinci" data-en="DEREKVINCI" data-es="DEREKVINCI">DEREKVINCI</a><span class="nav-sep" aria-hidden="true">|</span>
         <a class="site-nav__link" href="#roster" data-en="ARTIST" data-es="ARTISTAS">ARTIST</a><span class="nav-sep" aria-hidden="true">|</span>
+        <a class="site-nav__link" href="#newsletter" data-en="NEWSLETTER" data-es="BOLETÍN">NEWSLETTER</a><span class="nav-sep" aria-hidden="true">|</span>
+        <a class="site-nav__link" href="#creators" data-en="CREATORS" data-es="CREADORES">CREATORS</a><span class="nav-sep" aria-hidden="true">|</span>
         <a class="site-nav__link" href="#contact" data-en="BOOKING" data-es="RESERVAS">BOOKING</a><span class="nav-sep" aria-hidden="true">|</span>
         <a class="site-nav__link" href="#new-artist" data-en="NEW ARTIST" data-es="NUEVO ARTISTA">NEW ARTIST</a>
       </div>
@@ -3180,6 +3348,8 @@ body.drawer-open {
   <a class="mobile-drawer__link" href="#about" data-en="ABOUT" data-es="NOSOTROS">ABOUT</a>
   <a class="mobile-drawer__link" href="#derekvinci" data-en="DEREKVINCI" data-es="DEREKVINCI">DEREKVINCI</a>
   <a class="mobile-drawer__link" href="#roster" data-en="ARTIST" data-es="ARTISTAS">ARTIST</a>
+  <a class="mobile-drawer__link" href="#newsletter" data-en="NEWSLETTER" data-es="BOLETÍN">NEWSLETTER</a>
+  <a class="mobile-drawer__link" href="#creators" data-en="CREATORS" data-es="CREADORES">CREATORS</a>
   <a class="mobile-drawer__link" href="#contact" data-en="BOOKING" data-es="RESERVAS">BOOKING</a>
   <a class="mobile-drawer__link" href="#new-artist" data-en="NEW ARTIST" data-es="NUEVO ARTISTA">NEW ARTIST</a>
   <div class="mobile-drawer__actions">
@@ -3250,9 +3420,9 @@ body.drawer-open {
           <span class="stat__note" data-en="J Salez · Tony Lozano · Vinny Rivera · Johandy +5" data-es="J Salez · Tony Lozano · Vinny Rivera · Johandy +5">J Salez · Tony Lozano · Vinny Rivera · Johandy +5</span>
         </li>
         <li class="stat reveal-delay-2">
-          <span class="stat__value">60M<span class="gold">+</span></span>
-          <span class="stat__label" data-en="Combined Streams" data-es="Reproducciones Combinadas">Combined Streams</span>
-          <span class="stat__note" data-en="Across all roster artists" data-es="En todo el roster">Across all roster artists</span>
+          <span class="stat__value">1.5M<span class="gold">+</span></span>
+          <span class="stat__label" data-en="Monthly Listeners" data-es="Oyentes Mensuales">Monthly Listeners</span>
+          <span class="stat__note" data-en="Combined across the roster on Spotify" data-es="Combinados en el roster en Spotify">Combined across the roster on Spotify</span>
         </li>
         <li class="stat reveal-delay-3">
           <span class="stat__value">25<span class="gold">+</span></span>
@@ -3262,7 +3432,7 @@ body.drawer-open {
         <li class="stat">
           <span class="stat__value">1998</span>
           <span class="stat__label" data-en="Year Founded" data-es="Año de Fundación">Year Founded</span>
-          <span class="stat__note" data-en="Orlando, Florida" data-es="Orlando, Florida">Orlando, Florida</span>
+          <span class="stat__note" data-en="Boston ’98 · Orlando since ’06" data-es="Boston ’98 · Orlando desde ’06">Boston ’98 · Orlando since ’06</span>
         </li>
       </ul>
     </div>
@@ -3311,29 +3481,23 @@ body.drawer-open {
           </div>
         </article>
         <article class="artist-card artist-card--v4 reveal">
-          <div class="artist-card__media artist-card__placeholder" role="img" aria-label="Lee Sanz">
-            <img class="artist-card__placeholder-watermark" src="img/eqs-logo-gold.png" alt="" aria-hidden="true" width="120" height="84">
-            <span class="artist-card__coming" data-en="PHOTO SOON" data-es="FOTO PRONTO">PHOTO SOON</span>
-          </div>
+          <div class="artist-card__media artist-card__media--lee-sanz" role="img" aria-label="Lee Sanz"></div>
           <div class="artist-card__info">
             <h3 class="artist-card__name">Lee Sanz</h3>
             <a class="artist-card__explore" href="#contact" data-en="Explore" data-es="Explorar">Explore</a>
           </div>
         </article>
         <article class="artist-card artist-card--v4 reveal">
-          <div class="artist-card__media artist-card__placeholder" role="img" aria-label="Albin St Rose">
-            <img class="artist-card__placeholder-watermark" src="img/eqs-logo-gold.png" alt="" aria-hidden="true" width="120" height="84">
-            <span class="artist-card__coming" data-en="PHOTO SOON" data-es="FOTO PRONTO">PHOTO SOON</span>
-          </div>
+          <div class="artist-card__media artist-card__media--albin-st-rose" role="img" aria-label="Albin St&#39; Rose"></div>
           <div class="artist-card__info">
-            <h3 class="artist-card__name">Albin St Rose</h3>
+            <h3 class="artist-card__name">Albin St' Rose</h3>
             <a class="artist-card__explore" href="#contact" data-en="Explore" data-es="Explorar">Explore</a>
           </div>
         </article>
         <article class="artist-card artist-card--v4 reveal">
-          <div class="artist-card__media artist-card__media--angel-rose" role="img" aria-label="Angel Rose"></div>
+          <div class="artist-card__media artist-card__media--angel-rico" role="img" aria-label="Angel Rico"></div>
           <div class="artist-card__info">
-            <h3 class="artist-card__name">Angel Rose</h3>
+            <h3 class="artist-card__name">Angel Rico</h3>
             <a class="artist-card__explore" href="#releases" data-en="Explore" data-es="Explorar">Explore</a>
           </div>
         </article>
@@ -3356,7 +3520,7 @@ body.drawer-open {
         <article class="release-channel">
           <h3 class="release-channel__title" data-en="The EQS Catalog" data-es="El Catálogo EQS">The EQS Catalog</h3>
           <p class="section__lead" data-en="Stream the full EQS roster — new singles, albums, and curated playlists updated weekly." data-es="Escucha todo el roster EQS — sencillos, álbumes y playlists curadas actualizadas cada semana.">Stream the full EQS roster — new singles, albums, and curated playlists updated weekly.</p>
-          <a class="lane__cta" href="https://open.spotify.com/artist/1k9LH8hJGdjr23xa8Gu7zU" target="_blank" rel="noopener noreferrer" data-en="Open on Spotify →" data-es="Abrir en Spotify →">Open on Spotify →</a>
+          <a class="lane__cta" href="https://open.spotify.com/playlist/6hfzyb3iH65BXv8i8P596l" target="_blank" rel="noopener noreferrer" data-en="Open on Spotify →" data-es="Abrir en Spotify →">Open on Spotify →</a>
         </article>
         <article class="release-channel">
           <h3 class="release-channel__title" data-en="Visual Stories" data-es="Historias Visuales">Visual Stories</h3>
@@ -3367,6 +3531,12 @@ body.drawer-open {
       <div class="spotify-embeds" id="spotify-section">
         <iframe title="J Salez on Spotify" src="https://open.spotify.com/embed/artist/1k9LH8hJGdjr23xa8Gu7zU?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <iframe title="Vinny Rivera on Spotify" src="https://open.spotify.com/embed/artist/16KwTAKkQMkBVS0Fuz2vpt?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="Tony Lozano on Spotify" src="https://open.spotify.com/embed/artist/3BcUTcUB24CvdeMUho68m4?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="Jhonny Evidence on Spotify" src="https://open.spotify.com/embed/artist/7EndqnY5tR0pzhbVFJr5Zy?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="Johandy on Spotify" src="https://open.spotify.com/embed/artist/1CitJ6r1mhjof0XLq0BMHQ?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="Angel Rico on Spotify" src="https://open.spotify.com/embed/artist/5tQCNQQQoHVjwuGKbpoFQx?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="Lee Sanz on Spotify" src="https://open.spotify.com/embed/artist/5NenmouPCo43LQcwuzZD0f?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="Albin St&#39; Rose on Spotify" src="https://open.spotify.com/embed/artist/6YqUpk9eMaZeryksmey4Xf?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -3426,6 +3596,84 @@ body.drawer-open {
     </div>
   </section>
 
+  <section class="newsletter section reveal" id="newsletter" aria-labelledby="newsletter-heading">
+    <div class="container">
+      <p class="section__eyebrow uppercase-label" data-en="Newsletter" data-es="Boletín">Newsletter</p>
+      <h2 id="newsletter-heading" class="section__title" data-en="The EQS brief." data-es="El informe EQS.">The EQS brief.</h2>
+      <p class="section__lead" data-en="Label news, new releases, and tour dates — written by Hector Alvarez. Every issue is archived here." data-es="Noticias del sello, nuevos lanzamientos y fechas de gira — escrito por Hector Alvarez. Cada edición queda archivada aquí.">Label news, new releases, and tour dates — written by Hector Alvarez. Every issue is archived here.</p>
+      <div class="newsletter__grid" id="newsletter-grid">
+        <!--
+          TO ADD AN ISSUE:
+          1. Drop the PDF in newsletters/ (e.g. newsletters/eqs-brief-01.pdf)
+          2. Copy the <article> below into this grid, newest first, and fill it in
+          3. Delete the .newsletter__empty paragraph once there is at least one issue
+          The data-en / data-es pairs are optional — omit them for Spanish-only or English-only issues.
+
+        <article class="issue-card">
+          <p class="issue-card__meta">Issue 01 · January 2026</p>
+          <h3 class="issue-card__title">Headline of the issue</h3>
+          <p class="issue-card__text">One or two sentences on what is inside.</p>
+          <a class="issue-card__link" href="newsletters/eqs-brief-01.pdf" target="_blank" rel="noopener noreferrer" data-en="Read issue →" data-es="Leer edición →">Read issue →</a>
+        </article>
+        -->
+        <p class="newsletter__empty" data-en="Issues will appear here as they are published — the first one is on the way." data-es="Las ediciones aparecerán aquí a medida que se publiquen — la primera está en camino.">Issues will appear here as they are published — the first one is on the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="creators section reveal" id="creators" aria-labelledby="creators-heading">
+    <div class="container creators__grid">
+      <div class="creators__info">
+        <p class="section__eyebrow uppercase-label" data-en="Creator Program" data-es="Programa de Creadores">Creator Program</p>
+        <h2 id="creators-heading" class="section__title" data-en="EQS Creator Program." data-es="Programa de Creadores EQS.">EQS Creator Program.</h2>
+        <p class="creators__lead" data-en="Editors, videographers, photographers, and designers who move tropical music forward. Send us what you make — if it fits the label, we build from there." data-es="Editores, videógrafos, fotógrafos y diseñadores que impulsan la música tropical. Envíanos lo que haces — si encaja con el sello, construimos desde ahí.">Editors, videographers, photographers, and designers who move tropical music forward. Send us what you make — if it fits the label, we build from there.</p>
+        <ul class="creators__perks">
+          <li class="creators__perk" data-en="Create content with EQS roster artists" data-es="Crea contenido con los artistas del roster EQS">Create content with EQS roster artists</li>
+          <li class="creators__perk" data-en="Credit and reach across every EQS channel" data-es="Crédito y alcance en todos los canales de EQS">Credit and reach across every EQS channel</li>
+          <li class="creators__perk" data-en="Paid briefs when your work fits a campaign" data-es="Proyectos pagados cuando tu trabajo encaja en una campaña">Paid briefs when your work fits a campaign</li>
+          <li class="creators__perk" data-en="A direct line to the label — no gatekeeping" data-es="Línea directa con el sello — sin intermediarios">A direct line to the label — no gatekeeping</li>
+        </ul>
+        <p class="creators__email-label" data-en="Or send it straight to" data-es="O envíalo directo a">Or send it straight to</p>
+        <p class="contact__detail"><a href="mailto:victorsavanillabooking@gmail.com">VICTORSAVANILLABOOKING@GMAIL.COM</a></p>
+      </div>
+      <form class="contact-form creator-form" id="creator-form" action="https://formspree.io/f/YOUR_CREATOR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="EQS Creator Program Submission">
+        <input type="hidden" name="route_to" value="victorsavanillabooking@gmail.com">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="creator-name" data-en="Name" data-es="Nombre">Name</label>
+            <input id="creator-name" name="creator_name" type="text" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="creator-email" data-en="Email" data-es="Correo">Email</label>
+            <input id="creator-email" name="creator_email" type="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="creator-discipline" data-en="What You Make" data-es="Qué Haces">What You Make</label>
+          <select id="creator-discipline" name="discipline" required>
+            <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
+            <option value="video" data-en="Video / Editing" data-es="Video / Edición">Video / Editing</option>
+            <option value="photo" data-en="Photography" data-es="Fotografía">Photography</option>
+            <option value="design" data-en="Graphic Design / Artwork" data-es="Diseño Gráfico / Arte">Graphic Design / Artwork</option>
+            <option value="social" data-en="Social / Short-Form Content" data-es="Contenido Social / Formato Corto">Social / Short-Form Content</option>
+            <option value="other" data-en="Other" data-es="Otro">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="creator-links" data-en="Portfolio or Social Links" data-es="Portafolio o Redes Sociales">Portfolio or Social Links</label>
+          <input id="creator-links" name="portfolio" type="text" required placeholder="instagram.com/… · youtube.com/… · drive.google.com/…">
+        </div>
+        <div class="form-group">
+          <label for="creator-message" data-en="Tell Us About Your Work" data-es="Cuéntanos Sobre Tu Trabajo">Tell Us About Your Work</label>
+          <textarea id="creator-message" name="message" required></textarea>
+        </div>
+        <p class="application-error contact-form__error" role="alert" hidden></p>
+        <button class="form-submit" type="submit" data-en="SUBMIT WORK →" data-es="ENVIAR TRABAJO →">SUBMIT WORK →</button>
+      </form>
+    </div>
+  </section>
+
   <section class="application section reveal" id="new-artist" aria-labelledby="application-heading">
     <div class="container">
       <p class="section__eyebrow uppercase-label" data-en="Join EQS" data-es="Únete a EQS">Join EQS</p>
@@ -3433,6 +3681,7 @@ body.drawer-open {
       <p class="application-intro" data-en="At EQS Música we are building the future of tropical music. We look for artists who are serious, consistent, and investing in their careers — not just talent alone." data-es="En EQS Música estamos construyendo el futuro de la música tropical. Buscamos artistas serios, consistentes e invertidos en sus carreras — no solo talento.">At EQS Música we are building the future of tropical music. We look for artists who are serious, consistent, and investing in their careers — not just talent alone.</p>
       <form class="contact-form application-form" action="https://formspree.io/f/YOUR_ARTIST_FORM_ID" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="EQS New Artist Application">
+        <input type="hidden" name="route_to" value="halvarez@eqsmusica.com">
         <div class="wizard-progress">
           <div class="wizard-progress__track" aria-hidden="true"></div>
           <p class="wizard-progress__label" aria-live="polite"></p>
@@ -3780,6 +4029,8 @@ body.drawer-open {
           <li><a class="footer-col__link" href="#roster" data-en="Artists" data-es="Artistas">Artists</a></li>
           <li><a class="footer-col__link" href="#releases" data-en="Releases" data-es="Lanzamientos">Releases</a></li>
           <li><a class="footer-col__link" href="#derekvinci" data-en="DerekVinci" data-es="DerekVinci">DerekVinci</a></li>
+          <li><a class="footer-col__link" href="#newsletter" data-en="Newsletter" data-es="Boletín">Newsletter</a></li>
+          <li><a class="footer-col__link" href="#creators" data-en="Creator Program" data-es="Programa de Creadores">Creator Program</a></li>
           <li><a class="footer-col__link" href="#new-artist" data-en="New Artist" data-es="Nuevo Artista">New Artist</a></li>
           <li><a class="footer-col__link" href="#contact" data-en="Booking" data-es="Reservas">Booking</a></li>
         </ul>
@@ -3793,8 +4044,8 @@ body.drawer-open {
           <li><a class="footer-col__link" href="#roster">Johandy</a></li>
           <li><a class="footer-col__link" href="#roster">Jhonny Evidence</a></li>
           <li><a class="footer-col__link" href="#roster">Lee Sanz</a></li>
-          <li><a class="footer-col__link" href="#roster">Albin St Rose</a></li>
-          <li><a class="footer-col__link" href="#roster">Angel Rose</a></li>
+          <li><a class="footer-col__link" href="#roster">Albin St' Rose</a></li>
+          <li><a class="footer-col__link" href="#roster">Angel Rico</a></li>
           <li><a class="footer-col__link" href="#roster">danielsensualAI</a></li>
         </ul>
       </div>
@@ -4012,8 +4263,8 @@ body.drawer-open {
       of: { en: 'of', es: 'de' },
       sending: { en: 'Sending…', es: 'Enviando…' },
       noEndpoint: {
-        en: 'The application form isn’t connected yet. Please email us in the meantime.',
-        es: 'El formulario aún no está conectado. Por favor escríbenos mientras tanto.'
+        en: 'The application form isn’t connected yet. Please email halvarez@eqsmusica.com in the meantime.',
+        es: 'El formulario aún no está conectado. Por favor escribe a halvarez@eqsmusica.com mientras tanto.'
       },
       netErr: {
         en: 'Network error. Please check your connection and try again.',
@@ -4198,7 +4449,7 @@ body.drawer-open {
   }
 
   /* Booking form: block submits while the Formspree endpoint is a placeholder */
-  const bookingForm = document.querySelector('.contact-form:not(.application-form)');
+  const bookingForm = document.querySelector('.contact-form:not(.application-form):not(.creator-form)');
   if (bookingForm) {
     const bookingError = bookingForm.querySelector('.contact-form__error');
     const BOOKING_MSG = {
@@ -4212,6 +4463,26 @@ body.drawer-open {
         if (bookingError) {
           bookingError.textContent = BOOKING_MSG[currentLang === 'es' ? 'es' : 'en'];
           bookingError.hidden = false;
+        }
+      }
+    });
+  }
+
+  /* Creator form: block submits while the Formspree endpoint is a placeholder */
+  const creatorForm = document.getElementById('creator-form');
+  if (creatorForm) {
+    const creatorError = creatorForm.querySelector('.contact-form__error');
+    const CREATOR_MSG = {
+      en: 'The creator form isn\u2019t connected yet. Please email victorsavanillabooking@gmail.com in the meantime.',
+      es: 'El formulario de creadores a\u00fan no est\u00e1 conectado. Por favor escribe a victorsavanillabooking@gmail.com mientras tanto.'
+    };
+    creatorForm.addEventListener('submit', (e) => {
+      const action = creatorForm.getAttribute('action') || '';
+      if (!action || action.indexOf('YOUR_CREATOR_FORM_ID') !== -1) {
+        e.preventDefault();
+        if (creatorError) {
+          creatorError.textContent = CREATOR_MSG[currentLang === 'es' ? 'es' : 'en'];
+          creatorError.hidden = false;
         }
       }
     });
