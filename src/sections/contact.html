@@ -1,0 +1,42 @@
+  <section class="contact section reveal" id="contact" aria-labelledby="contact-heading">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <h2 id="contact-heading" class="contact__title section__title">Let's <span class="script-accent" data-en="Connect" data-es="Conectar">Connect</span></h2>
+        <p class="section__lead" data-en="Demos, bookings, press, and collaborations — our team responds within 48 hours." data-es="Demos, reservas, prensa y colaboraciones — nuestro equipo responde en 48 horas.">Demos, bookings, press, and collaborations — our team responds within 48 hours.</p>
+        <p class="contact__detail"><a href="mailto:DEREKVINCI@EQSMUSICA.COM">DEREKVINCI@EQSMUSICA.COM</a></p>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name" data-en="First Name" data-es="Nombre">First Name</label>
+            <input id="first-name" name="first_name" type="text" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="last-name" data-en="Last Name" data-es="Apellido">Last Name</label>
+            <input id="last-name" name="last_name" type="text" required autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" data-en="Email" data-es="Correo">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="inquiry" data-en="Inquiry Type" data-es="Tipo de Consulta">Inquiry Type</label>
+          <select id="inquiry" name="inquiry" required>
+            <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
+            <option value="booking" data-en="Booking" data-es="Reserva">Booking</option>
+            <option value="demo" data-en="Demo Submission" data-es="Envío de Demo">Demo Submission</option>
+            <option value="press" data-en="Press" data-es="Prensa">Press</option>
+            <option value="collaboration" data-en="Collaboration" data-es="Colaboración">Collaboration</option>
+            <option value="general" data-en="General" data-es="General">General</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message" data-en="Message" data-es="Mensaje">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <p class="application-error contact-form__error" role="alert" hidden></p>
+        <button class="form-submit" type="submit" data-en="SEND INQUIRY →" data-es="ENVIAR CONSULTA →">SEND INQUIRY →</button>
+      </form>
+    </div>
+  </section>

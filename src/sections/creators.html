@@ -1,0 +1,52 @@
+  <section class="creators section reveal" id="creators" aria-labelledby="creators-heading">
+    <div class="container creators__grid">
+      <div class="creators__info">
+        <p class="section__eyebrow uppercase-label" data-en="Creator Program" data-es="Programa de Creadores">Creator Program</p>
+        <h2 id="creators-heading" class="section__title" data-en="EQS Creator Program." data-es="Programa de Creadores EQS.">EQS Creator Program.</h2>
+        <p class="creators__lead" data-en="Editors, videographers, photographers, and designers who move tropical music forward. Send us what you make — if it fits the label, we build from there." data-es="Editores, videógrafos, fotógrafos y diseñadores que impulsan la música tropical. Envíanos lo que haces — si encaja con el sello, construimos desde ahí.">Editors, videographers, photographers, and designers who move tropical music forward. Send us what you make — if it fits the label, we build from there.</p>
+        <ul class="creators__perks">
+          <li class="creators__perk" data-en="Create content with EQS roster artists" data-es="Crea contenido con los artistas del roster EQS">Create content with EQS roster artists</li>
+          <li class="creators__perk" data-en="Credit and reach across every EQS channel" data-es="Crédito y alcance en todos los canales de EQS">Credit and reach across every EQS channel</li>
+          <li class="creators__perk" data-en="Paid briefs when your work fits a campaign" data-es="Proyectos pagados cuando tu trabajo encaja en una campaña">Paid briefs when your work fits a campaign</li>
+          <li class="creators__perk" data-en="A direct line to the label — no gatekeeping" data-es="Línea directa con el sello — sin intermediarios">A direct line to the label — no gatekeeping</li>
+        </ul>
+        <p class="creators__email-label" data-en="Or send it straight to" data-es="O envíalo directo a">Or send it straight to</p>
+        <p class="contact__detail"><a href="mailto:victorsavanillabooking@gmail.com">VICTORSAVANILLABOOKING@GMAIL.COM</a></p>
+      </div>
+      <form class="contact-form creator-form" id="creator-form" action="https://formspree.io/f/YOUR_CREATOR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="EQS Creator Program Submission">
+        <input type="hidden" name="route_to" value="victorsavanillabooking@gmail.com">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="creator-name" data-en="Name" data-es="Nombre">Name</label>
+            <input id="creator-name" name="creator_name" type="text" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="creator-email" data-en="Email" data-es="Correo">Email</label>
+            <input id="creator-email" name="creator_email" type="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="creator-discipline" data-en="What You Make" data-es="Qué Haces">What You Make</label>
+          <select id="creator-discipline" name="discipline" required>
+            <option value="" data-en="Select…" data-es="Seleccionar…">Select…</option>
+            <option value="video" data-en="Video / Editing" data-es="Video / Edición">Video / Editing</option>
+            <option value="photo" data-en="Photography" data-es="Fotografía">Photography</option>
+            <option value="design" data-en="Graphic Design / Artwork" data-es="Diseño Gráfico / Arte">Graphic Design / Artwork</option>
+            <option value="social" data-en="Social / Short-Form Content" data-es="Contenido Social / Formato Corto">Social / Short-Form Content</option>
+            <option value="other" data-en="Other" data-es="Otro">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="creator-links" data-en="Portfolio or Social Links" data-es="Portafolio o Redes Sociales">Portfolio or Social Links</label>
+          <input id="creator-links" name="portfolio" type="text" required placeholder="instagram.com/… · youtube.com/… · drive.google.com/…">
+        </div>
+        <div class="form-group">
+          <label for="creator-message" data-en="Tell Us About Your Work" data-es="Cuéntanos Sobre Tu Trabajo">Tell Us About Your Work</label>
+          <textarea id="creator-message" name="message" required></textarea>
+        </div>
+        <p class="application-error contact-form__error" role="alert" hidden></p>
+        <button class="form-submit" type="submit" data-en="SUBMIT WORK →" data-es="ENVIAR TRABAJO →">SUBMIT WORK →</button>
+      </form>
+    </div>
+  </section>

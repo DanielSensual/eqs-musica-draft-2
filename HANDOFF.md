@@ -29,7 +29,7 @@ python3 -m http.server 9876
 # Open http://127.0.0.1:9876
 ```
 
-**Stack:** Single-file static site — all HTML/CSS/JS in `index.html`. No build step. Vercel project: `draft-2-eqs-site`.
+**Stack:** Multi-page static site (since Sep 12, 2026). Pages are generated from `src/` by `python3 tools/build.py`; the output HTML is committed, so Vercel still deploys with no build step. See **Site structure** in `FOLLOWUP.md`. Vercel project: `draft-2-eqs-site`.
 
 ---
 
