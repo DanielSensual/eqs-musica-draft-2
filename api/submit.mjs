@@ -118,39 +118,43 @@ export async function POST(request) {
   const testToken = process.env.FORMS_TEST_TOKEN || "";
   const isTest = Boolean(testToken && bcc.length) && request.headers.get("x-forms-test") === testToken;
 
+  const email = JSON.stringify({
+    from,
+    to: isTest ? bcc : form.to,
+    ...(bcc.length && !isTest ? { bcc } : {}),
+    reply_to: replyTo,
+    subject: `${isTest ? `[TEST → ${form.to.join(", ")}] ` : ""}[${reference}] ${form.subject} — ${who}`,
+    text: [
+      `EQS Música website — ${form.subject}`,
+      `Reference: ${reference}`,
+      `Reply to: ${replyTo}`,
+      "",
+      body,
+      "",
+      "Sent from the form at www.eqsmusica.com. Reply to this email to answer the sender directly.",
+    ].join("\n"),
+    html: renderEmail({
+      formId,
+      fields,
+      who,
+      replyTo,
+      reference,
+      attachments: attachments.map((a) => a.filename),
+      testFor: isTest ? form.to.join(", ") : null,
+    }),
+    ...(attachments.length ? { attachments } : {}),
+  });
+  // Keyed on the exact email, so a double-click is sent once but a changed template or test flag never collides.
+  const sendKey = createHash("sha256").update(email).digest("hex");
+
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
-      "Idempotency-Key": `eqs-form/v1/${fingerprint}`,
+      "Idempotency-Key": `eqs-form/v2/${sendKey}`,
     },
-    body: JSON.stringify({
-      from,
-      to: isTest ? bcc : form.to,
-      ...(bcc.length && !isTest ? { bcc } : {}),
-      reply_to: replyTo,
-      subject: `${isTest ? `[TEST → ${form.to.join(", ")}] ` : ""}[${reference}] ${form.subject} — ${who}`,
-      text: [
-        `EQS Música website — ${form.subject}`,
-        `Reference: ${reference}`,
-        `Reply to: ${replyTo}`,
-        "",
-        body,
-        "",
-        "Sent from the form at www.eqsmusica.com. Reply to this email to answer the sender directly.",
-      ].join("\n"),
-      html: renderEmail({
-        formId,
-        fields,
-        who,
-        replyTo,
-        reference,
-        attachments: attachments.map((a) => a.filename),
-        testFor: isTest ? form.to.join(", ") : null,
-      }),
-      ...(attachments.length ? { attachments } : {}),
-    }),
+    body: email,
   }).catch(() => null);
 
   if (!res || !res.ok) {
