@@ -1,6 +1,11 @@
 # eqsmusica.com — Wix → Vercel cutover
 
-**Prepared:** Oct 27, 2026 · **Target:** tonight · **Vercel project:** `draft-2-eqs-site`
+**Prepared:** Oct 27, 2026 · **SWITCHED:** Oct 27, 2026 ~6:00 PM ET · **Vercel project:** `draft-2-eqs-site`
+
+> **Done.** Wix A records are now `216.150.1.1` + `216.150.16.1` (the three `185.230.63.x` records are gone), and `www` is a CNAME to
+> `aef5825a04ce704e.vercel-dns-017.com`. Vercel shows both domains Valid, the Let's Encrypt certificate was issued, the apex 308s to www,
+> all pages and old Wix URLs resolve, and a live form test from www.eqsmusica.com was delivered. MX, SPF and the verification TXT were checked
+> unchanged at the Wix nameserver right after the switch. Still open: an outside test email to DEREKVINCI@EQSMUSICA.COM, and the after-launch list below.
 
 ## The approach: keep Wix DNS and change only two records
 
