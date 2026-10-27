@@ -3346,3 +3346,174 @@ body.drawer-open {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Oct 27 launch revisions: mobile header, action bar, sideways scroll, cinematic artist reveal ── */
+
+/* No sideways drag on phones. `clip` (unlike `hidden`) doesn't break sticky headers, and the dark html
+   background means any rubber-band overscroll shows ink instead of white. */
+html {
+  background: var(--ink);
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+}
+
+.lang-toggle-group {
+  flex-shrink: 0;
+}
+
+.lang-toggle-group .lang-toggle__btn {
+  min-width: 2.25rem;
+}
+
+/* Phones: the bottom bar already carries NEW ARTIST, so the header keeps logo + EN/ES + menu only. */
+@media (max-width: 600px) {
+  .site-header__actions > .btn-cta {
+    display: none;
+  }
+
+  .site-header__actions {
+    gap: 0.6rem;
+  }
+
+  .lang-toggle-group .lang-toggle__btn {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.6875rem;
+  }
+}
+
+/* The desktop nav is empty below 900px but its flex gaps still cost ~48px; drop it so the menu button fits. */
+@media (max-width: 900px) {
+  .site-header__inner > .site-nav {
+    display: none;
+  }
+
+  .site-header__actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header__inner {
+    gap: 0.75rem;
+  }
+
+  .site-header__logo {
+    gap: 0.5rem;
+  }
+
+  .site-header__logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .site-header__wordmark {
+    font-size: 1.05rem;
+  }
+}
+
+/* Bottom quick-action bar: both buttons solid and readable. */
+.mobile-action-bar--dual {
+  background: rgba(4, 24, 19, 0.96);
+  border-top: 1px solid rgba(220, 201, 163, 0.28);
+}
+
+.mobile-action-bar--dual .btn-cta,
+.mobile-action-bar--dual .btn-cta--outline {
+  padding: 0.95rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.mobile-action-bar--dual .btn-cta--outline {
+  background: var(--accent-palm);
+  color: var(--cream);
+  border: 1px solid var(--accent-sun);
+}
+
+/* Artist cards: the frame appears, the photo wipes up inside it from a slow push-in, black-and-white into
+   colour, a light sweep passes once, then the name rises. --stagger is set per batch by the reveal observer.
+   The wipe sits on the photo, never on the card: Chrome's IntersectionObserver reports a fully clipped
+   element as not intersecting, so a clipped card would never get .visible. */
+.artist-card--v4.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.artist-card--v4 .artist-card__media {
+  clip-path: inset(100% 0 0 0);
+  transform: scale(1.22);
+  filter: grayscale(1) brightness(0.45);
+  transition:
+    clip-path 1.15s cubic-bezier(0.77, 0, 0.18, 1) var(--stagger, 0ms),
+    transform 2s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--stagger, 0ms) + 0.1s),
+    filter 1.6s ease calc(var(--stagger, 0ms) + 0.35s);
+}
+
+.artist-card--v4.visible .artist-card__media {
+  clip-path: inset(0 0 0 0);
+  transform: scale(1);
+  filter: none;
+}
+
+.artist-card--v4 .artist-card__info > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.8s ease calc(var(--stagger, 0ms) + 0.7s),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--stagger, 0ms) + 0.7s),
+    color var(--transition-fast);
+}
+
+.artist-card--v4 .artist-card__explore {
+  transition-delay: calc(var(--stagger, 0ms) + 0.85s), calc(var(--stagger, 0ms) + 0.85s), 0s;
+}
+
+.artist-card--v4.visible .artist-card__info > * {
+  opacity: 1;
+  transform: none;
+}
+
+.artist-card--v4::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgba(245, 241, 232, 0.18) 50%, transparent 65%);
+  transform: translateX(-120%);
+}
+
+.artist-card--v4.visible::after {
+  animation: artist-sheen 1.3s ease-out calc(var(--stagger, 0ms) + 0.55s) 1 both;
+}
+
+@keyframes artist-sheen {
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@media (hover: hover) {
+  .artist-card--v4.visible:hover .artist-card__media {
+    transform: scale(1.05);
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artist-card--v4 .artist-card__media,
+  .artist-card--v4 .artist-card__info > * {
+    clip-path: none;
+    transform: none;
+    filter: none;
+    opacity: 1;
+  }
+
+  .artist-card--v4::after {
+    display: none;
+  }
+}

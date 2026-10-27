@@ -19,11 +19,11 @@
   if (revealEls.length && 'IntersectionObserver' in window) {
     const revealObs = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            revealObs.unobserve(entry.target);
-          }
+        // Elements entering together get a short stagger (used by the artist cards).
+        entries.filter((entry) => entry.isIntersecting).forEach((entry, i) => {
+          entry.target.style.setProperty('--stagger', `${i * 110}ms`);
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
         });
       },
       { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
