@@ -13,25 +13,26 @@
  */
 
 import { createHash } from "node:crypto";
+import { LAYOUTS, displayValue, renderEmail } from "./_email.mjs";
 
 const FORMS = {
   booking: {
     to: ["DEREKVINCI@EQSMUSICA.COM"],
     subject: "Booking inquiry",
     emailField: "email",
-    nameFields: ["first_name", "last_name"],
+    name: (f) => [f.get("first_name"), f.get("last_name")].filter(Boolean).join(" "),
   },
   artist: {
     to: ["halvarez@eqsmusica.com"],
     subject: "New artist application",
     emailField: "email",
-    nameFields: ["artist_name", "full_name"],
+    name: (f) => f.get("artist_name") || f.get("full_name"),
   },
   creator: {
     to: ["victorsavanillabooking@gmail.com"],
     subject: "Creator Program submission",
     emailField: "creator_email",
-    nameFields: ["creator_name"],
+    name: (f) => f.get("creator_name"),
   },
 };
 
@@ -108,10 +109,11 @@ export async function POST(request) {
     return fail(503, "This form is temporarily unavailable.");
   }
 
-  const body = [...fields].map(([key, value]) => `${label(key)}: ${value}`).join("\n");
+  const labels = Object.assign({}, ...LAYOUTS[formId].sections.map((s) => s.fields));
+  const body = [...fields].map(([key, value]) => `${labels[key] || label(key)}: ${displayValue(key, value)}`).join("\n");
   const fingerprint = createHash("sha256").update(JSON.stringify([formId, body])).digest("hex");
   const reference = `EQS-${fingerprint.slice(0, 8).toUpperCase()}`;
-  const who = form.nameFields.map((f) => fields.get(f)).find(Boolean) || replyTo;
+  const who = form.name(fields) || replyTo;
   const bcc = (process.env.FORMS_BCC || "").split(",").map((s) => s.trim()).filter(Boolean);
   const testToken = process.env.FORMS_TEST_TOKEN || "";
   const isTest = Boolean(testToken && bcc.length) && request.headers.get("x-forms-test") === testToken;
@@ -138,6 +140,15 @@ export async function POST(request) {
         "",
         "Sent from the form at www.eqsmusica.com. Reply to this email to answer the sender directly.",
       ].join("\n"),
+      html: renderEmail({
+        formId,
+        fields,
+        who,
+        replyTo,
+        reference,
+        attachments: attachments.map((a) => a.filename),
+        testFor: isTest ? form.to.join(", ") : null,
+      }),
       ...(attachments.length ? { attachments } : {}),
     }),
   }).catch(() => null);
