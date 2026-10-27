@@ -5,7 +5,9 @@
         <p class="section__lead" data-en="Demos, bookings, press, and collaborations — our team responds within 48 hours." data-es="Demos, reservas, prensa y colaboraciones — nuestro equipo responde en 48 horas.">Demos, bookings, press, and collaborations — our team responds within 48 hours.</p>
         <p class="contact__detail"><a href="mailto:DEREKVINCI@EQSMUSICA.COM">DEREKVINCI@EQSMUSICA.COM</a></p>
       </div>
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="contact-form" action="/api/submit" method="POST">
+        <input type="hidden" name="form" value="booking">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
         <div class="form-row">
           <div class="form-group">
             <label for="first-name" data-en="First Name" data-es="Nombre">First Name</label>

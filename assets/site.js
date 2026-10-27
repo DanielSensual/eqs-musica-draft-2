@@ -194,9 +194,9 @@
       step: { en: 'Step', es: 'Paso' },
       of: { en: 'of', es: 'de' },
       sending: { en: 'Sending…', es: 'Enviando…' },
-      noEndpoint: {
-        en: 'The application form isn’t connected yet. Please email halvarez@eqsmusica.com in the meantime.',
-        es: 'El formulario aún no está conectado. Por favor escribe a halvarez@eqsmusica.com mientras tanto.'
+      tooBig: {
+        en: 'Your uploads are over 4 MB. Please remove them and share photos or a press kit through your Dropbox / Drive link instead.',
+        es: 'Tus archivos superan 4 MB. Quítalos y comparte fotos o press kit con tu enlace de Dropbox / Drive.'
       },
       netErr: {
         en: 'Network error. Please check your connection and try again.',
@@ -331,8 +331,10 @@
       if (!appForm.checkValidity()) { appForm.reportValidity(); return; }
 
       const action = appForm.getAttribute('action') || '';
-      if (!action || action.indexOf('YOUR_ARTIST_FORM_ID') !== -1) {
-        showError(L('noEndpoint'));
+      const uploadBytes = [...appForm.querySelectorAll('input[type="file"]')]
+        .reduce((sum, input) => sum + [...input.files].reduce((s, f) => s + f.size, 0), 0);
+      if (uploadBytes > 4 * 1024 * 1024) {
+        showError(L('tooBig'));
         return;
       }
 
@@ -380,45 +382,62 @@
     });
   }
 
-  /* Booking form: block submits while the Formspree endpoint is a placeholder */
-  const bookingForm = document.querySelector('.contact-form:not(.application-form):not(.creator-form)');
-  if (bookingForm) {
-    const bookingError = bookingForm.querySelector('.contact-form__error');
-    const BOOKING_MSG = {
-      en: 'The booking form isn’t connected yet. Please email DEREKVINCI@EQSMUSICA.COM in the meantime.',
-      es: 'El formulario de reservas aún no está conectado. Por favor escribe a DEREKVINCI@EQSMUSICA.COM mientras tanto.'
+  /* Booking + creator forms: send through /api/submit and swap the form for a confirmation */
+  const SIMPLE_FORMS = [
+    {
+      form: document.querySelector('.contact-form:not(.application-form):not(.creator-form)'),
+      email: 'DEREKVINCI@EQSMUSICA.COM',
+      done: { en: 'Thank you — your inquiry is in. Our team responds within 48 hours.', es: 'Gracias — recibimos tu consulta. Nuestro equipo responde en 48 horas.' }
+    },
+    {
+      form: document.getElementById('creator-form'),
+      email: 'victorsavanillabooking@gmail.com',
+      done: { en: 'Thank you — your work is in. If it fits the label, we’ll reach out.', es: 'Gracias — recibimos tu trabajo. Si encaja con el sello, te contactaremos.' }
+    }
+  ];
+  SIMPLE_FORMS.forEach(({ form, email, done }) => {
+    if (!form) return;
+    const errorBox = form.querySelector('.contact-form__error');
+    const button = form.querySelector('.form-submit');
+    const lang = () => (currentLang === 'es' ? 'es' : 'en');
+    const FAIL = {
+      en: `Your message hasn’t been sent. Please try again, or email ${email}.`,
+      es: `Tu mensaje no se envió. Intenta de nuevo o escribe a ${email}.`
     };
-    bookingForm.addEventListener('submit', (e) => {
-      const action = bookingForm.getAttribute('action') || '';
-      if (!action || action.indexOf('YOUR_FORM_ID') !== -1) {
-        e.preventDefault();
-        if (bookingError) {
-          bookingError.textContent = BOOKING_MSG[currentLang === 'es' ? 'es' : 'en'];
-          bookingError.hidden = false;
-        }
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (errorBox) errorBox.hidden = true;
+      if (button) {
+        button.disabled = true;
+        button.textContent = lang() === 'es' ? 'Enviando…' : 'Sending…';
       }
+      fetch(form.getAttribute('action'), {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('send failed');
+          const note = document.createElement('p');
+          note.className = 'application-success';
+          note.setAttribute('role', 'status');
+          note.setAttribute('tabindex', '-1');
+          note.textContent = done[lang()];
+          form.replaceWith(note);
+          note.focus({ preventScroll: true });
+        })
+        .catch(() => {
+          if (errorBox) {
+            errorBox.textContent = FAIL[lang()];
+            errorBox.hidden = false;
+          }
+          if (button) {
+            button.disabled = false;
+            button.textContent = button.getAttribute(lang() === 'es' ? 'data-es' : 'data-en');
+          }
+        });
     });
-  }
-
-  /* Creator form: block submits while the Formspree endpoint is a placeholder */
-  const creatorForm = document.getElementById('creator-form');
-  if (creatorForm) {
-    const creatorError = creatorForm.querySelector('.contact-form__error');
-    const CREATOR_MSG = {
-      en: 'The creator form isn\u2019t connected yet. Please email victorsavanillabooking@gmail.com in the meantime.',
-      es: 'El formulario de creadores a\u00fan no est\u00e1 conectado. Por favor escribe a victorsavanillabooking@gmail.com mientras tanto.'
-    };
-    creatorForm.addEventListener('submit', (e) => {
-      const action = creatorForm.getAttribute('action') || '';
-      if (!action || action.indexOf('YOUR_CREATOR_FORM_ID') !== -1) {
-        e.preventDefault();
-        if (creatorError) {
-          creatorError.textContent = CREATOR_MSG[currentLang === 'es' ? 'es' : 'en'];
-          creatorError.hidden = false;
-        }
-      }
-    });
-  }
+  });
 
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());

@@ -1958,7 +1958,7 @@ body::before {
 }
 .artist-card__media--vinny-rivera {
   background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
-    url("/img/vinny-rivera.png");
+    url("/img/vinny-rivera-card.jpg");
   background-position: center, center 25%;
 }
 .artist-card__media--tony-lozano {
@@ -2708,7 +2708,7 @@ body.drawer-open {
 
 .artist-card__media--vinny-rivera {
   background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%),
-    url("/img/vinny-rivera.png");
+    url("/img/vinny-rivera-card.jpg");
 }
 
 .application {

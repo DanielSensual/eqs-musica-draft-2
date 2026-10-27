@@ -3,7 +3,9 @@
       <p class="section__eyebrow uppercase-label" data-en="Join EQS" data-es="Únete a EQS">Join EQS</p>
       <h2 id="application-heading" class="section__title" data-en="Artist application." data-es="Solicitud de artista.">Artist application.</h2>
       <p class="application-intro" data-en="At EQS Música we are building the future of tropical music. We look for artists who are serious, consistent, and investing in their careers — not just talent alone." data-es="En EQS Música estamos construyendo el futuro de la música tropical. Buscamos artistas serios, consistentes e invertidos en sus carreras — no solo talento.">At EQS Música we are building the future of tropical music. We look for artists who are serious, consistent, and investing in their careers — not just talent alone.</p>
-      <form class="contact-form application-form" action="https://formspree.io/f/YOUR_ARTIST_FORM_ID" method="POST" enctype="multipart/form-data">
+      <form class="contact-form application-form" action="/api/submit" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="form" value="artist">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
         <input type="hidden" name="_subject" value="EQS New Artist Application">
         <input type="hidden" name="route_to" value="halvarez@eqsmusica.com">
         <div class="wizard-progress">

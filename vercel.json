@@ -4,5 +4,62 @@
   "installCommand": null,
   "framework": null,
   "outputDirectory": ".",
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/post/:slug*",
+      "destination": "/artists/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "/newsletter/",
+      "permanent": true
+    },
+    {
+      "source": "/blog(/?)",
+      "destination": "/newsletter/",
+      "permanent": true
+    },
+    {
+      "source": "/artist-page/:slug*",
+      "destination": "/artists/",
+      "permanent": true
+    },
+    {
+      "source": "/profile/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/(eqs-artist|j-salez|tony-lozano|vinny-rivera|johandy|jhonny-evidence|laura-alcoba|ronny-mercedes|mr-don|dj-khalid|dj-tagada)(/?)",
+      "destination": "/artists/",
+      "permanent": true
+    },
+    {
+      "source": "/(eqs-bookings|book-online|contact)(/?)",
+      "destination": "/booking/",
+      "permanent": true
+    },
+    {
+      "source": "/(for-new-artist|submit-your-product)(/?)",
+      "destination": "/apply/",
+      "permanent": true
+    },
+    {
+      "source": "/(derek-deler-photography|copy-of-derek-deler-photography)(/?)",
+      "destination": "/derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/(eqs-links-partners)(/?)",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/(under-constrution)(/?)",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }

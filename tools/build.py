@@ -22,7 +22,6 @@ ROUTES = {
     "#top": "/",
     "#about": "/about/",
     "#services": "/about/#services",
-    "#journal": "/about/#journal",
     "#roster": "/artists/",
     "#releases": "/artists/#releases",
     "#derekvinci": "/derekvinci/",
@@ -52,7 +51,7 @@ PAGES = [
         "title": "About | EQS MÚSICA",
         "og_title": "About EQS Música",
         "description": "Founded in Boston in 1998 by DerekVinci and based in Orlando since 2006 — EQS Música is a tropical and Latin music label, studio, and booking agency.",
-        "sections": ["about-story", "services", "stats", "partners", "journal"],
+        "sections": ["about-story", "services", "stats", "partners"],
     },
     {
         "path": "/derekvinci/",
@@ -203,13 +202,43 @@ def build_page(page):
     html = root_absolute_assets(html)
     html = mark_current(html, path)
 
-    out = ROOT / path.strip("/") / "index.html" if path != "/" else ROOT / "index.html"
+    if "out" in page:
+        out = ROOT / page["out"]
+        html = html.replace(f'<link rel="canonical" href="{SITE}{path}">', '<meta name="robots" content="noindex">')
+    else:
+        out = ROOT / path.strip("/") / "index.html" if path != "/" else ROOT / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding="utf-8")
     return out.relative_to(ROOT), len(html)
 
 
+# Vercel serves /404.html for any path that matches nothing (old Wix URLs not covered by vercel.json redirects).
+NOT_FOUND = {
+    "path": "/404/",
+    "out": "404.html",
+    "title": "Page Not Found | EQS MÚSICA",
+    "og_title": "EQS Música",
+    "description": "EQS Música — #1 in tropical music. Record label, production, and bookings by DerekVinci.",
+    "sections": ["not-found"],
+}
+
+SITE = "https://www.eqsmusica.com"
+
+
+def write_crawl_files():
+    """robots.txt and sitemap.xml from the page list, so they never drift from the real pages."""
+    urls = "".join(f"  <url><loc>{SITE}{page['path']}</loc></url>\n" for page in PAGES)
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "</urlset>\n",
+        encoding="utf-8",
+    )
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
+
+
 if __name__ == "__main__":
-    for page in PAGES:
+    for page in PAGES + [NOT_FOUND]:
         out, size = build_page(page)
         print(f"  {str(out):28} {size / 1024:6.1f} KB")
+    write_crawl_files()
+    print("  robots.txt, sitemap.xml")
