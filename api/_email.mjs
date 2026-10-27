@@ -1,25 +1,38 @@
 /**
  * Branded HTML for the form notification emails. Files starting with "_" in api/ are not deployed as functions.
  *
- * Email clients ignore <style> blocks and web fonts unevenly, so everything is inline and table-based,
- * with Georgia standing in for Cormorant Garamond and Helvetica/Arial for Montserrat.
+ * Email clients ignore <style> blocks and web fonts unevenly, so everything is inline and table-based.
+ * BRAND mirrors the live site's tokens in assets/site.css — change colors there first, then here.
  */
 
-const LOGO = "https://draft-2-eqs-site.vercel.app/img/eqs-logo-128.png";
-const SITE = "https://www.eqsmusica.com";
-
-const C = {
-  page: "#0b0b0b",
-  card: "#141414",
-  panel: "#1b1b1b",
-  rule: "#2a2a2a",
-  gold: "#e6ae6d",
-  cream: "#e8e0d4",
-  muted: "#8f8a82",
-  ink: "#0b0b0b",
+const BRAND = {
+  name: "EQS Música",
+  wordmark: ["EQS", "MÚSICA"],
+  logo: "https://draft-2-eqs-site.vercel.app/img/eqs-logo-128.png",
+  site: "https://www.eqsmusica.com",
+  siteLabel: "eqsmusica.com",
+  tagline: "#1 IN TROPICAL MUSIC",
+  colors: {
+    page: "#04241c", // darker than --accent-palm-dark so the card lifts off it
+    card: "#06352a", // --accent-palm-dark
+    header: "#0e5c4a", // --accent-palm
+    panel: "#0b4436",
+    rule: "#1d5244",
+    accent: "#dcc9a3", // --accent-sun: buttons, eyebrows, links
+    accentInk: "#06352a", // text on the accent button
+    text: "#f5f1e8", // --cream
+    muted: "#a69e93", // --cream-dim
+  },
+  // Glacial Indifference / Montserrat on the site; neither is safe in email clients.
+  headingFont: "'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  bodyFont: "'Helvetica Neue', Helvetica, Arial, sans-serif",
 };
-const SERIF = "Georgia, 'Times New Roman', serif";
-const SANS = "'Helvetica Neue', Helvetica, Arial, sans-serif";
+
+const C = BRAND.colors;
+const SERIF = BRAND.headingFont;
+const SANS = BRAND.bodyFont;
+const LOGO = BRAND.logo;
+const SITE = BRAND.site;
 
 // Labels match the ones visitors see on the site, grouped the way the form groups them.
 export const LAYOUTS = {
@@ -68,7 +81,7 @@ function esc(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 }
 
-const LINK = `color:${C.gold};text-decoration:underline`;
+const LINK = `color:${C.accent};text-decoration:underline`;
 
 /** Escape, keep line breaks, and turn emails, URLs and bare domains into gold links. */
 function rich(value) {
@@ -90,7 +103,7 @@ export function displayValue(key, value) {
 
 function cell(label, value, attrs = "") {
   const l = `<div style="font-family:${SANS};font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:${C.muted};padding-bottom:4px">${esc(label)}</div>`;
-  const v = `<div style="font-family:${SANS};font-size:15px;line-height:1.6;color:${C.cream}">${rich(value)}</div>`;
+  const v = `<div style="font-family:${SANS};font-size:15px;line-height:1.6;color:${C.text}">${rich(value)}</div>`;
   return `<td valign="top" ${attrs}style="padding:10px 12px 10px 0;border-bottom:1px solid ${C.rule}">${l}${v}</td>`;
 }
 
@@ -115,7 +128,7 @@ function rows(entries) {
 function section(title, rows) {
   return `
     <tr><td style="padding:28px 32px 0">
-      <div style="font-family:${SERIF};font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:${C.gold};padding-bottom:6px">${esc(title)}</div>
+      <div style="font-family:${SERIF};font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:${C.accent};padding-bottom:6px">${esc(title)}</div>
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse">${rows.join("")}</table>
     </td></tr>`;
 }
@@ -142,7 +155,7 @@ export function renderEmail({ formId, fields, who, replyTo, reference, attachmen
       const v = k === "city" && fields.get("country") ? `${fields.get(k)}, ${fields.get("country")}` : displayValue(k, fields.get(k));
       return `<td style="padding:0 8px 8px 0"><div style="border:1px solid ${C.rule};background:${C.panel};padding:8px 12px">
         <div style="font-family:${SANS};font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:${C.muted}">${esc(HIGHLIGHT_LABELS[k])}</div>
-        <div style="font-family:${SANS};font-size:14px;color:${C.cream};padding-top:2px">${esc(v)}</div></div></td>`;
+        <div style="font-family:${SANS};font-size:14px;color:${C.text};padding-top:2px">${esc(v)}</div></div></td>`;
     });
 
   const sections = layout.sections
@@ -161,16 +174,16 @@ export function renderEmail({ formId, fields, who, replyTo, reference, attachmen
     : "";
 
   const files = attachments.length
-    ? `<tr><td style="padding:24px 32px 0"><div style="border:1px dashed ${C.rule};padding:12px 14px;font-family:${SANS};font-size:13px;color:${C.cream}">
-        <span style="color:${C.gold}">&#128206; ${attachments.length} file${attachments.length > 1 ? "s" : ""} attached</span> &nbsp;${attachments.map(esc).join(" · ")}</div></td></tr>`
+    ? `<tr><td style="padding:24px 32px 0"><div style="border:1px dashed ${C.rule};padding:12px 14px;font-family:${SANS};font-size:13px;color:${C.text}">
+        <span style="color:${C.accent}">&#128206; ${attachments.length} file${attachments.length > 1 ? "s" : ""} attached</span> &nbsp;${attachments.map(esc).join(" · ")}</div></td></tr>`
     : "";
 
   const testBanner = testFor
-    ? `<tr><td style="background:${C.gold};padding:10px 32px;font-family:${SANS};font-size:12px;letter-spacing:1px;color:${C.ink};text-align:center">
+    ? `<tr><td style="background:${C.accent};padding:10px 32px;font-family:${SANS};font-size:12px;letter-spacing:1px;color:${C.accentInk};text-align:center">
         TEST SEND — the live form delivers this to <strong>${esc(testFor)}</strong></td></tr>`
     : "";
 
-  const mailto = `mailto:${encodeURIComponent(replyTo)}?subject=${encodeURIComponent(`Re: ${layout.eyebrow} — EQS Música`)}`;
+  const mailto = `mailto:${encodeURIComponent(replyTo)}?subject=${encodeURIComponent(`Re: ${layout.eyebrow} — ${BRAND.name}`)}`;
   const preheader = `${layout.eyebrow} from ${who} · ${reference}`;
 
   return `<!doctype html>
@@ -183,30 +196,30 @@ export function renderEmail({ formId, fields, who, replyTo, reference, attachmen
 <tr><td align="center" style="padding:32px 12px">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:${C.card};border:1px solid ${C.rule}">
   ${testBanner}
-  <tr><td style="padding:28px 32px 22px;border-bottom:1px solid ${C.rule}">
+  <tr><td style="padding:24px 32px;background:${C.header}">
     <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-      <td style="padding-right:12px"><img src="${LOGO}" width="40" height="40" alt="EQS" style="display:block;border:0"></td>
-      <td style="font-family:${SERIF};font-size:18px;letter-spacing:3px;color:${C.cream}"><strong style="color:${C.gold}">EQS</strong> MÚSICA</td>
+      <td style="padding-right:12px"><img src="${LOGO}" width="40" height="40" alt="${esc(BRAND.name)}" style="display:block;border:0"></td>
+      <td style="font-family:${SERIF};font-size:18px;letter-spacing:3px;color:${C.text}"><strong>${esc(BRAND.wordmark[0])}</strong> ${esc(BRAND.wordmark[1])}</td>
     </tr></table>
   </td></tr>
   <tr><td style="padding:30px 32px 0">
-    <div style="font-family:${SANS};font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:${C.gold}">${esc(layout.eyebrow)}</div>
-    <div style="font-family:${SERIF};font-size:32px;line-height:1.2;color:${C.cream};padding-top:10px">${esc(who)}</div>
+    <div style="font-family:${SANS};font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:${C.accent}">${esc(layout.eyebrow)}</div>
+    <div style="font-family:${SERIF};font-size:30px;font-weight:bold;line-height:1.2;color:${C.text};padding-top:10px">${esc(who)}</div>
     <div style="font-family:${SANS};font-size:14px;color:${C.muted};padding-top:6px"><a href="mailto:${esc(replyTo)}" style="color:${C.muted};text-decoration:none">${esc(replyTo)}</a></div>
   </td></tr>
   ${chips.length ? `<tr><td style="padding:20px 24px 0 32px"><table role="presentation" cellpadding="0" cellspacing="0"><tr>${chips.join("")}</tr></table></td></tr>` : ""}
   <tr><td style="padding:22px 32px 0">
-    <a href="${mailto}" style="display:inline-block;background:${C.gold};color:${C.ink};font-family:${SANS};font-size:13px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;padding:14px 26px">Reply to ${esc(first)} &rarr;</a>
+    <a href="${mailto}" style="display:inline-block;background:${C.accent};color:${C.accentInk};font-family:${SANS};font-size:13px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;padding:14px 26px">Reply to ${esc(first)} &rarr;</a>
   </td></tr>
   ${sections}${extraSection}${files}
   <tr><td style="padding:32px 32px 28px">
     <div style="border-top:1px solid ${C.rule};padding-top:18px;font-family:${SANS};font-size:12px;line-height:1.7;color:${C.muted}">
-      Sent from the form at <a href="${SITE}" style="color:${C.gold};text-decoration:none">eqsmusica.com</a>. Hit reply to answer ${esc(first)} directly.<br>
-      Reference <span style="color:${C.cream}">${esc(reference)}</span>
+      Sent from the form at <a href="${SITE}" style="color:${C.accent};text-decoration:none">${esc(BRAND.siteLabel)}</a>. Hit reply to answer ${esc(first)} directly.<br>
+      Reference <span style="color:${C.text}">${esc(reference)}</span>
     </div>
   </td></tr>
 </table>
-<div style="font-family:${SERIF};font-size:12px;letter-spacing:2px;color:${C.muted};padding-top:16px">#1 IN TROPICAL MUSIC</div>
+<div style="font-family:${SERIF};font-size:12px;letter-spacing:2px;color:${C.muted};padding-top:16px">${esc(BRAND.tagline)}</div>
 </td></tr></table>
 </body></html>`;
 }
