@@ -7,12 +7,12 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/post/:slug*",
+      "source": "/post/(.*)",
       "destination": "/artists/",
       "permanent": true
     },
     {
-      "source": "/blog/:path*",
+      "source": "/blog/(.*)",
       "destination": "/newsletter/",
       "permanent": true
     },
@@ -22,12 +22,12 @@
       "permanent": true
     },
     {
-      "source": "/artist-page/:slug*",
+      "source": "/artist-page/(.*)",
       "destination": "/artists/",
       "permanent": true
     },
     {
-      "source": "/profile/:path*",
+      "source": "/profile/(.*)",
       "destination": "/",
       "permanent": true
     },

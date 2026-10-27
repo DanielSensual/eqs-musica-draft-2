@@ -15,8 +15,8 @@ Changing two records carries no email risk.
 
 | Type | Host | Value | Cutover |
 |---|---|---|---|
-| A | `@` | 185.230.63.171 / .186 / .107 (Wix) | **REPLACE** → Vercel A |
-| CNAME | `www` | cdn3.wixdns.net | **REPLACE** → Vercel CNAME |
+| A | `@` | 185.230.63.171 / .186 / .107 (Wix) | **REPLACE** → `216.150.1.1` + `216.150.16.1` |
+| CNAME | `www` | cdn3.wixdns.net | **REPLACE** → `aef5825a04ce704e.vercel-dns-017.com` |
 | CNAME | `m` | www1.wixdns.net (Wix mobile alias) | leave (delete after launch) |
 | MX ×5 | `@` | aspmx.l.google.com (10), alt1–alt4 (20–50) — **Google Workspace** | **DO NOT TOUCH** |
 | TXT | `@` | `v=spf1 include:_spf.google.com ~all` | **DO NOT TOUCH** |
@@ -36,7 +36,11 @@ Changing two records carries no email risk.
    Redeploy, then submit each form once on draft-2-eqs-site.vercel.app.
    Already fixed (Oct 27): internal `*.md` hidden from the deploy, invented testimonials removed, old Wix URLs
    redirected (`vercel.json`), plus `404.html`, `robots.txt`, `sitemap.xml`, dead YouTube and partner links, and slimmer logo/photo files.
-2. In Vercel → `draft-2-eqs-site` → Settings → Domains, add:
+   **Done Oct 27:** env vars set; all three forms test-delivered (Resend `delivered`). To re-test without emailing
+   the client, POST to `/api/submit/` with header `x-forms-test: $FORMS_TEST_TOKEN` (token in the gitignored `.env.local`).
+2. **Done Oct 27.** Vercel's values, read from its domain config API: A `216.150.1.1` + `216.150.16.1`
+   (fallback `76.76.21.21`), CNAME `aef5825a04ce704e.vercel-dns-017.com` (fallback `cname.vercel-dns.com`).
+   In Vercel → `draft-2-eqs-site` → Settings → Domains, added:
    - `www.eqsmusica.com` as the primary domain (every canonical and OG URL already uses `www`)
    - `eqsmusica.com` with a **308 redirect → www.eqsmusica.com**
    Vercel reports "Invalid Configuration" until DNS moves. That status is expected, and the same screen shows the
@@ -47,8 +51,8 @@ Changing two records carries no email risk.
 ## The switch (about 10 minutes, then propagation)
 
 4. In Wix → Domains → eqsmusica.com → ⋯ → **Manage DNS records**:
-   - Delete the three `185.230.63.x` A records and add a single A record with Vercel's value.
-   - Edit the `www` CNAME from `cdn3.wixdns.net` to Vercel's CNAME.
+   - Delete the three `185.230.63.x` A records and add two: `216.150.1.1` and `216.150.16.1`.
+   - Edit the `www` CNAME from `cdn3.wixdns.net` to `aef5825a04ce704e.vercel-dns-017.com`.
    - If Wix locks these rows because the domain is still connected to the Wix site, first use
      ⋯ → **Unassign from this site**. This disconnects the old Wix site from the domain. It does **not** touch MX
      records or email. Then edit the records.
