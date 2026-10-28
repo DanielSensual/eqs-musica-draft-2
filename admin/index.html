@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#06352a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="EQS Admin">
+  <title>EQS Admin</title>
+  <link rel="manifest" href="/admin/manifest.webmanifest">
+  <link rel="icon" href="/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/glacial-indifference" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/admin.css">
+  <script defer src="/assets/admin.js"></script>
+</head>
+<body>
+  <main id="login" class="login" hidden>
+    <form class="login__card" id="login-form" autocomplete="off">
+      <img class="login__logo" src="/img/eqs-logo-128.png" width="64" height="64" alt="EQS Música">
+      <h1 class="login__title">EQS Admin</h1>
+      <p class="login__hint">Enter your 6-digit PIN</p>
+      <input class="login__pin" id="pin" name="pin" type="password" inputmode="numeric" pattern="[0-9]*"
+             maxlength="6" autocomplete="one-time-code" aria-label="PIN" required>
+      <p class="login__error" id="login-error" role="alert"></p>
+      <button class="btn btn--accent" type="submit" id="login-button">Sign in</button>
+    </form>
+  </main>
+
+  <div id="app" class="app" hidden>
+    <header class="topbar">
+      <div class="topbar__brand">
+        <img src="/img/eqs-logo-128.png" width="36" height="36" alt="">
+        <span class="topbar__name">EQS <span>Admin</span></span>
+      </div>
+      <div class="topbar__user">
+        <span id="who"></span>
+        <button class="btn btn--ghost btn--small" id="logout" type="button">Sign out</button>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="Sections">
+      <button class="tabs__tab is-active" type="button" data-tab="overview">Overview</button>
+      <button class="tabs__tab" type="button" data-tab="leads">Leads <span class="tabs__count" id="open-count" hidden></span></button>
+      <a class="tabs__site" href="/" target="_blank" rel="noopener">View site ↗</a>
+    </nav>
+
+    <section id="overview" class="panel-view">
+      <div class="toolbar">
+        <div class="chips" role="group" aria-label="Time range">
+          <button class="chip" type="button" data-range="24h">24 hours</button>
+          <button class="chip" type="button" data-range="7d">7 days</button>
+          <button class="chip is-active" type="button" data-range="30d">30 days</button>
+          <button class="chip" type="button" data-range="90d">90 days</button>
+        </div>
+        <span class="toolbar__note" id="updated"></span>
+      </div>
+      <p class="notice" id="stats-error" hidden></p>
+
+      <div class="kpis">
+        <div class="kpi"><span class="kpi__label">Visitors</span><span class="kpi__value" id="k-visitors">–</span><span class="kpi__delta" id="k-delta"></span></div>
+        <div class="kpi"><span class="kpi__label">Page views</span><span class="kpi__value" id="k-views">–</span><span class="kpi__delta" id="k-sessions"></span></div>
+        <div class="kpi"><span class="kpi__label">Avg. time on site</span><span class="kpi__value" id="k-time">–</span><span class="kpi__delta" id="k-bounce"></span></div>
+        <div class="kpi"><span class="kpi__label">New leads</span><span class="kpi__value" id="k-leads">–</span><span class="kpi__delta" id="k-leads-split"></span></div>
+      </div>
+
+      <div class="card card--chart">
+        <div class="card__head"><h2>Visitors</h2><span class="card__sub" id="chart-sub"></span></div>
+        <div class="chart" id="chart"></div>
+      </div>
+
+      <div class="grid">
+        <div class="card"><div class="card__head"><h2>Where visitors come from</h2></div><ol class="bars" id="sources"></ol></div>
+        <div class="card"><div class="card__head"><h2>Top pages</h2></div><ol class="bars" id="pages"></ol></div>
+        <div class="card"><div class="card__head"><h2>Artists people click</h2></div><ol class="bars" id="artists"></ol></div>
+        <div class="card"><div class="card__head"><h2>Clicks out to</h2></div><ol class="bars" id="outbound"></ol></div>
+        <div class="card"><div class="card__head"><h2>Phone or computer</h2></div><div class="split" id="devices"></div></div>
+        <div class="card"><div class="card__head"><h2>Site language</h2></div><div class="split" id="languages"></div></div>
+      </div>
+      <p class="footnote">Counting started October 28, 2026. Visitors are counted once per browser; no cookies are used.</p>
+    </section>
+
+    <section id="leads" class="panel-view" hidden>
+      <div class="toolbar toolbar--leads">
+        <div class="chips" role="group" aria-label="Form">
+          <button class="chip is-active" type="button" data-form="">All</button>
+          <button class="chip" type="button" data-form="booking">Bookings</button>
+          <button class="chip" type="button" data-form="artist">Artists</button>
+          <button class="chip" type="button" data-form="creator">Creators</button>
+        </div>
+        <div class="chips" role="group" aria-label="Status">
+          <button class="chip is-active" type="button" data-status="">Any</button>
+          <button class="chip" type="button" data-status="open">Open</button>
+          <button class="chip" type="button" data-status="handled">Handled</button>
+        </div>
+        <input class="search" id="lead-search" type="search" placeholder="Search name, email or message" aria-label="Search leads">
+      </div>
+      <p class="notice" id="leads-error" hidden></p>
+      <div class="leads" id="lead-list"></div>
+    </section>
+  </div>
+</body>
+</html>

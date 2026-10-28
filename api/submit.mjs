@@ -7,12 +7,14 @@
  *   FORMS_BCC        optional, comma-separated; a copy of every submission (launch monitoring)
  *   FORMS_TEST_TOKEN optional; a request carrying it in `x-forms-test` goes only to FORMS_BCC, marked [TEST],
  *                    so the live forms can be checked without emailing the client
+ *   DS_DATABASE_URL  optional; each real submission is also saved for the /admin/ leads list
  *
  * Recipients are fixed here, never taken from the request. Replies go to the submitter.
  * Errors use Formspree's JSON shape ({ errors: [{ message }] }) so the front end reads one format.
  */
 
 import { createHash } from "node:crypto";
+import { ensureTables, hasDatabase, sql } from "./_db.mjs";
 import { LAYOUTS, displayValue, renderEmail } from "./_email.mjs";
 
 const FORMS = {
@@ -157,10 +159,42 @@ export async function POST(request) {
     body: email,
   }).catch(() => null);
 
-  if (!res || !res.ok) {
+  const emailed = Boolean(res && res.ok);
+  // Test sends stay out of the admin's lead list.
+  if (!isTest) {
+    const rows = [...fields].map(([key, value]) => ({ key, label: labels[key] || label(key), value: displayValue(key, value) }));
+    await saveLead({ reference, formId, who, replyTo, rows, attachments, emailed });
+  }
+
+  if (!emailed) {
     // Provider errors can contain configuration details; never return them to the browser.
     console.error("[submit] Resend rejected the email", res && res.status);
     return fail(502, "Your message hasn't been sent. Please try again.");
   }
   return Response.json({ ok: true, reference });
+}
+
+/** Keeps a copy for the /admin/ leads list. Best effort: a database problem never blocks the email. */
+async function saveLead({ reference, formId, who, replyTo, rows, attachments, emailed }) {
+  if (!hasDatabase()) return;
+  try {
+    await ensureTables();
+    await sql(
+      `INSERT INTO eqs_leads (id, form, name, email, fields, attachments, emailed)
+       VALUES ($1, $2, $3, $4, $5::jsonb, $6::jsonb, $7)
+       ON CONFLICT (id) DO UPDATE SET emailed = eqs_leads.emailed OR EXCLUDED.emailed`,
+      [
+        reference,
+        formId,
+        who,
+        replyTo,
+        // An array, because jsonb reorders object keys and the admin should read in the form's order.
+        JSON.stringify(rows),
+        JSON.stringify(attachments.map((a) => a.filename)),
+        emailed,
+      ],
+    );
+  } catch (error) {
+    console.error("[submit] couldn't save the lead", error.message);
+  }
 }
