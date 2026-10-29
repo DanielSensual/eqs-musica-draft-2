@@ -3517,3 +3517,8 @@ body {
     display: none;
   }
 }
+
+/* WhatsApp revision 2026-10-29 (Victor): Latin Urban Department page */
+.latin-urban__lead { margin: 2rem 0; padding: 1.75rem; border: 1px solid #dcc9a3; border-radius: 4px; max-width: 40rem; }
+.latin-urban__name { font-size: clamp(1.8rem, 5vw, 2.6rem); color: #dcc9a3; margin: .25rem 0 .75rem; }
+.latin-urban__aka { font-size: .5em; letter-spacing: .08em; opacity: .8; }

@@ -61,6 +61,13 @@ PAGES = [
         "sections": ["derekvinci", "derek-productions", "final-cta"],
     },
     {
+        "path": "/latin-urban/",
+        "title": "Latin Urban Department | EQS MÚSICA",
+        "og_title": "EQS Música Latin Urban Department",
+        "description": "EQS Música's new Latin Urban department for Urban Latin and reparto cubano, led by DSTAR LC (Dayron).",
+        "sections": ["latin-urban", "final-cta"],
+    },
+    {
         "path": "/newsletter/",
         "title": "Newsletter | EQS MÚSICA",
         "og_title": "The EQS Brief",
