@@ -47,6 +47,43 @@ export function ensureTables() {
       created_at timestamptz NOT NULL DEFAULT now()
     )`);
     await sql(`CREATE INDEX IF NOT EXISTS eqs_admin_attempts_created ON eqs_admin_attempts (created_at)`);
+    // The website editor: one row per change request, its photos, and what each Claude call cost.
+    await sql(`CREATE TABLE IF NOT EXISTS eqs_edits (
+      id text PRIMARY KEY,
+      created_at timestamptz NOT NULL DEFAULT now(),
+      updated_at timestamptz NOT NULL DEFAULT now(),
+      requested_by text NOT NULL,
+      status text NOT NULL,
+      round int NOT NULL DEFAULT 1,
+      thread jsonb NOT NULL DEFAULT '[]'::jsonb,
+      progress text,
+      summary text,
+      draft_sha text,
+      published_sha text,
+      published_by text,
+      published_at timestamptz,
+      worker_at timestamptz,
+      cost_usd numeric NOT NULL DEFAULT 0
+    )`);
+    // At most one open draft, even when two people send a request at the same moment.
+    await sql(`CREATE UNIQUE INDEX IF NOT EXISTS eqs_edits_one_open ON eqs_edits ((1))
+      WHERE status IN ('queued', 'working', 'ready', 'failed', 'needs_daniel', 'publish_requested', 'publishing')`);
+    await sql(`CREATE TABLE IF NOT EXISTS eqs_edit_files (
+      id text PRIMARY KEY,
+      edit_id text NOT NULL,
+      round int NOT NULL,
+      name text NOT NULL,
+      mime text NOT NULL,
+      data text NOT NULL,
+      created_at timestamptz NOT NULL DEFAULT now()
+    )`);
+    await sql(`CREATE TABLE IF NOT EXISTS eqs_editor_usage (
+      created_at timestamptz NOT NULL DEFAULT now(),
+      edit_id text NOT NULL,
+      usd numeric NOT NULL,
+      input_tokens int NOT NULL DEFAULT 0,
+      output_tokens int NOT NULL DEFAULT 0
+    )`);
   })().catch((error) => {
     tablesReady = null;
     throw error;

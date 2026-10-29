@@ -47,6 +47,7 @@
     <nav class="tabs" aria-label="Sections">
       <button class="tabs__tab is-active" type="button" data-tab="overview">Overview</button>
       <button class="tabs__tab" type="button" data-tab="leads">Leads <span class="tabs__count" id="open-count" hidden></span></button>
+      <button class="tabs__tab" type="button" data-tab="website">Website <span class="tabs__dot" id="draft-dot" hidden></span></button>
       <a class="tabs__site" href="/" target="_blank" rel="noopener">View site ↗</a>
     </nav>
 
@@ -102,6 +103,46 @@
       </div>
       <p class="notice" id="leads-error" hidden></p>
       <div class="leads" id="lead-list"></div>
+    </section>
+
+    <section id="website" class="panel-view" hidden>
+      <div class="editor-intro">
+        <div>
+          <h2>Change the website</h2>
+          <p>Describe the change in English or Spanish. The editor builds a preview first; nothing changes on eqsmusica.com until Derek or Daniel taps Publish.</p>
+        </div>
+        <span class="toolbar__note" id="ed-budget"></span>
+      </div>
+      <p class="notice" id="ed-error" hidden></p>
+
+      <div class="card draft" id="ed-draft" hidden>
+        <div class="draft__head">
+          <span class="pill" id="ed-status"></span>
+          <span class="draft__ref" id="ed-ref"></span>
+        </div>
+        <ol class="thread" id="ed-thread"></ol>
+        <p class="draft__progress" id="ed-progress" hidden><span class="spinner" aria-hidden="true"></span><span id="ed-progress-text"></span></p>
+        <div class="draft__actions" id="ed-actions"></div>
+      </div>
+
+      <form class="card ask" id="ed-form">
+        <label class="ask__label" for="ed-message" id="ed-label">What should change?</label>
+        <textarea class="ask__text" id="ed-message" rows="4" maxlength="2000"
+                  placeholder="Example: Use this photo on Vinny Rivera's artist card. / Ejemplo: Cambia el título principal de la página de inicio."></textarea>
+        <div class="ask__photos" id="ed-photos"></div>
+        <div class="ask__actions">
+          <label class="btn btn--ghost btn--small ask__add">
+            <input type="file" id="ed-file" accept="image/*" multiple hidden>
+            Add photo
+          </label>
+          <button class="btn btn--accent" type="submit" id="ed-send">Send to editor</button>
+        </div>
+      </form>
+
+      <div class="card">
+        <div class="card__head"><h2>Recent changes</h2></div>
+        <div class="history" id="ed-history"></div>
+      </div>
     </section>
   </div>
 </body>

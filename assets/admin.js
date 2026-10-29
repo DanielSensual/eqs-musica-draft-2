@@ -1,4 +1,4 @@
-/* EQS Admin: PIN sign-in, analytics overview and the leads list. Everything visitor-supplied is set as text, never HTML. */
+/* EQS Admin: PIN sign-in, analytics overview, the leads list and the website editor. Everything visitor-supplied is set as text, never HTML. */
 (() => {
   const $ = (id) => document.getElementById(id);
   const TZ = 'America/New_York';
@@ -57,6 +57,7 @@
     $('who').textContent = `Hi, ${user.name}`;
     loadStats();
     loadLeads();
+    loadEditor();
   }
 
   $('login-form').addEventListener('submit', async (event) => {
@@ -96,9 +97,9 @@
   document.querySelectorAll('[data-tab]').forEach((tab) => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('[data-tab]').forEach((t) => t.classList.toggle('is-active', t === tab));
-      $('overview').hidden = tab.dataset.tab !== 'overview';
-      $('leads').hidden = tab.dataset.tab !== 'leads';
+      for (const view of ['overview', 'leads', 'website']) $(view).hidden = tab.dataset.tab !== view;
       if (tab.dataset.tab === 'overview') window.dispatchEvent(new Event('resize'));
+      if (tab.dataset.tab === 'website') loadEditor();
     });
   });
 
@@ -360,6 +361,181 @@
       allLeads = data.leads;
       updateOpenCount();
     }
+  }
+
+  /* ---------- Website editor ---------- */
+
+  const STATUS = {
+    queued: ['Waiting for the editor', 'busy'],
+    working: ['Working on it', 'busy'],
+    ready: ['Preview ready', 'good'],
+    failed: ["Didn't work", 'bad'],
+    needs_daniel: ['Needs Daniel', 'bad'],
+    publish_requested: ['Publishing', 'busy'],
+    publishing: ['Publishing', 'busy'],
+    published: ['Live', 'good'],
+    discarded: ['Discarded', 'muted'],
+    undo_requested: ['Undoing', 'busy'],
+    undoing: ['Undoing', 'busy'],
+    undone: ['Undone', 'muted'],
+  };
+  const isBusy = (status) => STATUS[status]?.[1] === 'busy';
+  const pill = (status) => h('span', { class: `pill pill--${STATUS[status]?.[1] || 'muted'}` }, STATUS[status]?.[0] || status);
+  const money = (n) => `$${Number(n || 0).toFixed(2)}`;
+
+  let photos = [];
+  let editorTimer;
+
+  /** Phone photos are often 5–12 MB; shrink to 1600 px JPEG before upload. */
+  function shrink(file) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      const url = URL.createObjectURL(file);
+      img.onload = () => {
+        const scale = Math.min(1, 1600 / Math.max(img.naturalWidth, img.naturalHeight));
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.round(img.naturalWidth * scale);
+        canvas.height = Math.round(img.naturalHeight * scale);
+        canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(url);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+        resolve({ mime: 'image/jpeg', data: dataUrl.split(',')[1], preview: dataUrl });
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); reject(new Error(`Couldn't read ${file.name}.`)); };
+      img.src = url;
+    });
+  }
+
+  function renderPhotos() {
+    $('ed-photos').replaceChildren(...photos.map((p, i) => h('figure', { class: 'ask__photo' },
+      h('img', { src: p.preview, alt: '' }),
+      h('button', { type: 'button', 'aria-label': 'Remove photo', onclick: () => { photos.splice(i, 1); renderPhotos(); } }, '×'),
+    )));
+  }
+
+  $('ed-file').addEventListener('change', async (event) => {
+    const picked = [...event.target.files];
+    event.target.value = '';
+    for (const file of picked) {
+      if (photos.length >= 3) { showEditorError('Up to 3 photos per request.'); break; }
+      try { photos.push(await shrink(file)); } catch (error) { showEditorError(error.message); }
+    }
+    renderPhotos();
+  });
+
+  function showEditorError(message) {
+    $('ed-error').textContent = message;
+    $('ed-error').hidden = !message;
+  }
+
+  async function editorAction(action, id, confirmText) {
+    if (confirmText && !confirm(confirmText)) return;
+    showEditorError('');
+    try {
+      await api('/api/admin/edits/', { method: 'POST', body: JSON.stringify({ action, id }) });
+    } catch (error) {
+      showEditorError(error.message);
+    }
+    loadEditor();
+  }
+
+  $('ed-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const message = $('ed-message').value.trim();
+    if (!message) { $('ed-message').focus(); return; }
+    showEditorError('');
+    $('ed-send').disabled = true;
+    try {
+      await api('/api/admin/edits/', {
+        method: 'POST',
+        body: JSON.stringify({ action: 'request', message, files: photos.map(({ mime, data }) => ({ mime, data })) }),
+      });
+      $('ed-message').value = '';
+      photos = [];
+      renderPhotos();
+    } catch (error) {
+      showEditorError(error.message);
+    } finally {
+      $('ed-send').disabled = false;
+    }
+    loadEditor();
+  });
+
+  function threadItem(entry) {
+    const who = entry.role === 'user' ? entry.by : entry.role === 'editor' ? 'Editor' : '';
+    return h('li', { class: `thread__item thread__item--${entry.role}${entry.kind === 'error' || entry.kind === 'needs_daniel' ? ' is-problem' : ''}` },
+      who ? h('span', { class: 'thread__who' }, who, h('time', {}, when(entry.at))) : null,
+      h('p', { class: 'thread__text' }, entry.text),
+      (entry.files || []).length ? h('span', { class: 'thread__files' }, `📎 ${entry.files.length} photo${entry.files.length > 1 ? 's' : ''}`) : null,
+    );
+  }
+
+  function renderDraft(data) {
+    const draft = data.draft;
+    $('ed-draft').hidden = !draft;
+    $('draft-dot').hidden = !draft;
+    const busy = draft && isBusy(draft.status);
+    $('ed-label').textContent = draft ? 'Ask for another change on this draft' : 'What should change?';
+    $('ed-send').textContent = draft ? 'Send' : 'Send to editor';
+    $('ed-message').disabled = $('ed-send').disabled = Boolean(busy);
+    if (!draft) return;
+
+    $('ed-status').replaceWith(Object.assign(pill(draft.status), { id: 'ed-status' }));
+    $('ed-ref').textContent = `${draft.id} · started by ${draft.requested_by}`;
+    $('ed-thread').replaceChildren(...draft.thread.map(threadItem));
+    $('ed-progress').hidden = !busy;
+    $('ed-progress-text').textContent = draft.progress || STATUS[draft.status][0] + '…';
+
+    const actions = [];
+    if (data.previewUrl && !busy) {
+      actions.push(h('a', { class: 'btn btn--ghost', href: data.previewUrl, target: '_blank', rel: 'noopener' }, 'Open preview ↗'));
+    }
+    if (draft.status === 'ready') {
+      actions.push(data.canPublish
+        ? h('button', { class: 'btn btn--accent', type: 'button', onclick: () => editorAction('publish', draft.id, 'Publish this change to eqsmusica.com?') }, 'Publish')
+        : h('span', { class: 'draft__note' }, 'Derek or Daniel publishes this.'));
+    }
+    if (['ready', 'failed', 'needs_daniel'].includes(draft.status)) {
+      actions.push(h('button', { class: 'btn btn--ghost btn--small', type: 'button', onclick: () => editorAction('discard', draft.id, 'Discard this draft? The live site stays as it is.') }, 'Discard'));
+    }
+    $('ed-actions').replaceChildren(...actions);
+  }
+
+  function renderHistory(history) {
+    const el = $('ed-history');
+    if (!history.length) {
+      el.replaceChildren(h('p', { class: 'empty' }, 'No changes yet. Published changes show up here, and the latest one can be undone.'));
+      return;
+    }
+    el.replaceChildren(...history.map((e) => h('div', { class: 'history__item' },
+      h('div', { class: 'history__main' },
+        h('p', { class: 'history__summary' }, e.request + (e.rounds > 1 ? ` (+${e.rounds - 1} more)` : '')),
+        e.summary ? h('p', { class: 'history__reply' }, e.summary) : null,
+        h('p', { class: 'history__meta' },
+          e.published_at ? `Published by ${e.published_by} · ${when(e.published_at)}` : `Asked by ${e.requested_by} · ${when(e.updated_at)}`),
+      ),
+      h('div', { class: 'history__side' },
+        pill(e.status),
+        e.canUndo ? h('button', { class: 'btn btn--ghost btn--small', type: 'button', onclick: () => editorAction('undo', e.id, 'Undo this change on the live site?') }, 'Undo') : null,
+      ),
+    )));
+  }
+
+  async function loadEditor() {
+    clearTimeout(editorTimer);
+    let data;
+    try {
+      data = await api('/api/admin/edits/');
+    } catch (error) {
+      if (error.status !== 401) showEditorError(error.message);
+      return;
+    }
+    renderDraft(data);
+    renderHistory(data.history);
+    $('ed-budget').textContent = `Editor budget today: ${money(data.spentToday)} of ${money(data.cap)}`;
+    // Check back while the bot is working, faster while the Website tab is open.
+    const working = (data.draft && isBusy(data.draft.status)) || data.history.some((e) => isBusy(e.status));
+    if (working) editorTimer = setTimeout(loadEditor, $('website').hidden ? 15000 : 4000);
   }
 
   /* ---------- Start ---------- */
