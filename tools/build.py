@@ -175,7 +175,9 @@ def featured_artists():
 def build_page(page):
     path = page["path"]
     body = []
-    for i, name in enumerate(page["sections"]):
+    if "html" in page:
+        body.append(page["html"].rstrip("\n"))
+    for i, name in enumerate(page.get("sections", [])):
         html = featured_artists() if name == "@featured" else read(f"sections/{name}.html")
         if i == 0 and path != "/":
             html = promote_heading(html)
@@ -243,9 +245,113 @@ def write_crawl_files():
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
 
 
+# ---------------------------------------------------------------------------------------------
+# Blog: src/blog/posts.json (from tools/import_blog.py) → /blog/ and /blog/<slug>/
+# ---------------------------------------------------------------------------------------------
+import html as _html
+from urllib.parse import quote
+
+MONTHS_EN = "January February March April May June July August September October November December".split()
+MONTHS_ES = "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre".split()
+
+
+def blog_posts():
+    f = SRC / "blog" / "posts.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
+
+
+def blog_date(iso, lang):
+    y, m, d = iso.split("-")
+    return f"{int(d)} {MONTHS_ES[int(m) - 1]} {y}" if lang == "es" else f"{MONTHS_EN[int(m) - 1]} {int(d)}, {y}"
+
+
+def clean_blog_body(body):
+    """Drop images Wix no longer serves, empty paragraphs, and anything that isn't a plain video embed."""
+    body = re.sub(r"<figure>\s*<img[^>]*wixstatic[^>]*>\s*</figure>", "", body)
+    body = re.sub(r"<img[^>]*wixstatic[^>]*>", "", body)
+    body = re.sub(r"<video\b.*?</video>", "", body, flags=re.S)
+    body = re.sub(r"<p>(\s|&nbsp;|\u00a0)*</p>", "", body)
+    body = re.sub(r"<iframe\b", '<iframe loading="lazy"', body)
+    return body
+
+
+def blog_pages():
+    posts = blog_posts()
+    if not posts:
+        return []
+    esc = _html.escape
+    cards = []
+    for p in posts:
+        img = (f'<img src="{p["cover"]}" alt="" loading="lazy" width="600" height="600">' if p["cover"] else "")
+        cards.append(
+            f'<a class="blog-card" href="/blog/{p["slug"]}/" lang="{p["lang"]}">'
+            f'<span class="blog-card__img">{img}</span>'
+            f'<span class="blog-card__date">{blog_date(p["date"], p["lang"])}</span>'
+            f'<span class="blog-card__title">{esc(p["title"])}</span></a>'
+        )
+    index = {
+        "path": "/blog/",
+        "title": "Blog | EQS MÚSICA",
+        "og_title": "The EQS Música Blog",
+        "description": "News, releases and videos from EQS Música and DerekVinci: Jhonny Evidence, J Salez, Tony Lozano, Vinny Rivera, Johandy and more.",
+        "html": (
+            '<section class="section section--page-top blog-index" id="blog"><div class="container">'
+            '<p class="section__eyebrow uppercase-label" data-en="Blog" data-es="Blog">Blog</p>'
+            '<h1 class="section__title" data-en="News &amp; releases." data-es="Noticias y lanzamientos.">News &amp; releases.</h1>'
+            '<div class="blog-grid">' + "".join(cards) + "</div></div></section>"
+        ),
+    }
+    pages = [index]
+    for p in posts:
+        cover = (f'<img class="blog-post__cover" src="{p["cover"]}" alt="" width="1000" height="1000">' if p["cover"] else "")
+        pages.append({
+            "path": f"/blog/{p['slug']}/",
+            "title": f"{esc(p['title'])} | EQS MÚSICA",
+            "og_title": esc(p["title"]),
+            "description": esc(re.sub(r"\s+", " ", p["excerpt"])[:155]),
+            "html": (
+                '<article class="section section--page-top blog-post"><div class="container blog-post__wrap">'
+                '<a class="blog-post__back" href="/blog/" data-en="← All posts" data-es="← Todas las publicaciones">← All posts</a>'
+                f'<p class="blog-post__date">{blog_date(p["date"], p["lang"])}</p>'
+                f'<h1 class="blog-post__title" lang="{p["lang"]}">{esc(p["title"])}</h1>'
+                f'{cover}<div class="blog-post__body" lang="{p["lang"]}">{clean_blog_body(p["body"])}</div>'
+                "</div></article>"
+            ),
+        })
+    return pages
+
+
+def write_blog_redirects():
+    """vercel.json: old Wix /post/<slug> → /blog/<slug>/, placed ahead of the generic /post/* fallback."""
+    posts = blog_posts()
+    if not posts:
+        return
+    f = ROOT / "vercel.json"
+    cfg = json.loads(f.read_text(encoding="utf-8"))
+    keep = [r for r in cfg["redirects"] if not r["source"].startswith(("/post/", "/blog"))]
+    new, seen = [], set()
+    for p in posts:
+        dest = f"/blog/{p['slug']}/"
+        for old in p["old"]:
+            if not old:
+                continue
+            for variant in {old, quote(old, safe="-_.~")}:
+                src = f"/post/{variant}"
+                if src in seen:
+                    continue
+                seen.add(src)
+                new.append({"source": src + "(/?)", "destination": dest, "permanent": True})
+    new.append({"source": "/post/(.*)", "destination": "/blog/", "permanent": True})
+    cfg["redirects"] = new + keep
+    f.write_text(json.dumps(cfg, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
 if __name__ == "__main__":
+    BLOG = blog_pages()
+    PAGES.extend(BLOG)
     for page in PAGES + [NOT_FOUND]:
         out, size = build_page(page)
         print(f"  {str(out):28} {size / 1024:6.1f} KB")
     write_crawl_files()
-    print("  robots.txt, sitemap.xml")
+    write_blog_redirects()
+    print("  robots.txt, sitemap.xml, vercel.json redirects")

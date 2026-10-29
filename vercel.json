@@ -7,18 +7,1133 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/post/eqs-música-presenta-vinny-rivera-presenta-peligro-su-nuevo-sencillo-de-vinny-rivera-junto-a-derek(/?)",
+      "destination": "/blog/eqs-musica-presenta-vinny-rivera-presenta-peligro-su-nuevo-sencillo-de-vinny/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-vinny-rivera-presenta-peligro-su-nuevo-sencillo-de-vinny-rivera-junto-a-derek(/?)",
+      "destination": "/blog/eqs-musica-presenta-vinny-rivera-presenta-peligro-su-nuevo-sencillo-de-vinny/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-vinny-rivera-presenta-peligro-su-nuevo-sencillo-de-vinny-rivera-junto-a-derek(/?)",
+      "destination": "/blog/eqs-musica-presenta-vinny-rivera-presenta-peligro-su-nuevo-sencillo-de-vinny/",
+      "permanent": true
+    },
+    {
+      "source": "/post/jhonny-evidence-presenta-sube-el-telón-una-bachata-cargada-de-sentimiento-y-esencia-tradicional-j(/?)",
+      "destination": "/blog/jhonny-evidence-presenta-sube-el-telon-una-bachata-cargada-de-sentimiento-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/jhonny-evidence-presenta-sube-el-tel%C3%B3n-una-bachata-cargada-de-sentimiento-y-esencia-tradicional-j(/?)",
+      "destination": "/blog/jhonny-evidence-presenta-sube-el-telon-una-bachata-cargada-de-sentimiento-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/jhonny-evidence-presenta-sube-el-tel%25C3%25B3n-una-bachata-cargada-de-sentimiento-y-esencia-tradicional-j(/?)",
+      "destination": "/blog/jhonny-evidence-presenta-sube-el-telon-una-bachata-cargada-de-sentimiento-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-artista-bachatero-mexicano-j-salez-presenta-su-nuevo-álbum-hecho-en-la(/?)",
+      "destination": "/blog/el-artista-bachatero-mexicano-j-salez-presenta-su-nuevo-album-hecho-en-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-artista-bachatero-mexicano-j-salez-presenta-su-nuevo-%C3%A1lbum-hecho-en-la(/?)",
+      "destination": "/blog/el-artista-bachatero-mexicano-j-salez-presenta-su-nuevo-album-hecho-en-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-artista-bachatero-mexicano-j-salez-presenta-su-nuevo-%25C3%25A1lbum-hecho-en-la(/?)",
+      "destination": "/blog/el-artista-bachatero-mexicano-j-salez-presenta-su-nuevo-album-hecho-en-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/vinny-rivera-lanza-mama-rica-su-nueva-bachata-sensual-junto-a-derekvinci(/?)",
+      "destination": "/blog/vinny-rivera-lanza-mama-rica-su-nueva-bachata-sensual-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-presenta-su-nuevo-álbum-yugo-desigual-junto-a-derekvinci(/?)",
+      "destination": "/blog/mr-don-presenta-su-nuevo-album-yugo-desigual-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-presenta-su-nuevo-%C3%A1lbum-yugo-desigual-junto-a-derekvinci(/?)",
+      "destination": "/blog/mr-don-presenta-su-nuevo-album-yugo-desigual-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-presenta-su-nuevo-%25C3%25A1lbum-yugo-desigual-junto-a-derekvinci(/?)",
+      "destination": "/blog/mr-don-presenta-su-nuevo-album-yugo-desigual-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-si-no-te-amara-el-nuevo-sencillo-de-jhonny-evidence-junto-a-bachata-sweet-y-p(/?)",
+      "destination": "/blog/eqs-musica-presenta-si-no-te-amara-el-nuevo-sencillo-de-jhonny-evidence-junto-a/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-si-no-te-amara-el-nuevo-sencillo-de-jhonny-evidence-junto-a-bachata-sweet-y-p(/?)",
+      "destination": "/blog/eqs-musica-presenta-si-no-te-amara-el-nuevo-sencillo-de-jhonny-evidence-junto-a/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-si-no-te-amara-el-nuevo-sencillo-de-jhonny-evidence-junto-a-bachata-sweet-y-p(/?)",
+      "destination": "/blog/eqs-musica-presenta-si-no-te-amara-el-nuevo-sencillo-de-jhonny-evidence-junto-a/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-presenta-duele-una-bachata-sensual-producida-por-derekvinci-bajo-el-sello-eqs-música(/?)",
+      "destination": "/blog/j-salez-presenta-duele-una-bachata-sensual-producida-por-derekvinci-bajo-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-presenta-duele-una-bachata-sensual-producida-por-derekvinci-bajo-el-sello-eqs-m%C3%BAsica(/?)",
+      "destination": "/blog/j-salez-presenta-duele-una-bachata-sensual-producida-por-derekvinci-bajo-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-presenta-duele-una-bachata-sensual-producida-por-derekvinci-bajo-el-sello-eqs-m%25C3%25BAsica(/?)",
+      "destination": "/blog/j-salez-presenta-duele-una-bachata-sensual-producida-por-derekvinci-bajo-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-bachatero-espa%C3%B1ol-tony-lozano-lanza-su-esperado-ep-haci%C3%A9ndolo-rom%C3%A1ntico-producido-por-derekvinc(/?)",
+      "destination": "/blog/el-bachatero-espanol-tony-lozano-lanza-su-esperado-ep-haciendolo-romantico/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-bachatero-español-tony-lozano-lanza-su-esperado-ep-haciéndolo-romántico-producido-por-derekvinc(/?)",
+      "destination": "/blog/el-bachatero-espanol-tony-lozano-lanza-su-esperado-ep-haciendolo-romantico/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-bachatero-espa%25C3%25B1ol-tony-lozano-lanza-su-esperado-ep-haci%25C3%25A9ndolo-rom%25C3%25A1ntico-producido-por-derekvinc(/?)",
+      "destination": "/blog/el-bachatero-espanol-tony-lozano-lanza-su-esperado-ep-haciendolo-romantico/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-presenta-del-sol-su-nueva-bachata-producida-por-derekvinci-con-el-respaldo-de-eqs-m%C3%BAsica(/?)",
+      "destination": "/blog/j-salez-presenta-del-sol-su-nueva-bachata-producida-por-derekvinci-con-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-presenta-del-sol-su-nueva-bachata-producida-por-derekvinci-con-el-respaldo-de-eqs-música(/?)",
+      "destination": "/blog/j-salez-presenta-del-sol-su-nueva-bachata-producida-por-derekvinci-con-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-presenta-del-sol-su-nueva-bachata-producida-por-derekvinci-con-el-respaldo-de-eqs-m%25C3%25BAsica(/?)",
+      "destination": "/blog/j-salez-presenta-del-sol-su-nueva-bachata-producida-por-derekvinci-con-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-y-dani-j-unen-continentes-y-corazones-con-su-nuevo-sencillo-el-coraz%C3%B3n-no-perdona-junto-al(/?)",
+      "destination": "/blog/mr-don-y-dani-j-unen-continentes-y-corazones-con-su-nuevo-sencillo-el-corazon/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-y-dani-j-unen-continentes-y-corazones-con-su-nuevo-sencillo-el-corazón-no-perdona-junto-al(/?)",
+      "destination": "/blog/mr-don-y-dani-j-unen-continentes-y-corazones-con-su-nuevo-sencillo-el-corazon/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-y-dani-j-unen-continentes-y-corazones-con-su-nuevo-sencillo-el-coraz%25C3%25B3n-no-perdona-junto-al(/?)",
+      "destination": "/blog/mr-don-y-dani-j-unen-continentes-y-corazones-con-su-nuevo-sencillo-el-corazon/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tony-lozano-presenta-la-f%C3%B3rmula-junto-a-derekvinci-el-segundo-sencillo-de-su-esperado-ep-haci%C3%A9nd(/?)",
+      "destination": "/blog/tony-lozano-presenta-la-formula-junto-a-derekvinci-el-segundo-sencillo-de-su/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tony-lozano-presenta-la-fórmula-junto-a-derekvinci-el-segundo-sencillo-de-su-esperado-ep-haciénd(/?)",
+      "destination": "/blog/tony-lozano-presenta-la-formula-junto-a-derekvinci-el-segundo-sencillo-de-su/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tony-lozano-presenta-la-f%25C3%25B3rmula-junto-a-derekvinci-el-segundo-sencillo-de-su-esperado-ep-haci%25C3%25A9nd(/?)",
+      "destination": "/blog/tony-lozano-presenta-la-formula-junto-a-derekvinci-el-segundo-sencillo-de-su/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-presenta-mami-una-bachata-romántica-y-sensual-bajo-el-sello-de-eqs-música(/?)",
+      "destination": "/blog/j-salez-presenta-mami-una-bachata-romantica-y-sensual-bajo-el-sello-de-eqs/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-presenta-mami-una-bachata-rom%C3%A1ntica-y-sensual-bajo-el-sello-de-eqs-m%C3%BAsica(/?)",
+      "destination": "/blog/j-salez-presenta-mami-una-bachata-romantica-y-sensual-bajo-el-sello-de-eqs/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-presenta-mami-una-bachata-rom%25C3%25A1ntica-y-sensual-bajo-el-sello-de-eqs-m%25C3%25BAsica(/?)",
+      "destination": "/blog/j-salez-presenta-mami-una-bachata-romantica-y-sensual-bajo-el-sello-de-eqs/",
+      "permanent": true
+    },
+    {
+      "source": "/post/johandy-presenta-amigos-de-qué-una-bachata-romántica-que-consolida-su-gran-año-musical(/?)",
+      "destination": "/blog/johandy-presenta-amigos-de-que-una-bachata-romantica-que-consolida-su-gran-ano/",
+      "permanent": true
+    },
+    {
+      "source": "/post/johandy-presenta-amigos-de-qu%C3%A9-una-bachata-rom%C3%A1ntica-que-consolida-su-gran-a%C3%B1o-musical(/?)",
+      "destination": "/blog/johandy-presenta-amigos-de-que-una-bachata-romantica-que-consolida-su-gran-ano/",
+      "permanent": true
+    },
+    {
+      "source": "/post/johandy-presenta-amigos-de-qu%25C3%25A9-una-bachata-rom%25C3%25A1ntica-que-consolida-su-gran-a%25C3%25B1o-musical(/?)",
+      "destination": "/blog/johandy-presenta-amigos-de-que-una-bachata-romantica-que-consolida-su-gran-ano/",
+      "permanent": true
+    },
+    {
+      "source": "/post/johandy-lo-vuelve-a-hacer-el-bachatero-dominicano-presenta-la-versi%C3%B3n-pop-de-su-%C3%A9xito-pasan-las-h(/?)",
+      "destination": "/blog/johandy-lo-vuelve-a-hacer-el-bachatero-dominicano-presenta-la-version-pop-de-su/",
+      "permanent": true
+    },
+    {
+      "source": "/post/johandy-lo-vuelve-a-hacer-el-bachatero-dominicano-presenta-la-versión-pop-de-su-éxito-pasan-las-h(/?)",
+      "destination": "/blog/johandy-lo-vuelve-a-hacer-el-bachatero-dominicano-presenta-la-version-pop-de-su/",
+      "permanent": true
+    },
+    {
+      "source": "/post/johandy-lo-vuelve-a-hacer-el-bachatero-dominicano-presenta-la-versi%25C3%25B3n-pop-de-su-%25C3%25A9xito-pasan-las-h(/?)",
+      "destination": "/blog/johandy-lo-vuelve-a-hacer-el-bachatero-dominicano-presenta-la-version-pop-de-su/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-y-derekvinci-presentan-bandolero-una-bachata-aut%C3%A9ntica-que-marca-el-camino-de-una-nueva-e(/?)",
+      "destination": "/blog/j-salez-y-derekvinci-presentan-bandolero-una-bachata-autentica-que-marca-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-y-derekvinci-presentan-bandolero-una-bachata-auténtica-que-marca-el-camino-de-una-nueva-e(/?)",
+      "destination": "/blog/j-salez-y-derekvinci-presentan-bandolero-una-bachata-autentica-que-marca-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-y-derekvinci-presentan-bandolero-una-bachata-aut%25C3%25A9ntica-que-marca-el-camino-de-una-nueva-e(/?)",
+      "destination": "/blog/j-salez-y-derekvinci-presentan-bandolero-una-bachata-autentica-que-marca-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tony-lozano-presenta-tequila-junto-derekvinci-una-bachata-con-alma-española-que-marca-su-proyecci(/?)",
+      "destination": "/blog/tony-lozano-presenta-tequila-junto-derekvinci-una-bachata-con-alma-espanola-que/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tony-lozano-presenta-tequila-junto-derekvinci-una-bachata-con-alma-espa%C3%B1ola-que-marca-su-proyecci(/?)",
+      "destination": "/blog/tony-lozano-presenta-tequila-junto-derekvinci-una-bachata-con-alma-espanola-que/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tony-lozano-presenta-tequila-junto-derekvinci-una-bachata-con-alma-espa%25C3%25B1ola-que-marca-su-proyecci(/?)",
+      "destination": "/blog/tony-lozano-presenta-tequila-junto-derekvinci-una-bachata-con-alma-espanola-que/",
+      "permanent": true
+    },
+    {
+      "source": "/post/johandy-presenta-pasan-las-horas-junto-a-derekvinci-una-bachata-moderna-cargada-de-romance-y-sent(/?)",
+      "destination": "/blog/johandy-presenta-pasan-las-horas-junto-a-derekvinci-una-bachata-moderna-cargada/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-escondidas-el-nuevo-éxito-de-la-estrella-emergente-de-la-bachata-j-salez-junt(/?)",
+      "destination": "/blog/eqs-musica-presenta-escondidas-el-nuevo-exito-de-la-estrella-emergente-de-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-escondidas-el-nuevo-%C3%A9xito-de-la-estrella-emergente-de-la-bachata-j-salez-junt(/?)",
+      "destination": "/blog/eqs-musica-presenta-escondidas-el-nuevo-exito-de-la-estrella-emergente-de-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-escondidas-el-nuevo-%25C3%25A9xito-de-la-estrella-emergente-de-la-bachata-j-salez-junt(/?)",
+      "destination": "/blog/eqs-musica-presenta-escondidas-el-nuevo-exito-de-la-estrella-emergente-de-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-infiel-el-nuevo-y-apasionante-sencillo-de-jhonny-evidence-y-laura-alcoba-junt(/?)",
+      "destination": "/blog/eqs-musica-presenta-infiel-el-nuevo-y-apasionante-sencillo-de-jhonny-evidence-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-infiel-el-nuevo-y-apasionante-sencillo-de-jhonny-evidence-y-laura-alcoba-junt(/?)",
+      "destination": "/blog/eqs-musica-presenta-infiel-el-nuevo-y-apasionante-sencillo-de-jhonny-evidence-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-infiel-el-nuevo-y-apasionante-sencillo-de-jhonny-evidence-y-laura-alcoba-junt(/?)",
+      "destination": "/blog/eqs-musica-presenta-infiel-el-nuevo-y-apasionante-sencillo-de-jhonny-evidence-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-eres-mala-el-nuevo-sencillo-de-cristian-martin-presenta-una-bachata-romántica(/?)",
+      "destination": "/blog/eqs-musica-presenta-eres-mala-el-nuevo-sencillo-de-cristian-martin-presenta-una/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-eres-mala-el-nuevo-sencillo-de-cristian-martin-presenta-una-bachata-rom%C3%A1ntica(/?)",
+      "destination": "/blog/eqs-musica-presenta-eres-mala-el-nuevo-sencillo-de-cristian-martin-presenta-una/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-eres-mala-el-nuevo-sencillo-de-cristian-martin-presenta-una-bachata-rom%25C3%25A1ntica(/?)",
+      "destination": "/blog/eqs-musica-presenta-eres-mala-el-nuevo-sencillo-de-cristian-martin-presenta-una/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-y-derekvinci-presentan-principio-del-fin-una-apasionada-bachata-bajo-el-sello-eqs-m%C3%BAsica(/?)",
+      "destination": "/blog/mr-don-y-derekvinci-presentan-principio-del-fin-una-apasionada-bachata-bajo-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-y-derekvinci-presentan-principio-del-fin-una-apasionada-bachata-bajo-el-sello-eqs-música(/?)",
+      "destination": "/blog/mr-don-y-derekvinci-presentan-principio-del-fin-una-apasionada-bachata-bajo-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-y-derekvinci-presentan-principio-del-fin-una-apasionada-bachata-bajo-el-sello-eqs-m%25C3%25BAsica(/?)",
+      "destination": "/blog/mr-don-y-derekvinci-presentan-principio-del-fin-una-apasionada-bachata-bajo-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-cantinero-el-nuevo-sencillo-del-bachatero-dominicano-jhonny-evidence-junto-a(/?)",
+      "destination": "/blog/eqs-musica-presenta-cantinero-el-nuevo-sencillo-del-bachatero-dominicano-jhonny/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-cantinero-el-nuevo-sencillo-del-bachatero-dominicano-jhonny-evidence-junto-a(/?)",
+      "destination": "/blog/eqs-musica-presenta-cantinero-el-nuevo-sencillo-del-bachatero-dominicano-jhonny/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-cantinero-el-nuevo-sencillo-del-bachatero-dominicano-jhonny-evidence-junto-a(/?)",
+      "destination": "/blog/eqs-musica-presenta-cantinero-el-nuevo-sencillo-del-bachatero-dominicano-jhonny/",
+      "permanent": true
+    },
+    {
+      "source": "/post/emanz-reign-y-derekvinci-encienden-la-escena-con-velita-la-bachata-que-fusiona-tradici%C3%B3n-innovaci(/?)",
+      "destination": "/blog/emanz-reign-y-derekvinci-encienden-la-escena-con-velita-la-bachata-que-fusiona/",
+      "permanent": true
+    },
+    {
+      "source": "/post/emanz-reign-y-derekvinci-encienden-la-escena-con-velita-la-bachata-que-fusiona-tradición-innovaci(/?)",
+      "destination": "/blog/emanz-reign-y-derekvinci-encienden-la-escena-con-velita-la-bachata-que-fusiona/",
+      "permanent": true
+    },
+    {
+      "source": "/post/emanz-reign-y-derekvinci-encienden-la-escena-con-velita-la-bachata-que-fusiona-tradici%25C3%25B3n-innovaci(/?)",
+      "destination": "/blog/emanz-reign-y-derekvinci-encienden-la-escena-con-velita-la-bachata-que-fusiona/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-artista-dominicano-johandy-presenta-postea-su-nuevo-sencillo-de-bachata-en-colaboración-con-der(/?)",
+      "destination": "/blog/el-artista-dominicano-johandy-presenta-postea-su-nuevo-sencillo-de-bachata-en/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-artista-dominicano-johandy-presenta-postea-su-nuevo-sencillo-de-bachata-en-colaboraci%C3%B3n-con-der(/?)",
+      "destination": "/blog/el-artista-dominicano-johandy-presenta-postea-su-nuevo-sencillo-de-bachata-en/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-artista-dominicano-johandy-presenta-postea-su-nuevo-sencillo-de-bachata-en-colaboraci%25C3%25B3n-con-der(/?)",
+      "destination": "/blog/el-artista-dominicano-johandy-presenta-postea-su-nuevo-sencillo-de-bachata-en/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-celebra-un-millón-de-reproducciones-en-youtube-con-su-sencillo-si-te-vas(/?)",
+      "destination": "/blog/j-salez-celebra-un-millon-de-reproducciones-en-youtube-con-su-sencillo-si-te-vas/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-celebra-un-mill%C3%B3n-de-reproducciones-en-youtube-con-su-sencillo-si-te-vas(/?)",
+      "destination": "/blog/j-salez-celebra-un-millon-de-reproducciones-en-youtube-con-su-sencillo-si-te-vas/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-celebra-un-mill%25C3%25B3n-de-reproducciones-en-youtube-con-su-sencillo-si-te-vas(/?)",
+      "destination": "/blog/j-salez-celebra-un-millon-de-reproducciones-en-youtube-con-su-sencillo-si-te-vas/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-caf%C3%A9-favorito-una-bachata-sexy-y-rom%C3%A1ntica-junto-a-tony-lozano-emma-c-derekv(/?)",
+      "destination": "/blog/eqs-musica-presenta-cafe-favorito-una-bachata-sexy-y-romantica-junto-a-tony/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-café-favorito-una-bachata-sexy-y-romántica-junto-a-tony-lozano-emma-c-derekv(/?)",
+      "destination": "/blog/eqs-musica-presenta-cafe-favorito-una-bachata-sexy-y-romantica-junto-a-tony/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-caf%25C3%25A9-favorito-una-bachata-sexy-y-rom%25C3%25A1ntica-junto-a-tony-lozano-emma-c-derekv(/?)",
+      "destination": "/blog/eqs-musica-presenta-cafe-favorito-una-bachata-sexy-y-romantica-junto-a-tony/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-insaciable-la-nueva-producci%C3%B3n-del-bachatero-mexicanoamericano-j-salez-junto(/?)",
+      "destination": "/blog/eqs-musica-presenta-insaciable-la-nueva-produccion-del-bachatero/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-insaciable-la-nueva-producción-del-bachatero-mexicanoamericano-j-salez-junto(/?)",
+      "destination": "/blog/eqs-musica-presenta-insaciable-la-nueva-produccion-del-bachatero/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-insaciable-la-nueva-producci%25C3%25B3n-del-bachatero-mexicanoamericano-j-salez-junto(/?)",
+      "destination": "/blog/eqs-musica-presenta-insaciable-la-nueva-produccion-del-bachatero/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-mi-universo-la-nueva-canci%C3%B3n-del-bachatero-chileno-mr-don-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-mi-universo-la-nueva-cancion-del-bachatero-chileno-mr-don/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-mi-universo-la-nueva-canción-del-bachatero-chileno-mr-don-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-mi-universo-la-nueva-cancion-del-bachatero-chileno-mr-don/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-mi-universo-la-nueva-canci%25C3%25B3n-del-bachatero-chileno-mr-don-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-mi-universo-la-nueva-cancion-del-bachatero-chileno-mr-don/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-bachatero-dominicano-johandy-presenta-su-nuevo-sencillo-vete-junto-a-derekvinci(/?)",
+      "destination": "/blog/el-bachatero-dominicano-johandy-presenta-su-nuevo-sencillo-vete-junto-a/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-conquista-la-escena-musical-con-más-de-un-millón-de-reproducciones-en-su-éxito-por-mala(/?)",
+      "destination": "/blog/j-salez-conquista-la-escena-musical-con-mas-de-un-millon-de-reproducciones-en/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-conquista-la-escena-musical-con-m%C3%A1s-de-un-mill%C3%B3n-de-reproducciones-en-su-%C3%A9xito-por-mala(/?)",
+      "destination": "/blog/j-salez-conquista-la-escena-musical-con-mas-de-un-millon-de-reproducciones-en/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-conquista-la-escena-musical-con-m%25C3%25A1s-de-un-mill%25C3%25B3n-de-reproducciones-en-su-%25C3%25A9xito-por-mala(/?)",
+      "destination": "/blog/j-salez-conquista-la-escena-musical-con-mas-de-un-millon-de-reproducciones-en/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-el-nuevo-sencillo-de-la-cantante-española-laura-alcoba-y-si-eras-tú(/?)",
+      "destination": "/blog/eqs-musica-presenta-el-nuevo-sencillo-de-la-cantante-espanola-laura-alcoba-y-si/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-el-nuevo-sencillo-de-la-cantante-espa%C3%B1ola-laura-alcoba-y-si-eras-t%C3%BA(/?)",
+      "destination": "/blog/eqs-musica-presenta-el-nuevo-sencillo-de-la-cantante-espanola-laura-alcoba-y-si/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-el-nuevo-sencillo-de-la-cantante-espa%25C3%25B1ola-laura-alcoba-y-si-eras-t%25C3%25BA(/?)",
+      "destination": "/blog/eqs-musica-presenta-el-nuevo-sencillo-de-la-cantante-espanola-laura-alcoba-y-si/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-conquista-nueva-york-con-su-gira-de-medios-y-el-éxito-de-su-nuevo-sencillo-si-te-vas(/?)",
+      "destination": "/blog/j-salez-conquista-nueva-york-con-su-gira-de-medios-y-el-exito-de-su-nuevo/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-conquista-nueva-york-con-su-gira-de-medios-y-el-%C3%A9xito-de-su-nuevo-sencillo-si-te-vas(/?)",
+      "destination": "/blog/j-salez-conquista-nueva-york-con-su-gira-de-medios-y-el-exito-de-su-nuevo/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-conquista-nueva-york-con-su-gira-de-medios-y-el-%25C3%25A9xito-de-su-nuevo-sencillo-si-te-vas(/?)",
+      "destination": "/blog/j-salez-conquista-nueva-york-con-su-gira-de-medios-y-el-exito-de-su-nuevo/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-la-versi%C3%B3n-bachata-de-residuals-en-la-voz-de-j-salez-producida-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-la-version-bachata-de-residuals-en-la-voz-de-j-salez/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-la-versión-bachata-de-residuals-en-la-voz-de-j-salez-producida-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-la-version-bachata-de-residuals-en-la-voz-de-j-salez/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-la-versi%25C3%25B3n-bachata-de-residuals-en-la-voz-de-j-salez-producida-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-la-version-bachata-de-residuals-en-la-voz-de-j-salez/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-jhonny-evidence-clásicos-de-la-bachata(/?)",
+      "destination": "/blog/eqs-musica-presenta-jhonny-evidence-clasicos-de-la-bachata/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-jhonny-evidence-cl%C3%A1sicos-de-la-bachata(/?)",
+      "destination": "/blog/eqs-musica-presenta-jhonny-evidence-clasicos-de-la-bachata/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-jhonny-evidence-cl%25C3%25A1sicos-de-la-bachata(/?)",
+      "destination": "/blog/eqs-musica-presenta-jhonny-evidence-clasicos-de-la-bachata/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-cita-la-nueva-bachata-de-mr-don-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-cita-la-nueva-bachata-de-mr-don-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-cita-la-nueva-bachata-de-mr-don-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-cita-la-nueva-bachata-de-mr-don-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-cita-la-nueva-bachata-de-mr-don-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-cita-la-nueva-bachata-de-mr-don-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-lanza-si-te-vas-junto-a-derekvinci-una-bachata-sensual(/?)",
+      "destination": "/blog/j-salez-lanza-si-te-vas-junto-a-derekvinci-una-bachata-sensual/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-musica-presenta-mujeriego-el-nuevo-sencillo-de-tony-lozano-junto-a-derekvinci-antonimusic-e(/?)",
+      "destination": "/blog/eqs-musica-presenta-mujeriego-el-nuevo-sencillo-de-tony-lozano-junto-a/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-estrena-venir-el-nuevo-sencillo-de-vinny-rivera-producido-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-estrena-venir-el-nuevo-sencillo-de-vinny-rivera-producido-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-estrena-venir-el-nuevo-sencillo-de-vinny-rivera-producido-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-estrena-venir-el-nuevo-sencillo-de-vinny-rivera-producido-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-estrena-venir-el-nuevo-sencillo-de-vinny-rivera-producido-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-estrena-venir-el-nuevo-sencillo-de-vinny-rivera-producido-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-la-versión-bachata-de-akureyri-con-laura-alcoba-y-mario-rainero(/?)",
+      "destination": "/blog/eqs-musica-presenta-la-version-bachata-de-akureyri-con-laura-alcoba-y-mario/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-la-versi%C3%B3n-bachata-de-akureyri-con-laura-alcoba-y-mario-rainero(/?)",
+      "destination": "/blog/eqs-musica-presenta-la-version-bachata-de-akureyri-con-laura-alcoba-y-mario/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-la-versi%25C3%25B3n-bachata-de-akureyri-con-laura-alcoba-y-mario-rainero(/?)",
+      "destination": "/blog/eqs-musica-presenta-la-version-bachata-de-akureyri-con-laura-alcoba-y-mario/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-llegaste-la-nueva-bachata-de-johandy-bajo-la-producci%C3%B3n-de-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-llegaste-la-nueva-bachata-de-johandy-bajo-la-produccion-de/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-llegaste-la-nueva-bachata-de-johandy-bajo-la-producción-de-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-llegaste-la-nueva-bachata-de-johandy-bajo-la-produccion-de/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-llegaste-la-nueva-bachata-de-johandy-bajo-la-producci%25C3%25B3n-de-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-llegaste-la-nueva-bachata-de-johandy-bajo-la-produccion-de/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-bachatero-mexicano-americano-j-salez-presenta-mala-o-buena-su-nueva-canción-junto-a-derekvinci(/?)",
+      "destination": "/blog/el-bachatero-mexicano-americano-j-salez-presenta-mala-o-buena-su-nueva-cancion/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-bachatero-mexicano-americano-j-salez-presenta-mala-o-buena-su-nueva-canci%C3%B3n-junto-a-derekvinci(/?)",
+      "destination": "/blog/el-bachatero-mexicano-americano-j-salez-presenta-mala-o-buena-su-nueva-cancion/",
+      "permanent": true
+    },
+    {
+      "source": "/post/el-bachatero-mexicano-americano-j-salez-presenta-mala-o-buena-su-nueva-canci%25C3%25B3n-junto-a-derekvinci(/?)",
+      "destination": "/blog/el-bachatero-mexicano-americano-j-salez-presenta-mala-o-buena-su-nueva-cancion/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-de-adentro-pa-fuera-el-nuevo-lanzamiento-musical-de-tony-lozano(/?)",
+      "destination": "/blog/eqs-musica-presenta-de-adentro-pa-fuera-el-nuevo-lanzamiento-musical-de-tony/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-de-adentro-pa-fuera-el-nuevo-lanzamiento-musical-de-tony-lozano(/?)",
+      "destination": "/blog/eqs-musica-presenta-de-adentro-pa-fuera-el-nuevo-lanzamiento-musical-de-tony/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-de-adentro-pa-fuera-el-nuevo-lanzamiento-musical-de-tony-lozano(/?)",
+      "destination": "/blog/eqs-musica-presenta-de-adentro-pa-fuera-el-nuevo-lanzamiento-musical-de-tony/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-traicionera-el-nuevo-himno-de-desamor-de-j-salez(/?)",
+      "destination": "/blog/eqs-musica-presenta-traicionera-el-nuevo-himno-de-desamor-de-j-salez/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-traicionera-el-nuevo-himno-de-desamor-de-j-salez(/?)",
+      "destination": "/blog/eqs-musica-presenta-traicionera-el-nuevo-himno-de-desamor-de-j-salez/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-traicionera-el-nuevo-himno-de-desamor-de-j-salez(/?)",
+      "destination": "/blog/eqs-musica-presenta-traicionera-el-nuevo-himno-de-desamor-de-j-salez/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-bad-boy-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-bad-boy-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-bad-boy-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-bad-boy-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-bad-boy-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-bad-boy-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-más-de-lo-que-imaginé-en-su-nueva-versión-merengue-por-johandy(/?)",
+      "destination": "/blog/eqs-musica-presenta-mas-de-lo-que-imagine-en-su-nueva-version-merengue-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-m%C3%A1s-de-lo-que-imagin%C3%A9-en-su-nueva-versi%C3%B3n-merengue-por-johandy(/?)",
+      "destination": "/blog/eqs-musica-presenta-mas-de-lo-que-imagine-en-su-nueva-version-merengue-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-m%25C3%25A1s-de-lo-que-imagin%25C3%25A9-en-su-nueva-versi%25C3%25B3n-merengue-por-johandy(/?)",
+      "destination": "/blog/eqs-musica-presenta-mas-de-lo-que-imagine-en-su-nueva-version-merengue-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-brujería-una-producción-musical-de-jhonny-evidence-y-derekvinci-junto-a-el-tig(/?)",
+      "destination": "/blog/eqs-musica-presenta-brujeria-una-produccion-musical-de-jhonny-evidence-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-brujer%C3%ADa-una-producci%C3%B3n-musical-de-jhonny-evidence-y-derekvinci-junto-a-el-tig(/?)",
+      "destination": "/blog/eqs-musica-presenta-brujeria-una-produccion-musical-de-jhonny-evidence-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-brujer%25C3%25ADa-una-producci%25C3%25B3n-musical-de-jhonny-evidence-y-derekvinci-junto-a-el-tig(/?)",
+      "destination": "/blog/eqs-musica-presenta-brujeria-una-produccion-musical-de-jhonny-evidence-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-bad-dreams-una-explosiva-versión-bachata-junto-ronny-mercedes-dj-magic-flow-y(/?)",
+      "destination": "/blog/eqs-musica-presenta-bad-dreams-una-explosiva-version-bachata-junto-ronny/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-bad-dreams-una-explosiva-versi%C3%B3n-bachata-junto-ronny-mercedes-dj-magic-flow-y(/?)",
+      "destination": "/blog/eqs-musica-presenta-bad-dreams-una-explosiva-version-bachata-junto-ronny/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-bad-dreams-una-explosiva-versi%25C3%25B3n-bachata-junto-ronny-mercedes-dj-magic-flow-y(/?)",
+      "destination": "/blog/eqs-musica-presenta-bad-dreams-una-explosiva-version-bachata-junto-ronny/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-te-odio-el-nuevo-sencillo-de-johandy-producido-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-te-odio-el-nuevo-sencillo-de-johandy-producido-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-te-odio-el-nuevo-sencillo-de-johandy-producido-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-te-odio-el-nuevo-sencillo-de-johandy-producido-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-te-odio-el-nuevo-sencillo-de-johandy-producido-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-te-odio-el-nuevo-sencillo-de-johandy-producido-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-capaz-en-una-apasionada-versión-bachata-interpretada-por-tony-lozano-y-produci(/?)",
+      "destination": "/blog/eqs-musica-presenta-capaz-en-una-apasionada-version-bachata-interpretada-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-capaz-en-una-apasionada-versi%C3%B3n-bachata-interpretada-por-tony-lozano-y-produci(/?)",
+      "destination": "/blog/eqs-musica-presenta-capaz-en-una-apasionada-version-bachata-interpretada-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-capaz-en-una-apasionada-versi%25C3%25B3n-bachata-interpretada-por-tony-lozano-y-produci(/?)",
+      "destination": "/blog/eqs-musica-presenta-capaz-en-una-apasionada-version-bachata-interpretada-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-aveces-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-aveces-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-aveces-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-aveces-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-aveces-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-aveces-la-nueva-bachata-de-vinny-rivera-junto-a-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-fr%C3%ADo-una-emocionante-versi%C3%B3n-bachata-junto-a-tony-lozano-dj-magic-flow-y-der(/?)",
+      "destination": "/blog/eqs-musica-presenta-frio-una-emocionante-version-bachata-junto-a-tony-lozano-dj/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-frío-una-emocionante-versión-bachata-junto-a-tony-lozano-dj-magic-flow-y-der(/?)",
+      "destination": "/blog/eqs-musica-presenta-frio-una-emocionante-version-bachata-junto-a-tony-lozano-dj/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-fr%25C3%25ADo-una-emocionante-versi%25C3%25B3n-bachata-junto-a-tony-lozano-dj-magic-flow-y-der(/?)",
+      "destination": "/blog/eqs-musica-presenta-frio-una-emocionante-version-bachata-junto-a-tony-lozano-dj/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-volver-a-nacer-un-emocionante-lanzamiento-junto-a-mr-don-y-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-volver-a-nacer-un-emocionante-lanzamiento-junto-a-mr-don-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-volver-a-nacer-un-emocionante-lanzamiento-junto-a-mr-don-y-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-volver-a-nacer-un-emocionante-lanzamiento-junto-a-mr-don-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-volver-a-nacer-un-emocionante-lanzamiento-junto-a-mr-don-y-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-volver-a-nacer-un-emocionante-lanzamiento-junto-a-mr-don-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/junto-a-eqs-m%C3%BAsica-vinny-rivera-brilla-en-el-world-bachata-festival-en-malasia(/?)",
+      "destination": "/blog/junto-a-eqs-musica-vinny-rivera-brilla-en-el-world-bachata-festival-en-malasia/",
+      "permanent": true
+    },
+    {
+      "source": "/post/junto-a-eqs-música-vinny-rivera-brilla-en-el-world-bachata-festival-en-malasia(/?)",
+      "destination": "/blog/junto-a-eqs-musica-vinny-rivera-brilla-en-el-world-bachata-festival-en-malasia/",
+      "permanent": true
+    },
+    {
+      "source": "/post/junto-a-eqs-m%25C3%25BAsica-vinny-rivera-brilla-en-el-world-bachata-festival-en-malasia(/?)",
+      "destination": "/blog/junto-a-eqs-musica-vinny-rivera-brilla-en-el-world-bachata-festival-en-malasia/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-bachata-navideña-un-álbum-con-un-repertorio-está-lleno-de-emociones-y-ritmos-f(/?)",
+      "destination": "/blog/eqs-musica-presenta-bachata-navidena-un-album-con-un-repertorio-esta-lleno-de/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-bachata-navide%C3%B1a-un-%C3%A1lbum-con-un-repertorio-est%C3%A1-lleno-de-emociones-y-ritmos-f(/?)",
+      "destination": "/blog/eqs-musica-presenta-bachata-navidena-un-album-con-un-repertorio-esta-lleno-de/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-bachata-navide%25C3%25B1a-un-%25C3%25A1lbum-con-un-repertorio-est%25C3%25A1-lleno-de-emociones-y-ritmos-f(/?)",
+      "destination": "/blog/eqs-musica-presenta-bachata-navidena-un-album-con-un-repertorio-esta-lleno-de/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-vete-con-%C3%A9l-el-nuevo-sencillo-junto-a-eri-rey-derekvinci-el-tiguere-y-los(/?)",
+      "destination": "/blog/eqs-musica-presenta-vete-con-el-el-nuevo-sencillo-junto-a-eri-rey-derekvinci-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-vete-con-él-el-nuevo-sencillo-junto-a-eri-rey-derekvinci-el-tiguere-y-los(/?)",
+      "destination": "/blog/eqs-musica-presenta-vete-con-el-el-nuevo-sencillo-junto-a-eri-rey-derekvinci-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-vete-con-%25C3%25A9l-el-nuevo-sencillo-junto-a-eri-rey-derekvinci-el-tiguere-y-los(/?)",
+      "destination": "/blog/eqs-musica-presenta-vete-con-el-el-nuevo-sencillo-junto-a-eri-rey-derekvinci-el/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-dos-anillos-el-nuevo-sencillo-de-tony-lozano-producido-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-dos-anillos-el-nuevo-sencillo-de-tony-lozano-producido-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-dos-anillos-el-nuevo-sencillo-de-tony-lozano-producido-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-dos-anillos-el-nuevo-sencillo-de-tony-lozano-producido-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-dos-anillos-el-nuevo-sencillo-de-tony-lozano-producido-por-derekvinci(/?)",
+      "destination": "/blog/eqs-musica-presenta-dos-anillos-el-nuevo-sencillo-de-tony-lozano-producido-por/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-el-nuevo-sencillo-dictadura-de-mr-don-junto-a-derekvinci-y-el-tiguere-perte(/?)",
+      "destination": "/blog/eqs-musica-presenta-el-nuevo-sencillo-dictadura-de-mr-don-junto-a-derekvinci-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-el-nuevo-sencillo-dictadura-de-mr-don-junto-a-derekvinci-y-el-tiguere-perte(/?)",
+      "destination": "/blog/eqs-musica-presenta-el-nuevo-sencillo-dictadura-de-mr-don-junto-a-derekvinci-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-el-nuevo-sencillo-dictadura-de-mr-don-junto-a-derekvinci-y-el-tiguere-perte(/?)",
+      "destination": "/blog/eqs-musica-presenta-el-nuevo-sencillo-dictadura-de-mr-don-junto-a-derekvinci-y/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-lanza-te-quiero-una-nueva-versi%C3%B3n-en-bachata-junto-a-los-espa%C3%B1oles-tony-lozano-y-emma(/?)",
+      "destination": "/blog/eqs-musica-lanza-te-quiero-una-nueva-version-en-bachata-junto-a-los-espanoles/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-lanza-te-quiero-una-nueva-versión-en-bachata-junto-a-los-españoles-tony-lozano-y-emma(/?)",
+      "destination": "/blog/eqs-musica-lanza-te-quiero-una-nueva-version-en-bachata-junto-a-los-espanoles/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-lanza-te-quiero-una-nueva-versi%25C3%25B3n-en-bachata-junto-a-los-espa%25C3%25B1oles-tony-lozano-y-emma(/?)",
+      "destination": "/blog/eqs-musica-lanza-te-quiero-una-nueva-version-en-bachata-junto-a-los-espanoles/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-%C3%A1breme-la-puerta-el-nuevo-sencillo-de-jhonny-evidence-junto-a-el-tiguere-y-der(/?)",
+      "destination": "/blog/eqs-musica-presenta-abreme-la-puerta-el-nuevo-sencillo-de-jhonny-evidence-junto/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-ábreme-la-puerta-el-nuevo-sencillo-de-jhonny-evidence-junto-a-el-tiguere-y-der(/?)",
+      "destination": "/blog/eqs-musica-presenta-abreme-la-puerta-el-nuevo-sencillo-de-jhonny-evidence-junto/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-%25C3%25A1breme-la-puerta-el-nuevo-sencillo-de-jhonny-evidence-junto-a-el-tiguere-y-der(/?)",
+      "destination": "/blog/eqs-musica-presenta-abreme-la-puerta-el-nuevo-sencillo-de-jhonny-evidence-junto/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-carne-y-hueso-lo-nuevo-tony-lozano-el-icónico-artista-de-la-bachata-junto-a-d(/?)",
+      "destination": "/blog/eqs-musica-presenta-carne-y-hueso-lo-nuevo-tony-lozano-el-iconico-artista-de-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-carne-y-hueso-lo-nuevo-tony-lozano-el-ic%C3%B3nico-artista-de-la-bachata-junto-a-d(/?)",
+      "destination": "/blog/eqs-musica-presenta-carne-y-hueso-lo-nuevo-tony-lozano-el-iconico-artista-de-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-carne-y-hueso-lo-nuevo-tony-lozano-el-ic%25C3%25B3nico-artista-de-la-bachata-junto-a-d(/?)",
+      "destination": "/blog/eqs-musica-presenta-carne-y-hueso-lo-nuevo-tony-lozano-el-iconico-artista-de-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/derekvinci-el-productor-dominicano-que-trasciende-fronteras-liderando-la-m%C3%BAsica-bachata-presenta-su(/?)",
+      "destination": "/blog/derekvinci-el-productor-dominicano-que-trasciende-fronteras-liderando-la-musica/",
+      "permanent": true
+    },
+    {
+      "source": "/post/derekvinci-el-productor-dominicano-que-trasciende-fronteras-liderando-la-música-bachata-presenta-su(/?)",
+      "destination": "/blog/derekvinci-el-productor-dominicano-que-trasciende-fronteras-liderando-la-musica/",
+      "permanent": true
+    },
+    {
+      "source": "/post/derekvinci-el-productor-dominicano-que-trasciende-fronteras-liderando-la-m%25C3%25BAsica-bachata-presenta-su(/?)",
+      "destination": "/blog/derekvinci-el-productor-dominicano-que-trasciende-fronteras-liderando-la-musica/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-su-nueva-producción-con-la-estrella-sudamericana-de-la-bachata-mr-don-sueños(/?)",
+      "destination": "/blog/eqs-musica-presenta-su-nueva-produccion-con-la-estrella-sudamericana-de-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-su-nueva-producci%C3%B3n-con-la-estrella-sudamericana-de-la-bachata-mr-don-sue%C3%B1os(/?)",
+      "destination": "/blog/eqs-musica-presenta-su-nueva-produccion-con-la-estrella-sudamericana-de-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-su-nueva-producci%25C3%25B3n-con-la-estrella-sudamericana-de-la-bachata-mr-don-sue%25C3%25B1os(/?)",
+      "destination": "/blog/eqs-musica-presenta-su-nueva-produccion-con-la-estrella-sudamericana-de-la/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-por-mala-una-colaboración-estelar-entre-j-salez-derekvinci-el-tiguere-atac(/?)",
+      "destination": "/blog/eqs-musica-presenta-por-mala-una-colaboracion-estelar-entre-j-salez-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-por-mala-una-colaboraci%C3%B3n-estelar-entre-j-salez-derekvinci-el-tiguere-atac(/?)",
+      "destination": "/blog/eqs-musica-presenta-por-mala-una-colaboracion-estelar-entre-j-salez-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-por-mala-una-colaboraci%25C3%25B3n-estelar-entre-j-salez-derekvinci-el-tiguere-atac(/?)",
+      "destination": "/blog/eqs-musica-presenta-por-mala-una-colaboracion-estelar-entre-j-salez-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/la-discogr%C3%A1fica-lider-en-musica-bachata-eqs-m%C3%BAsica-presenta-sola-el-nuevo-sencillo-en-la-voz-de-joha(/?)",
+      "destination": "/blog/la-discografica-lider-en-musica-bachata-eqs-musica-presenta-sola-el-nuevo/",
+      "permanent": true
+    },
+    {
+      "source": "/post/la-discográfica-lider-en-musica-bachata-eqs-música-presenta-sola-el-nuevo-sencillo-en-la-voz-de-joha(/?)",
+      "destination": "/blog/la-discografica-lider-en-musica-bachata-eqs-musica-presenta-sola-el-nuevo/",
+      "permanent": true
+    },
+    {
+      "source": "/post/la-discogr%25C3%25A1fica-lider-en-musica-bachata-eqs-m%25C3%25BAsica-presenta-sola-el-nuevo-sencillo-en-la-voz-de-joha(/?)",
+      "destination": "/blog/la-discografica-lider-en-musica-bachata-eqs-musica-presenta-sola-el-nuevo/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%C3%BAsica-presenta-la-versi%C3%B3n-bachata-de-dime-c%C3%B3mo-hago-de-mar%C3%ADa-becerra-interpretada-por-laura(/?)",
+      "destination": "/blog/eqs-musica-presenta-la-version-bachata-de-dime-como-hago-de-maria-becerra/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-música-presenta-la-versión-bachata-de-dime-cómo-hago-de-maría-becerra-interpretada-por-laura(/?)",
+      "destination": "/blog/eqs-musica-presenta-la-version-bachata-de-dime-como-hago-de-maria-becerra/",
+      "permanent": true
+    },
+    {
+      "source": "/post/eqs-m%25C3%25BAsica-presenta-la-versi%25C3%25B3n-bachata-de-dime-c%25C3%25B3mo-hago-de-mar%25C3%25ADa-becerra-interpretada-por-laura(/?)",
+      "destination": "/blog/eqs-musica-presenta-la-version-bachata-de-dime-como-hago-de-maria-becerra/",
+      "permanent": true
+    },
+    {
+      "source": "/post/1-spot-on-music-choice-national-tropical-song-of-the-week(/?)",
+      "destination": "/blog/1-spot-on-music-choice-national-tropical-song-of-the-week/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mariposas-1(/?)",
+      "destination": "/blog/mariposas-1/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mi-mitad(/?)",
+      "destination": "/blog/mi-mitad/",
+      "permanent": true
+    },
+    {
+      "source": "/post/beso-mr-don-x-dama-x-derekvinci(/?)",
+      "destination": "/blog/beso-mr-don-x-dama-x-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tony-lozano-el-bachatero-español-conquista-con-su-nuevo-éxito-toa-la-noche(/?)",
+      "destination": "/blog/tony-lozano-el-bachatero-espanol-conquista-con-su-nuevo-exito-toa-la-noche/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tony-lozano-el-bachatero-espa%C3%B1ol-conquista-con-su-nuevo-%C3%A9xito-toa-la-noche(/?)",
+      "destination": "/blog/tony-lozano-el-bachatero-espanol-conquista-con-su-nuevo-exito-toa-la-noche/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tony-lozano-el-bachatero-espa%25C3%25B1ol-conquista-con-su-nuevo-%25C3%25A9xito-toa-la-noche(/?)",
+      "destination": "/blog/tony-lozano-el-bachatero-espanol-conquista-con-su-nuevo-exito-toa-la-noche/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mr-don-chilean-bachata-artist(/?)",
+      "destination": "/blog/mr-don-chilean-bachata-artist/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mariposas(/?)",
+      "destination": "/blog/mariposas/",
+      "permanent": true
+    },
+    {
+      "source": "/post/popiwa-bachata(/?)",
+      "destination": "/blog/popiwa-bachata/",
+      "permanent": true
+    },
+    {
+      "source": "/post/j-salez-vinny-rivera-y-derekvinci-lanzan-exclusivo-cover-de-bachata-de-un-x100t-de-grupo-frontera(/?)",
+      "destination": "/blog/j-salez-vinny-rivera-y-derekvinci-lanzan-exclusivo-cover-de-bachata-de-un-x100t/",
+      "permanent": true
+    },
+    {
+      "source": "/post/international-singer-songwriter-j-salez-releases-new-bachata-single-solo(/?)",
+      "destination": "/blog/international-singer-songwriter-j-salez-releases-new-bachata-single-solo/",
+      "permanent": true
+    },
+    {
+      "source": "/post/breaking-the-code-the-life-and-legacy-of-the-man-behind-eqs-bachata(/?)",
+      "destination": "/blog/breaking-the-code-the-life-and-legacy-of-the-man-behind-eqs-bachata/",
+      "permanent": true
+    },
+    {
+      "source": "/post/bachata-birthday-tour(/?)",
+      "destination": "/blog/bachata-birthday-tour/",
+      "permanent": true
+    },
+    {
+      "source": "/post/bachata-tour-kicks-off-in-chicago-next-stop-west-coast(/?)",
+      "destination": "/blog/bachata-tour-kicks-off-in-chicago-next-stop-west-coast/",
+      "permanent": true
+    },
+    {
+      "source": "/post/new-bachata-llévame-vinny-rivera-x-derekvinci(/?)",
+      "destination": "/blog/new-bachata-llevame-vinny-rivera-x-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/new-bachata-ll%C3%A9vame-vinny-rivera-x-derekvinci(/?)",
+      "destination": "/blog/new-bachata-llevame-vinny-rivera-x-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/new-bachata-ll%25C3%25A9vame-vinny-rivera-x-derekvinci(/?)",
+      "destination": "/blog/new-bachata-llevame-vinny-rivera-x-derekvinci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/bachata-sensual-connection-tour(/?)",
+      "destination": "/blog/bachata-sensual-connection-tour/",
+      "permanent": true
+    },
+    {
+      "source": "/post/vinny-rivera-the-rising-star-of-bachata-sensual(/?)",
+      "destination": "/blog/vinny-rivera-the-rising-star-of-bachata-sensual/",
+      "permanent": true
+    },
+    {
+      "source": "/post/johnny-evidence-sigue-buscando-su-espacio-en-el-mundo-de-la-bachata-cuantas-veces(/?)",
+      "destination": "/blog/johnny-evidence-sigue-buscando-su-espacio-en-el-mundo-de-la-bachata-cuantas/",
+      "permanent": true
+    },
+    {
+      "source": "/post/buscando-un-amor(/?)",
+      "destination": "/blog/buscando-un-amor/",
+      "permanent": true
+    },
+    {
+      "source": "/post/bachata-cover-hecha-pa-mi-vinny-rivera-x-dj-tony-pecino(/?)",
+      "destination": "/blog/bachata-cover-hecha-pa-mi-vinny-rivera-x-dj-tony-pecino/",
+      "permanent": true
+    },
+    {
+      "source": "/post/jhonny-evidence-releases-first-christmas-bachata-lejos-navidad(/?)",
+      "destination": "/blog/jhonny-evidence-releases-first-christmas-bachata-lejos-navidad/",
+      "permanent": true
+    },
+    {
+      "source": "/post/joshy-tripp-juanki-santana-release-new-single-mujerona(/?)",
+      "destination": "/blog/joshy-tripp-juanki-santana-release-new-single-mujerona/",
+      "permanent": true
+    },
+    {
+      "source": "/post/so%C3%B1e-contigo-bachata-cover(/?)",
+      "destination": "/blog/sone-contigo-bachata-cover/",
+      "permanent": true
+    },
+    {
+      "source": "/post/soñe-contigo-bachata-cover(/?)",
+      "destination": "/blog/sone-contigo-bachata-cover/",
+      "permanent": true
+    },
+    {
+      "source": "/post/so%25C3%25B1e-contigo-bachata-cover(/?)",
+      "destination": "/blog/sone-contigo-bachata-cover/",
+      "permanent": true
+    },
+    {
+      "source": "/post/sirlopez-vete(/?)",
+      "destination": "/blog/sirlopez-vete/",
+      "permanent": true
+    },
+    {
+      "source": "/post/dj-ramon-x-kely-jai-pero-te-conoci(/?)",
+      "destination": "/blog/dj-ramon-x-kely-jai-pero-te-conoci/",
+      "permanent": true
+    },
+    {
+      "source": "/post/jhonny-evidence-bachata-rosa-cover(/?)",
+      "destination": "/blog/jhonny-evidence-bachata-rosa-cover/",
+      "permanent": true
+    },
+    {
+      "source": "/post/hawai-bachata-version(/?)",
+      "destination": "/blog/hawai-bachata-version/",
+      "permanent": true
+    },
+    {
+      "source": "/post/dicen-por-ahi-tu-valentino(/?)",
+      "destination": "/blog/dicen-por-ahi-tu-valentino/",
+      "permanent": true
+    },
+    {
+      "source": "/post/mi-promesa-mr-don-ft-ralphy-dreamz(/?)",
+      "destination": "/blog/mi-promesa-mr-don-ft-ralphy-dreamz/",
+      "permanent": true
+    },
+    {
+      "source": "/post/bachata-with-sax(/?)",
+      "destination": "/blog/bachata-with-sax/",
+      "permanent": true
+    },
+    {
+      "source": "/post/bachata-assault-by-jhonny-evidence-mr-don(/?)",
+      "destination": "/blog/bachata-assault-by-jhonny-evidence-mr-don/",
+      "permanent": true
+    },
+    {
+      "source": "/post/sirlopez-lanza-la-manzana(/?)",
+      "destination": "/blog/sirlopez-lanza-la-manzana/",
+      "permanent": true
+    },
+    {
+      "source": "/post/bachata-buena-2020-spotify-playlist(/?)",
+      "destination": "/blog/bachata-buena-2020-spotify-playlist/",
+      "permanent": true
+    },
+    {
+      "source": "/post/tumanera-jhonnyevidence(/?)",
+      "destination": "/blog/tumanera-jhonnyevidence/",
+      "permanent": true
+    },
+    {
+      "source": "/post/jhonny-evidence-un-amor-en-bachata(/?)",
+      "destination": "/blog/jhonny-evidence-un-amor-en-bachata/",
+      "permanent": true
+    },
+    {
       "source": "/post/(.*)",
-      "destination": "/artists/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/(.*)",
-      "destination": "/newsletter/",
-      "permanent": true
-    },
-    {
-      "source": "/blog(/?)",
-      "destination": "/newsletter/",
+      "destination": "/blog/",
       "permanent": true
     },
     {

@@ -3522,3 +3522,94 @@ body {
 .latin-urban__lead { margin: 2rem 0; padding: 1.75rem; border: 1px solid #dcc9a3; border-radius: 4px; max-width: 40rem; }
 .latin-urban__name { font-size: clamp(1.8rem, 5vw, 2.6rem); color: #dcc9a3; margin: .25rem 0 .75rem; }
 .latin-urban__aka { font-size: .5em; letter-spacing: .08em; opacity: .8; }
+
+/* Blog (imported from the old Wix site) */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: clamp(18px, 2.4vw, 32px);
+  margin-top: clamp(28px, 4vw, 48px);
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--cream);
+  text-decoration: none;
+}
+.blog-card__img {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--ink-2);
+  border: 1px solid var(--hairline);
+}
+.blog-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+.blog-card:hover .blog-card__img img,
+.blog-card:focus-visible .blog-card__img img {
+  transform: scale(1.04);
+}
+.blog-card__date,
+.blog-post__date {
+  color: var(--blood);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.blog-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.blog-post__wrap {
+  max-width: 780px;
+}
+.blog-post__back {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--blood);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+.blog-post__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 4.4vw, 2.7rem);
+  line-height: 1.15;
+  margin: 10px 0 28px;
+  overflow-wrap: anywhere;
+}
+.blog-post__cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 32px;
+  border: 1px solid var(--hairline);
+}
+.blog-post__body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.blog-post__body p { margin: 0 0 1.1em; }
+.blog-post__body h2,
+.blog-post__body h3 { font-family: var(--font-heading); margin: 1.6em 0 0.6em; }
+.blog-post__body a { color: var(--blood); }
+.blog-post__body figure { margin: 1.6em 0; }
+.blog-post__body img { max-width: 100%; height: auto; display: block; }
+.blog-post__body iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  margin: 1.6em 0;
+}
+.blog-post__body iframe[src*="open.spotify.com"] { aspect-ratio: auto; height: 352px; }
