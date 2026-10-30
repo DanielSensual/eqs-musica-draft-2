@@ -3634,3 +3634,54 @@ body {
   border: 0;
   border-radius: 0;
 }
+
+/* WhatsApp request (Victor, 10-30): one page per artist with full bio, links and a Book button */
+.artist-page .blog-post__back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.artist-page__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.artist-page__link {
+  padding: 0.45rem 0.95rem;
+  border: 1px solid rgba(220, 201, 163, 0.45);
+  border-radius: 999px;
+  color: #dcc9a3;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.artist-page__link:hover,
+.artist-page__link:focus-visible {
+  background: #0e5c4a;
+  border-color: #0e5c4a;
+  color: #f5f1e8;
+}
+
+.artist-page__book {
+  display: inline-block;
+}
+
+.artist-page__player {
+  margin-top: 3rem;
+}
+
+.artist-page__news {
+  margin-top: 3rem;
+}
+
+.artist-page .derek__portrait img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}

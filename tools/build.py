@@ -346,7 +346,76 @@ def write_blog_redirects():
     f.write_text(json.dumps(cfg, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+# ---------------------------------------------------------------------------------------------
+# Artist pages: src/artists/artists.json → /artists/<slug>/ (roster cards link here)
+# ---------------------------------------------------------------------------------------------
+
+
+def artist_pages():
+    f = SRC / "artists" / "artists.json"
+    if not f.exists():
+        return []
+    esc = _html.escape
+    posts = blog_posts()
+    pages = []
+    for a in json.loads(f.read_text(encoding="utf-8")):
+        paras = "".join(
+            f'<p data-en="{esc(en)}" data-es="{esc(es)}">{esc(en)}</p>' for en, es in zip(a["bio_en"], a["bio_es"])
+        )
+        links = "".join(
+            f'<a class="artist-page__link" href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(label)}</a>'
+            for label, url in a["links"]
+        )
+        news = [p for p in posts if a["news"].lower() in (p["title"] + p["body"]).lower()]
+        news.sort(key=lambda p: p["date"], reverse=True)
+        news_html = ""
+        if news:
+            cards = []
+            for p in news[:3]:
+                img = (f'<img src="{p["cover"]}" alt="" loading="lazy" width="600" height="600">' if p["cover"] else "")
+                cards.append(
+                    f'<a class="blog-card" href="/blog/{p["slug"]}/" lang="{p["lang"]}">'
+                    f'<span class="blog-card__img">{img}</span>'
+                    f'<span class="blog-card__date">{blog_date(p["date"], p["lang"])}</span>'
+                    f'<span class="blog-card__title">{esc(p["title"])}</span></a>'
+                )
+            cards = "".join(cards)
+            news_html = (
+                '<div class="artist-page__news">'
+                '<p class="section__eyebrow uppercase-label" data-en="Latest news" data-es="Últimas noticias">Latest news</p>'
+                f'<div class="blog-grid">{cards}</div></div>'
+            )
+        name = esc(a["name"])
+        pages.append({
+            "path": f"/artists/{a['slug']}/",
+            "title": f"{name} | EQS MÚSICA",
+            "og_title": f"{name} — EQS Música",
+            "description": esc(re.sub(r"\s+", " ", a["bio_en"][0])[:155]),
+            "html": (
+                f'<section class="derek section section--page-top artist-page" id="artist-{a["slug"]}"><div class="container">'
+                '<a class="blog-post__back" href="/artists/" data-en="← All artists" data-es="← Todos los artistas">← All artists</a>'
+                '<div class="derek__grid derek__grid--v4">'
+                f'<div class="derek__portrait"><img src="{a["img"]}" alt="{name}" width="340" height="453" decoding="async"></div>'
+                '<div>'
+                '<p class="section__eyebrow uppercase-label" data-en="EQS Música Artist" data-es="Artista de EQS Música">EQS Música Artist</p>'
+                f'<h1 class="section__title">{name}</h1>'
+                f'<p class="uppercase-label" data-en="{esc(a["tag_en"])}" data-es="{esc(a["tag_es"])}">{esc(a["tag_en"])}</p>'
+                f'<div class="derek__bio">{paras}</div>'
+                f'<div class="artist-page__links">{links}</div>'
+                f'<a class="btn-cta artist-page__book" href="#contact" data-en="Book {name} →" data-es="Reservar a {name} →">Book {name} →</a>'
+                '</div></div>'
+                '<div class="spotify-embeds artist-page__player">'
+                f'<iframe title="{name} on Spotify" src="https://open.spotify.com/embed/artist/{a["spotify"]}?utm_source=generator" width="100%" height="352" '
+                'allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>'
+                f'{news_html}'
+                '</div></section>'
+            ),
+        })
+    return pages
+
+
 if __name__ == "__main__":
+    PAGES.extend(artist_pages())
     BLOG = blog_pages()
     PAGES.extend(BLOG)
     for page in PAGES + [NOT_FOUND]:
