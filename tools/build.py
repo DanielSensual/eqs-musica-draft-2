@@ -43,7 +43,7 @@ PAGES = [
         "path": "/artists/",
         "title": "Artists | EQS MÚSICA",
         "og_title": "EQS Música Artists",
-        "description": "The EQS Música roster — J Salez, Tony Lozano, Vinny Rivera, Johandy, Jhonny Evidence, Lee Sanz, Albin St' Rose, and Angel Rico.",
+        "description": "The EQS Música roster — J Salez, Tony Lozano, Vinny Rivera, Johandy, Jhonny Evidence, and Angel Rico.",
         "sections": ["roster", "stats", "releases", "final-cta"],
     },
     {
