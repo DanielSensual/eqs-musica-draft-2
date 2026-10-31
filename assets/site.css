@@ -3685,3 +3685,53 @@ body {
   aspect-ratio: 3 / 4;
   object-fit: cover;
 }
+
+/* Artist photos from EQS (Oct 30): new card portraits and per-artist photo grids */
+.artist-card__media--j-salez,
+.artist-card__media--tony-lozano,
+.artist-card__media--vinny-rivera,
+.artist-card__media--jhonny-evidence {
+  background-position: center, center 20%;
+}
+.artist-card__media--j-salez {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%), url("/img/j-salez-2026.jpg");
+}
+.artist-card__media--tony-lozano {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%), url("/img/tony-lozano-2026.jpg");
+}
+.artist-card__media--vinny-rivera {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%), url("/img/vinny-rivera-2026.jpg");
+}
+.artist-card__media--jhonny-evidence {
+  background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.92) 85%), url("/img/jhonny-evidence-2026.jpg");
+}
+.artist-page__gallery,
+.latin-urban__gallery {
+  margin-top: clamp(40px, 6vw, 72px);
+}
+.photo-grid {
+  columns: 3 240px;
+  column-gap: 14px;
+  margin-top: 18px;
+}
+.photo-grid__item {
+  display: block;
+  margin: 0 0 14px;
+  break-inside: avoid;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+}
+.photo-grid__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-base);
+}
+.photo-grid__item:hover img,
+.photo-grid__item:focus-visible img {
+  transform: scale(1.03);
+}
+.latin-urban__profile,
+.artist-page .derek__grid {
+  align-items: start;
+}

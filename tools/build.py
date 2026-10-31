@@ -385,6 +385,18 @@ def artist_pages():
                 '<p class="section__eyebrow uppercase-label" data-en="Latest news" data-es="Últimas noticias">Latest news</p>'
                 f'<div class="blog-grid">{cards}</div></div>'
             )
+        gallery_html = ""
+        if a.get("gallery"):
+            shots = "".join(
+                f'<a class="photo-grid__item" href="{src}" target="_blank" rel="noopener">'
+                f'<img src="{src}" alt="{esc(a["name"])}" loading="lazy" width="{w}" height="{h}"></a>'
+                for src, w, h in a["gallery"]
+            )
+            gallery_html = (
+                '<div class="artist-page__gallery">'
+                '<p class="section__eyebrow uppercase-label" data-en="Photos" data-es="Fotos">Photos</p>'
+                f'<div class="photo-grid">{shots}</div></div>'
+            )
         name = esc(a["name"])
         pages.append({
             "path": f"/artists/{a['slug']}/",
@@ -407,6 +419,7 @@ def artist_pages():
                 '<div class="spotify-embeds artist-page__player">'
                 f'<iframe title="{name} on Spotify" src="https://open.spotify.com/embed/artist/{a["spotify"]}?utm_source=generator" width="100%" height="352" '
                 'allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>'
+                f'{gallery_html}'
                 f'{news_html}'
                 '</div></section>'
             ),
